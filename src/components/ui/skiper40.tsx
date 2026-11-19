@@ -1,5 +1,4 @@
 import React from "react";
-import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 export interface SkiperLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -15,9 +14,22 @@ export interface SkiperLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorEl
  */
 export const Link000 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a";
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "relative inline-flex items-center text-sm font-medium transition-colors duration-200",
+          active ? "text-amber-400 font-semibold" : "text-white/90 hover:text-white",
+          child.props.className,
+          className
+        ),
+      });
+    }
+
     return (
-      <Comp
+      <a
         ref={ref}
         className={cn(
           "relative inline-flex items-center text-sm font-medium transition-colors duration-200",
@@ -27,7 +39,7 @@ export const Link000 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
         {...props}
       >
         {children}
-      </Comp>
+      </a>
     );
   }
 );
@@ -39,40 +51,31 @@ Link000.displayName = "Link000";
  */
 export const Link001 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, underlineColor = "bg-amber-400", asChild = false, ...props }, ref) => {
-    if (asChild) {
-      return (
-        <Slot
-          ref={ref}
-          className={cn(
-            "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
-            active ? "text-white font-semibold" : "text-white/85 hover:text-white",
-            className
-          )}
-          {...props}
-        >
-          {React.Children.map(children, (child) => {
-            if (React.isValidElement(child)) {
-              return React.cloneElement(child, {
-                // @ts-expect-error pass children through
-                children: (
-                  <>
-                    <span className="relative z-10 py-1">{child.props.children}</span>
-                    <span
-                      aria-hidden="true"
-                      className={cn(
-                        "absolute bottom-0 left-0 h-[2px] transition-all duration-300 ease-out group-hover:w-full",
-                        underlineColor,
-                        active ? "w-full" : "w-0"
-                      )}
-                    />
-                  </>
-                ),
-              });
-            }
-            return child;
-          })}
-        </Slot>
-      );
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
+          active ? "text-white font-semibold" : "text-white/85 hover:text-white",
+          child.props.className,
+          className
+        ),
+        children: (
+          <>
+            <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{child.props.children}</span>
+            <span
+              aria-hidden="true"
+              className={cn(
+                "absolute bottom-0 left-0 h-[2px] transition-all duration-300 ease-out group-hover:w-full",
+                underlineColor,
+                active ? "w-full" : "w-0"
+              )}
+            />
+          </>
+        ),
+      });
     }
 
     return (
@@ -85,7 +88,7 @@ export const Link001 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
         )}
         {...props}
       >
-        <span className="relative z-10 py-1">{children}</span>
+        <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{children}</span>
         <span
           aria-hidden="true"
           className={cn(
@@ -105,9 +108,35 @@ Link001.displayName = "Link001";
  */
 export const Link002 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, underlineColor = "bg-amber-400", asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a";
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
+          active ? "text-white font-semibold" : "text-white/85 hover:text-white",
+          child.props.className,
+          className
+        ),
+        children: (
+          <>
+            <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{child.props.children}</span>
+            <span
+              aria-hidden="true"
+              className={cn(
+                "absolute bottom-0 right-0 h-[2px] transition-all duration-300 ease-out group-hover:w-full group-hover:left-0",
+                underlineColor,
+                active ? "w-full" : "w-0"
+              )}
+            />
+          </>
+        ),
+      });
+    }
+
     return (
-      <Comp
+      <a
         ref={ref}
         className={cn(
           "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
@@ -116,7 +145,7 @@ export const Link002 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
         )}
         {...props}
       >
-        <span className="relative z-10 py-1">{children}</span>
+        <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{children}</span>
         <span
           aria-hidden="true"
           className={cn(
@@ -125,7 +154,7 @@ export const Link002 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
             active ? "w-full" : "w-0"
           )}
         />
-      </Comp>
+      </a>
     );
   }
 );
@@ -137,9 +166,35 @@ Link002.displayName = "Link002";
  */
 export const Link003 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, underlineColor = "bg-amber-400", asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a";
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
+          active ? "text-white font-semibold" : "text-white/85 hover:text-white",
+          child.props.className,
+          className
+        ),
+        children: (
+          <>
+            <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{child.props.children}</span>
+            <span
+              aria-hidden="true"
+              className={cn(
+                "absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 transition-all duration-300 ease-out group-hover:w-full",
+                underlineColor,
+                active ? "w-full" : "w-0"
+              )}
+            />
+          </>
+        ),
+      });
+    }
+
     return (
-      <Comp
+      <a
         ref={ref}
         className={cn(
           "group relative inline-flex items-center text-[15px] font-medium tracking-wide transition-colors duration-250",
@@ -148,7 +203,7 @@ export const Link003 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
         )}
         {...props}
       >
-        <span className="relative z-10 py-1">{children}</span>
+        <span className="relative z-10 py-1 inline-flex items-center gap-1.5">{children}</span>
         <span
           aria-hidden="true"
           className={cn(
@@ -157,7 +212,7 @@ export const Link003 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
             active ? "w-full" : "w-0"
           )}
         />
-      </Comp>
+      </a>
     );
   }
 );
@@ -168,9 +223,34 @@ Link003.displayName = "Link003";
  */
 export const Link004 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a";
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "group relative inline-flex items-center px-3 py-1.5 text-sm font-medium tracking-wide overflow-hidden rounded-md transition-colors duration-250",
+          active ? "text-slate-950 font-semibold" : "text-white hover:text-slate-950",
+          child.props.className,
+          className
+        ),
+        children: (
+          <>
+            <span
+              aria-hidden="true"
+              className={cn(
+                "absolute inset-0 z-0 bg-amber-400 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0",
+                active ? "translate-y-0" : ""
+              )}
+            />
+            <span className="relative z-10 inline-flex items-center gap-1.5">{child.props.children}</span>
+          </>
+        ),
+      });
+    }
+
     return (
-      <Comp
+      <a
         ref={ref}
         className={cn(
           "group relative inline-flex items-center px-3 py-1.5 text-sm font-medium tracking-wide overflow-hidden rounded-md transition-colors duration-250",
@@ -186,8 +266,8 @@ export const Link004 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
             active ? "translate-y-0" : ""
           )}
         />
-        <span className="relative z-10">{children}</span>
-      </Comp>
+        <span className="relative z-10 inline-flex items-center gap-1.5">{children}</span>
+      </a>
     );
   }
 );
@@ -198,9 +278,34 @@ Link004.displayName = "Link004";
  */
 export const Link005 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
   ({ children, className, active, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a";
+    if (asChild && React.isValidElement(children)) {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
+        ref,
+        ...props,
+        className: cn(
+          "group relative inline-flex items-center px-3 py-1.5 text-sm font-medium tracking-wide overflow-hidden rounded-md transition-colors duration-250",
+          active ? "text-slate-950 font-semibold" : "text-white hover:text-slate-950",
+          child.props.className,
+          className
+        ),
+        children: (
+          <>
+            <span
+              aria-hidden="true"
+              className={cn(
+                "absolute inset-0 z-0 bg-amber-400 -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0",
+                active ? "translate-x-0" : ""
+              )}
+            />
+            <span className="relative z-10 inline-flex items-center gap-1.5">{child.props.children}</span>
+          </>
+        ),
+      });
+    }
+
     return (
-      <Comp
+      <a
         ref={ref}
         className={cn(
           "group relative inline-flex items-center px-3 py-1.5 text-sm font-medium tracking-wide overflow-hidden rounded-md transition-colors duration-250",
@@ -216,8 +321,8 @@ export const Link005 = React.forwardRef<HTMLAnchorElement, SkiperLinkProps>(
             active ? "translate-x-0" : ""
           )}
         />
-        <span className="relative z-10">{children}</span>
-      </Comp>
+        <span className="relative z-10 inline-flex items-center gap-1.5">{children}</span>
+      </a>
     );
   }
 );
