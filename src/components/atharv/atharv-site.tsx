@@ -1,21 +1,24 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
   Check,
+  ChevronDown,
   Clock3,
   Layers3,
   Mail,
   MapPin,
   Menu,
   Phone,
+  Search,
   ShieldCheck,
   X,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Link001 } from "@/components/ui/skiper40";
 
 const company = {
   phone: "+91 8879 555 125",
@@ -28,7 +31,7 @@ export const services = [
     number: "01",
     title: "Interior Painting & Finishing",
     href: "/interior-painting-finishing",
-    image: "/atharv-images/interior-painting-finishing.webp",
+    image: "/atharv-images/interior-painting-hero.webp",
     summary: "Thoughtful colours and refined interior finishes, delivered with care.",
     heading: "Flawless finishes that transform your interiors.",
     description:
@@ -38,12 +41,16 @@ export const services = [
       "Carefully prepared surfaces and clean, even coats",
       "Finishes suited to residential and commercial interiors",
     ],
+    gallery: [
+      { src: "/atharv-images/interior-painting-hero.webp", alt: "Beautifully finished modern living room with designer ceiling" },
+      { src: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern architectural interior with reflective surfaces" },
+    ],
   },
   {
     number: "02",
     title: "Exterior Painting & Building Repainting",
     href: "/exterior-painting-building-repainting",
-    image: "/atharv-images/exterior-building-restoration.webp",
+    image: "/atharv-images/exterior-painting-repairing.webp",
     summary: "Building repainting that refreshes your façade and elevates its appearance.",
     heading: "A considered new finish for your building’s exterior.",
     description:
@@ -53,12 +60,16 @@ export const services = [
       "Repainting to renew the look of existing façades",
       "Work coordinated with your building and site requirements",
     ],
+    gallery: [
+      { src: "/atharv-images/exterior-painting-repairing.webp", alt: "Building with scaffolding undergoing exterior painting" },
+      { src: "/atharv-images/project-towers-construction.jpeg", alt: "Commercial towers under construction" },
+    ],
   },
   {
     number: "03",
     title: "Civil Repairs & Structural Maintenance",
     href: "/civil-repairs-structural-maintenance",
-    image: "/atharv-images/structural-repairs.webp",
+    image: "/atharv-images/civil-repairs-maintenance.webp",
     summary: "Careful building maintenance focused on strength, safety and longevity.",
     heading: "Restore strength, stability and structural integrity.",
     description:
@@ -68,12 +79,16 @@ export const services = [
       "Site-specific repair planning and execution",
       "Work focused on long-term durability and function",
     ],
+    gallery: [
+      { src: "/atharv-images/civil-repairs-maintenance.webp", alt: "Construction workers with safety gear at repair site" },
+      { src: "/atharv-images/project-site-architects.jpeg", alt: "Construction professionals at a building site" },
+    ],
   },
   {
     number: "04",
     title: "Waterproofing Solutions",
     href: "/waterproofing-solutions",
-    image: "/atharv-images/waterproofing.webp",
+    image: "/atharv-images/waterproofing-solutions.webp",
     summary: "Purposeful waterproofing to help protect your property from moisture.",
     heading: "Lasting protection against leaks and moisture damage.",
     description:
@@ -83,12 +98,15 @@ export const services = [
       "Solutions for leaks, seepage and moisture exposure",
       "An approach shaped by the building and its requirements",
     ],
+    gallery: [
+      { src: "/atharv-images/waterproofing-solutions.webp", alt: "Worker applying waterproof coating on a surface" },
+    ],
   },
   {
     number: "05",
     title: "Texture, PU & Polishing Works",
     href: "/texture-pu-polishing-works",
-    image: "/atharv-images/texture-polishing.webp",
+    image: "/atharv-images/texture-pu-polishing.webp",
     summary: "Distinctive surface treatments with a premium architectural finish.",
     heading: "Premium surface finishes, made to leave a lasting impression.",
     description:
@@ -103,7 +121,7 @@ export const services = [
     number: "06",
     title: "Road & Miscellaneous Civil Works",
     href: "/road-miscellaneous-civil-works",
-    image: "/atharv-images/road-civil-works.webp",
+    image: "/atharv-images/road-civil-works-hero.webp",
     summary: "Reliable civil and road works, planned for long-term performance.",
     heading: "Civil infrastructure built around your project’s needs.",
     description:
@@ -145,93 +163,293 @@ function QuoteButton({ className = "" }: { className?: string }) {
   );
 }
 
-export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const pathname = useRouterState({ select: (state) => state.location.pathname });
+function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  const filteredServices = services.filter((s) =>
+    s.title.toLowerCase().includes(query.toLowerCase()) ||
+    s.summary.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const filteredProjects = projects.filter((p) =>
+    p.title.toLowerCase().includes(query.toLowerCase()) ||
+    p.category.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
-    <header className="ad-header">
-      <div className="ad-container ad-header-inner">
-        <Link
-          aria-label="Atharv Decorators home"
-          className="ad-brand-link"
-          onClick={() => setIsOpen(false)}
-          from="/"
-          to={homePath}
-        >
-          <Logo />
-        </Link>
-        <Button
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Close navigation" : "Open navigation"}
-          className="ad-menu-toggle"
-          onClick={() => setIsOpen((current) => !current)}
-          size="icon"
-          variant="outline"
-        >
-          {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-        </Button>
-        <nav aria-label="Main navigation" className={`ad-nav${isOpen ? " is-open" : ""}`}>
-          <Link
-            aria-current={pathname === homePath ? "page" : undefined}
-            className={`ad-nav-link${pathname === homePath ? " is-active" : ""}`}
-            onClick={() => setIsOpen(false)}
-            to={homePath}
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-2xl overflow-hidden rounded-2xl border border-white/15 bg-[#0e161a] text-white shadow-2xl animate-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
+          <Search className="h-5 w-5 text-amber-400 shrink-0" />
+          <input
+            autoFocus
+            type="text"
+            placeholder="Search services, projects, keywords... (Press Esc to close)"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="w-full bg-transparent text-base text-white placeholder-white/40 focus:outline-none"
+          />
+          {query && (
+            <button
+              onClick={() => setQuery("")}
+              className="text-xs uppercase tracking-wider text-white/40 hover:text-white"
+            >
+              Clear
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            className="rounded p-1 text-white/50 hover:bg-white/10 hover:text-white"
+            aria-label="Close search"
           >
-            Home
-          </Link>
-          <Link
-            aria-current={pathname === aboutPath ? "page" : undefined}
-            className={`ad-nav-link${pathname === aboutPath ? " is-active" : ""}`}
-            onClick={() => setIsOpen(false)}
-            from="/"
-            to={aboutPath}
-          >
-            About
-          </Link>
-          <Link
-            aria-current={pathname === projectsPath ? "page" : undefined}
-            className={`ad-nav-link${pathname === projectsPath ? " is-active" : ""}`}
-            onClick={() => setIsOpen(false)}
-            from="/"
-            to={projectsPath}
-          >
-            Projects
-          </Link>
-          <Link
-            aria-current={pathname === contactPath ? "page" : undefined}
-            className={`ad-nav-link${pathname === contactPath ? " is-active" : ""}`}
-            onClick={() => setIsOpen(false)}
-            from="/"
-            to={contactPath}
-          >
-            Contact
-          </Link>
-          <details className={`ad-nav-dropdown${pathname === servicesPath || services.some((service) => pathname === service.href) ? " is-active" : ""}`}>
-            <summary aria-label="Browse services">
-              Services <ArrowDown aria-hidden="true" size={13} />
-            </summary>
-            <div className="ad-nav-service-menu">
-              <Link className="ad-nav-service-overview" onClick={() => setIsOpen(false)} from="/" to={servicesPath}>
-                View all services <ArrowRight aria-hidden="true" size={14} />
-              </Link>
-              {services.map((service) => (
+            <X size={18} />
+          </button>
+        </div>
+
+        <div className="max-h-[60vh] overflow-y-auto p-4 space-y-4">
+          <div>
+            <div className="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">Services</div>
+            <div className="mt-1 space-y-1">
+              {filteredServices.map((service) => (
                 <Link
-                  aria-current={pathname === service.href ? "page" : undefined}
                   key={service.number}
-                  onClick={() => setIsOpen(false)}
-                  from="/"
                   to={service.href}
+                  onClick={onClose}
+                  className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm hover:bg-white/10 transition-colors group"
                 >
-                  <span>{service.number}</span> {service.title}
+                  <div className="flex items-center gap-3">
+                    <span className="font-serif text-amber-400 font-bold">{service.number}</span>
+                    <span className="text-white/90 group-hover:text-amber-400 font-medium">{service.title}</span>
+                  </div>
+                  <ArrowRight size={14} className="text-white/40 group-hover:text-amber-400 transition-colors" />
+                </Link>
+              ))}
+              {filteredServices.length === 0 && (
+                <div className="px-3 py-2 text-xs text-white/40">No matching services</div>
+              )}
+            </div>
+          </div>
+
+          <div>
+            <div className="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400">Projects</div>
+            <div className="mt-1 space-y-1">
+              {filteredProjects.slice(0, 5).map((project) => (
+                <Link
+                  key={project.title}
+                  to={projectsPath}
+                  onClick={onClose}
+                  className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm hover:bg-white/10 transition-colors group"
+                >
+                  <div className="flex items-center gap-3">
+                    <img src={project.image} alt={project.title} className="w-8 h-8 rounded object-cover" />
+                    <div>
+                      <div className="text-white/90 group-hover:text-amber-400 font-medium">{project.title}</div>
+                      <div className="text-xs text-white/50">{project.category}</div>
+                    </div>
+                  </div>
+                  <ArrowRight size={14} className="text-white/40 group-hover:text-amber-400 transition-colors" />
                 </Link>
               ))}
             </div>
-          </details>
-          <QuoteButton />
-        </nav>
+          </div>
+
+          <div className="border-t border-white/10 pt-3 flex items-center justify-between px-3 text-xs text-white/40">
+            <span>Press <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-white/80">ESC</kbd> to exit</span>
+            <Link to={projectsPath} onClick={onClose} className="hover:text-amber-400">View all projects &rarr;</Link>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
+  );
+}
+
+export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 20);
+    }
+    function handleKeyDown(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const isServicesActive = pathname === servicesPath || services.some((service) => pathname === service.href);
+
+  return (
+    <>
+      <header className={`ad-header${isScrolled ? " is-scrolled" : ""}`}>
+        <div className="ad-container ad-header-inner">
+          <Link
+            aria-label="Atharv Decorators home"
+            className="ad-brand-link"
+            onClick={() => setIsOpen(false)}
+            from="/"
+            to={homePath}
+          >
+            <Logo />
+          </Link>
+          <Button
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            className="ad-menu-toggle"
+            onClick={() => setIsOpen((current) => !current)}
+            size="icon"
+            variant="outline"
+          >
+            {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </Button>
+
+          <nav aria-label="Main navigation" className={`ad-nav${isOpen ? " is-open" : ""}`}>
+            <Link001
+              asChild
+              active={pathname === homePath}
+              underlineColor="bg-amber-400"
+            >
+              <Link
+                aria-current={pathname === homePath ? "page" : undefined}
+                className={`ad-nav-link${pathname === homePath ? " is-active" : ""}`}
+                onClick={() => setIsOpen(false)}
+                to={homePath}
+              >
+                Home
+              </Link>
+            </Link001>
+
+            <Link001
+              asChild
+              active={pathname === aboutPath}
+              underlineColor="bg-amber-400"
+            >
+              <Link
+                aria-current={pathname === aboutPath ? "page" : undefined}
+                className={`ad-nav-link${pathname === aboutPath ? " is-active" : ""}`}
+                onClick={() => setIsOpen(false)}
+                from="/"
+                to={aboutPath}
+              >
+                About
+              </Link>
+            </Link001>
+
+            <div className="ad-nav-dropdown-container">
+              <Link001
+                asChild
+                active={isServicesActive}
+                underlineColor="bg-amber-400"
+              >
+                <Link
+                  aria-current={isServicesActive ? "page" : undefined}
+                  className={`ad-nav-link ad-services-trigger${isServicesActive ? " is-active" : ""}`}
+                  onClick={() => setIsOpen(false)}
+                  from="/"
+                  to={servicesPath}
+                >
+                  Services <ChevronDown className="ad-nav-chevron" size={14} />
+                </Link>
+              </Link001>
+
+              <div className="ad-nav-service-menu">
+                <Link className="ad-nav-service-overview" onClick={() => setIsOpen(false)} from="/" to={servicesPath}>
+                  View all services <ArrowRight aria-hidden="true" size={14} />
+                </Link>
+                {services.map((service) => (
+                  <Link
+                    aria-current={pathname === service.href ? "page" : undefined}
+                    key={service.number}
+                    onClick={() => setIsOpen(false)}
+                    from="/"
+                    to={service.href}
+                  >
+                    <span>{service.number}</span> {service.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link001
+              asChild
+              active={pathname === projectsPath}
+              underlineColor="bg-amber-400"
+            >
+              <Link
+                aria-current={pathname === projectsPath ? "page" : undefined}
+                className={`ad-nav-link${pathname === projectsPath ? " is-active" : ""}`}
+                onClick={() => setIsOpen(false)}
+                from="/"
+                to={projectsPath}
+              >
+                Projects
+              </Link>
+            </Link001>
+
+            <Link001
+              asChild
+              active={pathname === contactPath}
+              underlineColor="bg-amber-400"
+            >
+              <Link
+                aria-current={pathname === contactPath ? "page" : undefined}
+                className={`ad-nav-link${pathname === contactPath ? " is-active" : ""}`}
+                onClick={() => setIsOpen(false)}
+                from="/"
+                to={contactPath}
+              >
+                Contact
+              </Link>
+            </Link001>
+
+            <span className="ad-nav-divider" aria-hidden="true" />
+
+            <button
+              type="button"
+              className="ad-search-btn"
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="Search website"
+              title="Search (Ctrl+K)"
+            >
+              <Search size={18} />
+            </button>
+          </nav>
+        </div>
+      </header>
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+    </>
   );
 }
 
@@ -327,9 +545,25 @@ function ServiceGrid({ items = services }: { items?: readonly Service[] }) {
   );
 }
 
-function PageHero({ title, eyebrow }: { title: string; eyebrow: string }) {
+function PageHero({
+  title,
+  eyebrow,
+  backgroundImage = "/atharv-images/project-futuristic-building.jpeg",
+}: {
+  title: string;
+  eyebrow: string;
+  backgroundImage?: string;
+}) {
   return (
-    <section aria-label={eyebrow} className="ad-page-hero">
+    <section
+      aria-label={eyebrow}
+      className="ad-page-hero"
+      style={{
+        backgroundImage: `linear-gradient(90deg, rgba(10,16,20,0.92) 0%, rgba(10,16,20,0.72) 48%, rgba(10,16,20,0.52) 100%), url("${backgroundImage}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="ad-container">
         <nav aria-label="Breadcrumb" className="ad-breadcrumb">
           <Link to={homePath}>Home</Link>
@@ -377,6 +611,49 @@ function ContactBand() {
             Get in touch <ArrowUpRight aria-hidden="true" size={16} />
           </a>
         </Button>
+      </div>
+    </section>
+  );
+}
+
+const clientLogos = [
+  { name: "Taj Hotels", src: "/atharv-images/client-taj.webp" },
+  { name: "MSC Bank", src: "/atharv-images/client-msc-bank.webp" },
+  { name: "Talwalkars", src: "/atharv-images/client-talwalkars.webp" },
+  { name: "L&T Construction", src: "/atharv-images/client-lt-construction.webp" },
+  { name: "MAN Infraconstruction", src: "/atharv-images/client-man-infra.webp" },
+  { name: "Unity Construction", src: "/atharv-images/client-unity-construction.webp" },
+  { name: "Turner", src: "/atharv-images/client-turner.webp" },
+  { name: "Amazon", src: "/atharv-images/client-amazon.webp" },
+  { name: "Balsan Developers", src: "/atharv-images/client-balsan-developers.webp" },
+  { name: "Rebel Foods", src: "/atharv-images/client-rebel-foods.webp" },
+  { name: "Runwal Greens", src: "/atharv-images/client-runwal-greens.webp" },
+  { name: "R Galleria", src: "/atharv-images/client-r-galleria.webp" },
+] as const;
+
+function ClientLogosSection() {
+  return (
+    <section aria-label="Trusted Clients" className="py-14 border-b border-border bg-[#faf9f6] dark:bg-card">
+      <div className="ad-container">
+        <p className="text-center text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-8">
+          Trusted by Industry Leaders &amp; Prestigious Developments
+        </p>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center">
+          {clientLogos.map((client) => (
+            <div
+              key={client.name}
+              className="p-3 flex items-center justify-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
+              title={client.name}
+            >
+              <img
+                src={client.src}
+                alt={client.name}
+                className="max-h-12 w-auto object-contain transition-transform duration-200 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -448,6 +725,8 @@ export function HomePage() {
           </div>
         </div>
       </div>
+
+      <ClientLogosSection />
 
       <section aria-labelledby="ad-about-title" className="ad-container ad-about-section">
         <div className="ad-about-visual">
@@ -556,7 +835,7 @@ export function HomePage() {
 export function AboutPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="About us" title="A legacy built on trust." />
+      <PageHero eyebrow="About us" title="A legacy built on trust." backgroundImage="/atharv-images/project-modern-architecture.jpeg" />
       <section aria-labelledby="ad-company-title" className="ad-container ad-about-section">
         <div className="ad-about-visual">
           <div className="ad-about-image">
@@ -630,7 +909,7 @@ export function AboutPage() {
 export function ServicesPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Our services" title="Complete care for your property." />
+      <PageHero eyebrow="Our services" title="Complete care for your property." backgroundImage="/atharv-images/project-glass-building.jpeg" />
       <section aria-labelledby="ad-services-title" className="ad-section ad-services-section">
         <div className="ad-container">
           <div className="ad-section-topline">
@@ -654,23 +933,26 @@ export function ServicesPage() {
 }
 
 const projects = [
-  { title: "Commercial tower development", category: "Commercial buildings", image: "/atharv-images/projects-commercial-towers.jpg", alt: "Commercial towers rising at an active construction site" },
-  { title: "Contemporary glass architecture", category: "Building exteriors", image: "/atharv-images/projects-glass-office.jpg", alt: "Modern glass office building reflecting its surroundings" },
-  { title: "A new perspective on the skyline", category: "Architectural buildings", image: "/atharv-images/projects-sculptural-building.jpg", alt: "Sculptural white contemporary building viewed against the sky" },
-  { title: "Care on every construction site", category: "Project delivery", image: "/atharv-images/projects-construction-team.jpg", alt: "Construction professionals reviewing plans on site" },
-  { title: "A refreshed building exterior", category: "Painting & restoration", image: "/atharv-images/projects-facade-restoration.webp", alt: "Large apartment façade undergoing exterior repainting" },
-  { title: "Purpose-built road works", category: "Road & civil works", image: "/atharv-images/projects-road-construction.webp", alt: "Road construction machinery working along a newly graded site" },
-  { title: "Interior finishing details", category: "Interior finishes", image: "/atharv-images/projects-interior-finish.webp", alt: "Warm, finished modern interior with detailed ceiling lighting" },
-  { title: "Building from the ground up", category: "Civil construction", image: "/atharv-images/projects-excavation.jpg", alt: "Excavator moving material at an active construction site" },
-  { title: "Practical waterproofing", category: "Waterproofing", image: "/atharv-images/projects-waterproofing.webp", alt: "Waterproof coating being carefully applied to a surface" },
-  { title: "Structural repair in progress", category: "Civil repairs", image: "/atharv-images/projects-structural-repairs.webp", alt: "Building repair and maintenance underway on site" },
-  { title: "Refined surface finishes", category: "Texture & polishing", image: "/atharv-images/projects-texture-finish.webp", alt: "Detailed stone-like wall texture finish, shown close up" },
+  { title: "Commercial tower development", category: "Commercial buildings", image: "/atharv-images/project-towers-construction.jpeg", alt: "Commercial towers under construction with cranes against the sky" },
+  { title: "Contemporary glass architecture", category: "Building exteriors", image: "/atharv-images/project-glass-building.jpeg", alt: "Modern dark glass office building with reflective facade" },
+  { title: "A new perspective on the skyline", category: "Architectural buildings", image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
+  { title: "Care on every construction site", category: "Project delivery", image: "/atharv-images/project-site-architects.jpeg", alt: "Construction professionals with blueprints at a building site" },
+  { title: "A refreshed building exterior", category: "Painting & restoration", image: "/atharv-images/exterior-painting-repairing.webp", alt: "Building with scaffolding undergoing exterior painting and repair" },
+  { title: "Purpose-built road works", category: "Road & civil works", image: "/atharv-images/road-civil-works-hero.webp", alt: "Road construction with heavy yellow machinery at work" },
+  { title: "Interior finishing details", category: "Interior finishes", image: "/atharv-images/interior-painting-hero.webp", alt: "Beautifully finished modern living room interior with designer ceiling" },
+  { title: "Building from the ground up", category: "Civil construction", image: "/atharv-images/project-excavator-action.jpeg", alt: "Excavator pouring dirt at an active construction site" },
+  { title: "Practical waterproofing", category: "Waterproofing", image: "/atharv-images/waterproofing-solutions.webp", alt: "Worker applying waterproof coating on a surface" },
+  { title: "Structural repair in progress", category: "Civil repairs", image: "/atharv-images/civil-repairs-maintenance.webp", alt: "Construction workers with safety gear at a repair site" },
+  { title: "Refined surface finishes", category: "Texture & polishing", image: "/atharv-images/texture-pu-polishing.webp", alt: "Detailed textured wall panel finish with herringbone pattern" },
+  { title: "Modern architectural landmark", category: "Architecture", image: "/atharv-images/project-modern-architecture.jpeg", alt: "Modern white architectural building with geometric facade" },
+  { title: "Futuristic civic building", category: "Commercial buildings", image: "/atharv-images/project-futuristic-building.jpeg", alt: "Curved futuristic civic building with sweeping design" },
+  { title: "Contemporary structure", category: "Building exteriors", image: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern glass and concrete civic structure with reflective pool" },
 ] as const;
 
 export function ProjectsPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Our projects" title="Built with care. Made to last." />
+      <PageHero eyebrow="Our projects" title="Built with care. Made to last." backgroundImage="/atharv-images/project-tower-site.jpeg" />
       <section aria-labelledby="ad-project-gallery-title" className="ad-section ad-project-gallery-section">
         <div className="ad-container">
           <div className="ad-section-topline">
@@ -769,7 +1051,7 @@ function ContactEnquiryForm() {
 export function ContactPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Contact us" title="Let’s talk about your project." />
+      <PageHero eyebrow="Contact us" title="Let’s talk about your project." backgroundImage="/atharv-images/project-site-architects.jpeg" />
       <section aria-labelledby="ad-contact-title" className="ad-contact-page-section">
         <div className="ad-container ad-contact-page-grid">
           <div className="ad-contact-page-copy">
@@ -807,7 +1089,11 @@ export function ContactPage() {
 export function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <SiteFrame>
-      <PageHero eyebrow={service.title} title={service.title} />
+      <PageHero
+        eyebrow={service.title}
+        title={service.title}
+        backgroundImage="/atharv-images/project-futuristic-building.jpeg"
+      />
       <section aria-labelledby="ad-service-detail-title" className="ad-container ad-detail-layout">
         <div className="ad-detail-copy">
           <Eyebrow>About this service</Eyebrow>
@@ -833,6 +1119,45 @@ export function ServiceDetailPage({ service }: { service: Service }) {
           <ValueStrip />
         </div>
       </section>
+
+      {/* Featured Projects Gallery for this service (as on reference site) */}
+      <section aria-labelledby="ad-service-gallery-title" className="ad-section ad-project-gallery-section">
+        <div className="ad-container">
+          <div className="ad-section-topline">
+            <div>
+              <Eyebrow>Featured Project Work</Eyebrow>
+              <h2 className="ad-heading" id="ad-service-gallery-title">
+                On-site execution &amp; <em>workmanship.</em>
+              </h2>
+            </div>
+            <p className="ad-body-copy">
+              A curated gallery of civil repairs, painting, restoration and waterproofing projects delivered across Maharashtra.
+            </p>
+          </div>
+          <div className="ad-project-gallery">
+            {projects.slice(0, 6).map((project, index) => (
+              <figure className="ad-gallery-item" key={project.title}>
+                <div className="ad-gallery-image">
+                  <img
+                    alt={project.alt}
+                    decoding="async"
+                    height="680"
+                    loading="lazy"
+                    src={project.image}
+                    width="1000"
+                  />
+                  <span className="ad-gallery-index">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <figcaption>
+                  <span>{project.category}</span>
+                  <strong>{project.title}</strong>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="ad-related-services-title" className="ad-section ad-services-section">
         <div className="ad-container">
           <div className="ad-section-topline">

@@ -196,11 +196,22 @@
 }
 
 .ad-header {
-  position: relative;
-  z-index: 10;
-  border-bottom: 1px solid color-mix(in oklab, var(--brand-deep) 10%, transparent);
-  background: var(--brand-ink);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin-bottom: -88px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 16, 20, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: var(--brand-paper);
+  transition: background-color 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.ad-header.is-scrolled {
+  background: rgba(10, 15, 19, 0.92);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.65);
 }
 
 .ad-header-inner {
@@ -208,14 +219,19 @@
   min-height: 88px;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 32px;
 }
 
 .ad-logo {
   display: block;
-  width: 214px;
+  width: 215px;
   max-width: 100%;
   height: auto;
+  transition: opacity 200ms ease;
+}
+
+.ad-logo:hover {
+  opacity: 0.95;
 }
 
 .ad-brand-link {
@@ -226,91 +242,133 @@
 .ad-nav {
   display: flex;
   align-items: center;
-  gap: 34px;
-  font-size: 12px;
-  font-weight: 550;
+  gap: 30px;
 }
 
 .ad-nav-link {
-  padding-block: 9px;
-  color: color-mix(in oklab, var(--brand-paper) 78%, transparent) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-block: 8px;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 14.5px;
+  font-weight: 550;
+  letter-spacing: 0.01em;
   transition: color 180ms ease;
 }
 
 .ad-nav-link:hover,
 .ad-nav-link.is-active {
-  color: var(--brand-gold) !important;
+  color: #ffffff !important;
 }
 
-.ad-nav-dropdown {
+.ad-nav-dropdown-container {
   position: relative;
-  align-self: center;
-}
-
-.ad-nav-dropdown > summary {
   display: inline-flex;
-  min-height: 44px;
   align-items: center;
-  gap: 5px;
-  padding-block: 9px;
-  color: color-mix(in oklab, var(--brand-paper) 78%, transparent);
+}
+
+.ad-services-trigger {
   cursor: pointer;
-  list-style: none;
-  transition: color 180ms ease;
 }
 
-.ad-nav-dropdown > summary::-webkit-details-marker {
-  display: none;
+.ad-nav-chevron {
+  transition: transform 220ms ease;
+  opacity: 0.75;
 }
 
-.ad-nav-dropdown.is-active > summary,
-.ad-nav-dropdown[open] > summary,
-.ad-nav-dropdown > summary:hover {
-  color: var(--brand-gold);
+.ad-nav-dropdown-container:hover .ad-nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
 }
 
 .ad-nav-service-menu {
   position: absolute;
-  top: calc(100% + 8px);
-  left: -18px;
-  z-index: 12;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 60;
   display: grid;
-  width: min(356px, calc(100vw - 36px));
+  width: min(340px, calc(100vw - 36px));
   max-height: min(70vh, 490px);
   overflow: auto;
-  border: 1px solid var(--brand-line-light);
-  background: var(--brand-ink);
-  box-shadow: var(--brand-shadow-soft);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(14, 21, 26, 0.97);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+}
+
+.ad-nav-dropdown-container:hover .ad-nav-service-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
 }
 
 .ad-nav-service-menu a {
   display: flex;
-  min-height: 43px;
+  min-height: 44px;
   align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  border-bottom: 1px solid color-mix(in oklab, var(--brand-paper) 10%, transparent);
-  color: color-mix(in oklab, var(--brand-paper) 82%, transparent);
-  font-size: 11px;
+  gap: 12px;
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
   line-height: 1.5;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .ad-nav-service-menu a:hover,
 .ad-nav-service-menu a[aria-current="page"] {
-  background: color-mix(in oklab, var(--brand-green) 42%, var(--brand-ink));
+  background: rgba(255, 255, 255, 0.08);
   color: var(--brand-gold);
 }
 
 .ad-nav-service-menu a > span {
-  flex: 0 0 21px;
+  flex: 0 0 22px;
   color: var(--brand-gold);
   font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
 }
 
 .ad-nav-service-menu .ad-nav-service-overview {
   justify-content: space-between;
   color: var(--brand-gold);
-  font-weight: 650;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ad-nav-divider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.22);
+  margin-inline: 4px;
+}
+
+.ad-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.ad-search-btn:hover {
+  color: var(--brand-gold);
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.08);
 }
 
 .ad-header-cta {
@@ -341,10 +399,10 @@
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: 660px;
+  min-height: 700px;
   align-items: center;
   overflow: hidden;
-  padding-block: 82px 102px;
+  padding-block: calc(82px + 88px) 102px;
   background: var(--brand-deep);
   color: var(--brand-paper);
 }
@@ -1172,21 +1230,18 @@
 .ad-page-hero {
   position: relative;
   display: flex;
-  min-height: 325px;
+  min-height: 380px;
   align-items: end;
   overflow: hidden;
-  padding-block: 58px 52px;
+  padding-block: calc(65px + 88px) 55px;
   background: var(--brand-deep);
   color: var(--brand-paper);
+  background-position: center;
+  background-size: cover;
 }
 
 .ad-page-hero::before {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(90deg, color-mix(in oklab, var(--brand-ink) 92%, transparent), color-mix(in oklab, var(--brand-ink) 55%, transparent)), url("/atharv-images/construction-skyline.jpg");
-  background-position: center, center 48%;
-  background-size: cover;
-  content: "";
+  display: none;
 }
 
 .ad-page-hero .ad-container {
@@ -1486,17 +1541,17 @@
     display: none;
     align-items: stretch;
     gap: 0;
-    padding: 10px 18px 16px;
-    border-bottom: 1px solid var(--brand-line-light);
-    background: var(--brand-ink);
+    padding: 12px 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(14, 21, 26, 0.98);
+    backdrop-filter: blur(16px);
   }
   .ad-nav.is-open { display: flex; flex-direction: column; }
-  .ad-nav-link { padding-block: 11px; border-bottom: 1px solid color-mix(in oklab, var(--brand-paper) 10%, transparent); }
-  .ad-nav-dropdown { align-self: stretch; border-bottom: 1px solid color-mix(in oklab, var(--brand-paper) 10%, transparent); }
-  .ad-nav-dropdown > summary { min-height: 43px; justify-content: space-between; }
-  .ad-nav-dropdown[open] > summary { color: var(--brand-gold); }
-  .ad-nav-service-menu { position: static; width: 100%; max-height: min(55vh, 370px); border-right: 0; border-bottom: 0; border-left: 0; box-shadow: none; }
-  .ad-nav-service-menu a { min-height: 40px; padding-left: 13px; font-size: 10px; }
+  .ad-nav-link { padding-block: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); font-size: 14px; }
+  .ad-nav-dropdown-container { display: flex; flex-direction: column; align-items: stretch; }
+  .ad-nav-service-menu { position: static; transform: none; width: 100%; max-height: min(55vh, 370px); opacity: 1; visibility: visible; pointer-events: auto; border: 0; background: rgba(0, 0, 0, 0.25); border-radius: 6px; margin-block: 6px; }
+  .ad-nav-divider { display: none; }
+  .ad-search-btn { align-self: flex-start; margin-top: 10px; width: auto; height: 38px; padding-inline: 14px; gap: 8px; border-radius: 6px; background: rgba(255, 255, 255, 0.08); }
   .ad-nav .ad-header-cta { align-self: flex-start; margin-top: 12px; }
   .ad-hero { min-height: auto; padding-block: 57px 79px; }
   .ad-hero-inner { min-height: unset; grid-template-columns: 1fr; }
