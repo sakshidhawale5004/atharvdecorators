@@ -10,33 +10,145 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CivilRepairsStructuralMaintenanceRouteImport } from './routes/civil-repairs-structural-maintenance'
+import { Route as ExteriorPaintingBuildingRepaintingRouteImport } from './routes/exterior-painting-building-repainting'
+import { Route as InteriorPaintingFinishingRouteImport } from './routes/interior-painting-finishing'
+import { Route as RoadMiscellaneousCivilWorksRouteImport } from './routes/road-miscellaneous-civil-works'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TexturePuPolishingWorksRouteImport } from './routes/texture-pu-polishing-works'
+import { Route as WaterproofingSolutionsRouteImport } from './routes/waterproofing-solutions'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CivilRepairsStructuralMaintenanceRoute =
+  CivilRepairsStructuralMaintenanceRouteImport.update({
+    id: '/civil-repairs-structural-maintenance',
+    path: '/civil-repairs-structural-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ExteriorPaintingBuildingRepaintingRoute =
+  ExteriorPaintingBuildingRepaintingRouteImport.update({
+    id: '/exterior-painting-building-repainting',
+    path: '/exterior-painting-building-repainting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InteriorPaintingFinishingRoute =
+  InteriorPaintingFinishingRouteImport.update({
+    id: '/interior-painting-finishing',
+    path: '/interior-painting-finishing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RoadMiscellaneousCivilWorksRoute =
+  RoadMiscellaneousCivilWorksRouteImport.update({
+    id: '/road-miscellaneous-civil-works',
+    path: '/road-miscellaneous-civil-works',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TexturePuPolishingWorksRoute = TexturePuPolishingWorksRouteImport.update({
+  id: '/texture-pu-polishing-works',
+  path: '/texture-pu-polishing-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WaterproofingSolutionsRoute = WaterproofingSolutionsRouteImport.update({
+  id: '/waterproofing-solutions',
+  path: '/waterproofing-solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
+  '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
+  '/services': typeof ServicesRoute
+  '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
+  '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
+  '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
+  '/services': typeof ServicesRoute
+  '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
+  '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
+  '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
+  '/services': typeof ServicesRoute
+  '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
+  '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/civil-repairs-structural-maintenance'
+    | '/exterior-painting-building-repainting'
+    | '/interior-painting-finishing'
+    | '/road-miscellaneous-civil-works'
+    | '/services'
+    | '/texture-pu-polishing-works'
+    | '/waterproofing-solutions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/civil-repairs-structural-maintenance'
+    | '/exterior-painting-building-repainting'
+    | '/interior-painting-finishing'
+    | '/road-miscellaneous-civil-works'
+    | '/services'
+    | '/texture-pu-polishing-works'
+    | '/waterproofing-solutions'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/civil-repairs-structural-maintenance'
+    | '/exterior-painting-building-repainting'
+    | '/interior-painting-finishing'
+    | '/road-miscellaneous-civil-works'
+    | '/services'
+    | '/texture-pu-polishing-works'
+    | '/waterproofing-solutions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CivilRepairsStructuralMaintenanceRoute: typeof CivilRepairsStructuralMaintenanceRoute
+  ExteriorPaintingBuildingRepaintingRoute: typeof ExteriorPaintingBuildingRepaintingRoute
+  InteriorPaintingFinishingRoute: typeof InteriorPaintingFinishingRoute
+  RoadMiscellaneousCivilWorksRoute: typeof RoadMiscellaneousCivilWorksRoute
+  ServicesRoute: typeof ServicesRoute
+  TexturePuPolishingWorksRoute: typeof TexturePuPolishingWorksRoute
+  WaterproofingSolutionsRoute: typeof WaterproofingSolutionsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +160,77 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/civil-repairs-structural-maintenance': {
+      id: '/civil-repairs-structural-maintenance'
+      path: '/civil-repairs-structural-maintenance'
+      fullPath: '/civil-repairs-structural-maintenance'
+      preLoaderRoute: typeof CivilRepairsStructuralMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/exterior-painting-building-repainting': {
+      id: '/exterior-painting-building-repainting'
+      path: '/exterior-painting-building-repainting'
+      fullPath: '/exterior-painting-building-repainting'
+      preLoaderRoute: typeof ExteriorPaintingBuildingRepaintingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interior-painting-finishing': {
+      id: '/interior-painting-finishing'
+      path: '/interior-painting-finishing'
+      fullPath: '/interior-painting-finishing'
+      preLoaderRoute: typeof InteriorPaintingFinishingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/road-miscellaneous-civil-works': {
+      id: '/road-miscellaneous-civil-works'
+      path: '/road-miscellaneous-civil-works'
+      fullPath: '/road-miscellaneous-civil-works'
+      preLoaderRoute: typeof RoadMiscellaneousCivilWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/texture-pu-polishing-works': {
+      id: '/texture-pu-polishing-works'
+      path: '/texture-pu-polishing-works'
+      fullPath: '/texture-pu-polishing-works'
+      preLoaderRoute: typeof TexturePuPolishingWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/waterproofing-solutions': {
+      id: '/waterproofing-solutions'
+      path: '/waterproofing-solutions'
+      fullPath: '/waterproofing-solutions'
+      preLoaderRoute: typeof WaterproofingSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CivilRepairsStructuralMaintenanceRoute:
+    CivilRepairsStructuralMaintenanceRoute,
+  ExteriorPaintingBuildingRepaintingRoute:
+    ExteriorPaintingBuildingRepaintingRoute,
+  InteriorPaintingFinishingRoute: InteriorPaintingFinishingRoute,
+  RoadMiscellaneousCivilWorksRoute: RoadMiscellaneousCivilWorksRoute,
+  ServicesRoute: ServicesRoute,
+  TexturePuPolishingWorksRoute: TexturePuPolishingWorksRoute,
+  WaterproofingSolutionsRoute: WaterproofingSolutionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

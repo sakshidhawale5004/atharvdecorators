@@ -14,4 +14,23 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it.each([
+    "/about",
+    "/services",
+    "/exterior-painting-building-repainting",
+    "/interior-painting-finishing",
+    "/waterproofing-solutions",
+    "/civil-repairs-structural-maintenance",
+    "/texture-pu-polishing-works",
+    "/road-miscellaneous-civil-works",
+  ])("matches the requested page at %s", (pathname) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes(pathname);
+    const trailingSlashMatches = router.matchRoutes(`${pathname}/`);
+
+    expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+    expect(trailingSlashMatches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
 });

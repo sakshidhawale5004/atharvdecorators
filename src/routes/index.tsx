@@ -1,23 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomePage } from "@/components/atharv/atharv-site";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
+  head: () => ({
+    meta: [
+      { title: "Atharv Decorators | Building Care, Painting & Civil Works" },
+      { name: "description", content: "Professional building painting, civil repairs, waterproofing and interior finishes by Atharv Decorators, delivering quality since 2001." },
+      { property: "og:title", content: "Atharv Decorators | Building Care, Painting & Civil Works" },
+      { property: "og:description", content: "Professional civil repairs, painting and waterproofing for residential, commercial and corporate spaces." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}

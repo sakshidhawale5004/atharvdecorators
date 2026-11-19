@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Public Atharv Decorators pages share their navigation, footer, content sections, and service data in `src/components/atharv/atharv-site.tsx`; individual route files own their page-specific metadata and route wiring. This keeps all service details consistent while giving each public URL its own searchable page.
+- Supplied website images, the company logo, the brand favicon, and the original source-image archive live in `public/` or `brand-assets/` and are committed with the site. This preserves the user's supplied assets in the synced project repository.
