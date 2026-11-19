@@ -12,8 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CivilRepairsStructuralMaintenanceRouteImport } from './routes/civil-repairs-structural-maintenance'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ExteriorPaintingBuildingRepaintingRouteImport } from './routes/exterior-painting-building-repainting'
 import { Route as InteriorPaintingFinishingRouteImport } from './routes/interior-painting-finishing'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as RoadMiscellaneousCivilWorksRouteImport } from './routes/road-miscellaneous-civil-works'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TexturePuPolishingWorksRouteImport } from './routes/texture-pu-polishing-works'
@@ -35,6 +37,11 @@ const CivilRepairsStructuralMaintenanceRoute =
     path: '/civil-repairs-structural-maintenance',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExteriorPaintingBuildingRepaintingRoute =
   ExteriorPaintingBuildingRepaintingRouteImport.update({
     id: '/exterior-painting-building-repainting',
@@ -47,6 +54,11 @@ const InteriorPaintingFinishingRoute =
     path: '/interior-painting-finishing',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RoadMiscellaneousCivilWorksRoute =
   RoadMiscellaneousCivilWorksRouteImport.update({
     id: '/road-miscellaneous-civil-works',
@@ -73,8 +85,10 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/contact': typeof ContactRoute
   '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
   '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/projects': typeof ProjectsRoute
   '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
@@ -84,8 +98,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/contact': typeof ContactRoute
   '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
   '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/projects': typeof ProjectsRoute
   '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
@@ -96,8 +112,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/civil-repairs-structural-maintenance': typeof CivilRepairsStructuralMaintenanceRoute
+  '/contact': typeof ContactRoute
   '/exterior-painting-building-repainting': typeof ExteriorPaintingBuildingRepaintingRoute
   '/interior-painting-finishing': typeof InteriorPaintingFinishingRoute
+  '/projects': typeof ProjectsRoute
   '/road-miscellaneous-civil-works': typeof RoadMiscellaneousCivilWorksRoute
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
@@ -109,8 +127,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/civil-repairs-structural-maintenance'
+    | '/contact'
     | '/exterior-painting-building-repainting'
     | '/interior-painting-finishing'
+    | '/projects'
     | '/road-miscellaneous-civil-works'
     | '/services'
     | '/texture-pu-polishing-works'
@@ -120,8 +140,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/civil-repairs-structural-maintenance'
+    | '/contact'
     | '/exterior-painting-building-repainting'
     | '/interior-painting-finishing'
+    | '/projects'
     | '/road-miscellaneous-civil-works'
     | '/services'
     | '/texture-pu-polishing-works'
@@ -131,8 +153,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/civil-repairs-structural-maintenance'
+    | '/contact'
     | '/exterior-painting-building-repainting'
     | '/interior-painting-finishing'
+    | '/projects'
     | '/road-miscellaneous-civil-works'
     | '/services'
     | '/texture-pu-polishing-works'
@@ -143,8 +167,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CivilRepairsStructuralMaintenanceRoute: typeof CivilRepairsStructuralMaintenanceRoute
+  ContactRoute: typeof ContactRoute
   ExteriorPaintingBuildingRepaintingRoute: typeof ExteriorPaintingBuildingRepaintingRoute
   InteriorPaintingFinishingRoute: typeof InteriorPaintingFinishingRoute
+  ProjectsRoute: typeof ProjectsRoute
   RoadMiscellaneousCivilWorksRoute: typeof RoadMiscellaneousCivilWorksRoute
   ServicesRoute: typeof ServicesRoute
   TexturePuPolishingWorksRoute: typeof TexturePuPolishingWorksRoute
@@ -174,6 +200,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CivilRepairsStructuralMaintenanceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/exterior-painting-building-repainting': {
       id: '/exterior-painting-building-repainting'
       path: '/exterior-painting-building-repainting'
@@ -186,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: '/interior-painting-finishing'
       fullPath: '/interior-painting-finishing'
       preLoaderRoute: typeof InteriorPaintingFinishingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/road-miscellaneous-civil-works': {
@@ -224,9 +264,11 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CivilRepairsStructuralMaintenanceRoute:
     CivilRepairsStructuralMaintenanceRoute,
+  ContactRoute: ContactRoute,
   ExteriorPaintingBuildingRepaintingRoute:
     ExteriorPaintingBuildingRepaintingRoute,
   InteriorPaintingFinishingRoute: InteriorPaintingFinishingRoute,
+  ProjectsRoute: ProjectsRoute,
   RoadMiscellaneousCivilWorksRoute: RoadMiscellaneousCivilWorksRoute,
   ServicesRoute: ServicesRoute,
   TexturePuPolishingWorksRoute: TexturePuPolishingWorksRoute,

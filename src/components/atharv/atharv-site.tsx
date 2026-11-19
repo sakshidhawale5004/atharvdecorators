@@ -1,6 +1,19 @@
 import { useState, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Check, Clock3, Layers3, Menu, ShieldCheck, X } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  Clock3,
+  Layers3,
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  ShieldCheck,
+  X,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -108,6 +121,8 @@ type Service = (typeof services)[number];
 const homePath = "/" as const;
 const servicesPath = "/services" as const;
 const aboutPath = "/about" as const;
+const projectsPath = "/projects" as const;
+const contactPath = "/contact" as const;
 
 function Logo({ footer = false }: { footer?: boolean }) {
   return (
@@ -175,14 +190,44 @@ export function Header() {
             About
           </Link>
           <Link
-            aria-current={pathname === servicesPath ? "page" : undefined}
-            className={`ad-nav-link${pathname.startsWith(servicesPath) ? " is-active" : ""}`}
+            aria-current={pathname === projectsPath ? "page" : undefined}
+            className={`ad-nav-link${pathname === projectsPath ? " is-active" : ""}`}
             onClick={() => setIsOpen(false)}
             from="/"
-            to={servicesPath}
+            to={projectsPath}
           >
-            Services
+            Projects
           </Link>
+          <Link
+            aria-current={pathname === contactPath ? "page" : undefined}
+            className={`ad-nav-link${pathname === contactPath ? " is-active" : ""}`}
+            onClick={() => setIsOpen(false)}
+            from="/"
+            to={contactPath}
+          >
+            Contact
+          </Link>
+          <details className={`ad-nav-dropdown${pathname === servicesPath || services.some((service) => pathname === service.href) ? " is-active" : ""}`}>
+            <summary aria-label="Browse services">
+              Services <ArrowDown aria-hidden="true" size={13} />
+            </summary>
+            <div className="ad-nav-service-menu">
+              <Link className="ad-nav-service-overview" onClick={() => setIsOpen(false)} from="/" to={servicesPath}>
+                View all services <ArrowRight aria-hidden="true" size={14} />
+              </Link>
+              {services.map((service) => (
+                <Link
+                  aria-current={pathname === service.href ? "page" : undefined}
+                  key={service.number}
+                  onClick={() => setIsOpen(false)}
+                  from="/"
+                  to={service.href}
+                >
+                  <span>{service.number}</span> {service.title}
+                </Link>
+              ))}
+            </div>
+          </details>
           <QuoteButton />
         </nav>
       </div>
@@ -210,6 +255,8 @@ export function Footer() {
               <Link from="/" to={homePath}>Home</Link>
               <Link from="/" to={aboutPath}>About us</Link>
               <Link from="/" to={servicesPath}>Our services</Link>
+              <Link from="/" to={projectsPath}>Projects</Link>
+              <Link from="/" to={contactPath}>Contact us</Link>
             </nav>
           </div>
           <div>
@@ -217,7 +264,7 @@ export function Footer() {
             <div className="ad-footer-links">
               <a href={company.telephone}>{company.phone}</a>
               <a href={`mailto:${company.email}`}>{company.email}</a>
-              <a href={`mailto:${company.email}?subject=Project%20enquiry`}>Enquire about a project</a>
+              <Link from="/" to={contactPath}>Enquire about a project</Link>
             </div>
           </div>
         </div>
@@ -496,7 +543,7 @@ export function HomePage() {
               <ShieldCheck aria-hidden="true" size={24} />
               <p>Careful planning and considered execution, shaped around every property.</p>
               <strong>Good work is seen in the details.</strong>
-              <ArrowLink to={servicesPath}>See what we do</ArrowLink>
+              <ArrowLink to={projectsPath}>Explore our projects</ArrowLink>
             </div>
           </div>
         </div>
@@ -599,6 +646,157 @@ export function ServicesPage() {
             </p>
           </div>
           <ServiceGrid />
+        </div>
+      </section>
+      <ContactBand />
+    </SiteFrame>
+  );
+}
+
+const projects = [
+  { title: "Commercial tower development", category: "Commercial buildings", image: "/atharv-images/projects-commercial-towers.jpg", alt: "Commercial towers rising at an active construction site" },
+  { title: "Contemporary glass architecture", category: "Building exteriors", image: "/atharv-images/projects-glass-office.jpg", alt: "Modern glass office building reflecting its surroundings" },
+  { title: "A new perspective on the skyline", category: "Architectural buildings", image: "/atharv-images/projects-sculptural-building.jpg", alt: "Sculptural white contemporary building viewed against the sky" },
+  { title: "Care on every construction site", category: "Project delivery", image: "/atharv-images/projects-construction-team.jpg", alt: "Construction professionals reviewing plans on site" },
+  { title: "A refreshed building exterior", category: "Painting & restoration", image: "/atharv-images/projects-facade-restoration.webp", alt: "Large apartment façade undergoing exterior repainting" },
+  { title: "Purpose-built road works", category: "Road & civil works", image: "/atharv-images/projects-road-construction.webp", alt: "Road construction machinery working along a newly graded site" },
+  { title: "Interior finishing details", category: "Interior finishes", image: "/atharv-images/projects-interior-finish.webp", alt: "Warm, finished modern interior with detailed ceiling lighting" },
+  { title: "Building from the ground up", category: "Civil construction", image: "/atharv-images/projects-excavation.jpg", alt: "Excavator moving material at an active construction site" },
+  { title: "Practical waterproofing", category: "Waterproofing", image: "/atharv-images/projects-waterproofing.webp", alt: "Waterproof coating being carefully applied to a surface" },
+  { title: "Structural repair in progress", category: "Civil repairs", image: "/atharv-images/projects-structural-repairs.webp", alt: "Building repair and maintenance underway on site" },
+  { title: "Refined surface finishes", category: "Texture & polishing", image: "/atharv-images/projects-texture-finish.webp", alt: "Detailed stone-like wall texture finish, shown close up" },
+] as const;
+
+export function ProjectsPage() {
+  return (
+    <SiteFrame>
+      <PageHero eyebrow="Our projects" title="Built with care. Made to last." />
+      <section aria-labelledby="ad-project-gallery-title" className="ad-section ad-project-gallery-section">
+        <div className="ad-container">
+          <div className="ad-section-topline">
+            <div>
+              <Eyebrow>Across every surface and structure</Eyebrow>
+              <h2 className="ad-heading" id="ad-project-gallery-title">
+                A closer look at <em>building care.</em>
+              </h2>
+            </div>
+            <p className="ad-body-copy">
+              Painting, building care and civil works come together in the places where we live, work and gather.
+            </p>
+          </div>
+          <div className="ad-project-gallery">
+            {projects.map((project, index) => (
+              <figure className="ad-gallery-item" key={project.image}>
+                <div className="ad-gallery-image">
+                  <img
+                    alt={project.alt}
+                    decoding="async"
+                    height="680"
+                    loading={index < 3 ? "eager" : "lazy"}
+                    src={project.image}
+                    width="1000"
+                  />
+                  <span className="ad-gallery-index">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <figcaption>
+                  <span>{project.category}</span>
+                  <strong>{project.title}</strong>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+      <ContactBand />
+    </SiteFrame>
+  );
+}
+
+function ContactEnquiryForm() {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const workType = String(formData.get("workType") ?? "General enquiry");
+    const message = String(formData.get("message") ?? "").trim();
+    const subject = encodeURIComponent(`Project enquiry — ${workType}`);
+    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nWork type: ${workType}\n\nProject details:\n${message}`);
+
+    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
+  }
+
+  return (
+    <form className="ad-contact-form" onSubmit={handleSubmit}>
+      <div className="ad-contact-form-heading">
+        <Eyebrow>Tell us what you have in mind</Eyebrow>
+        <h2 className="ad-heading" id="ad-contact-form-title">Drop us a line.</h2>
+        <p>Your enquiry opens in your email app, ready for you to send.</p>
+      </div>
+      <div className="ad-form-grid">
+        <label className="ad-form-field">
+          <span>Your name</span>
+          <input autoComplete="name" name="name" placeholder="Name" required />
+        </label>
+        <label className="ad-form-field">
+          <span>Phone</span>
+          <input autoComplete="tel" name="phone" placeholder="Your phone number" required type="tel" />
+        </label>
+        <label className="ad-form-field">
+          <span>Email address</span>
+          <input autoComplete="email" name="email" placeholder="you@example.com" required type="email" />
+        </label>
+        <label className="ad-form-field">
+          <span>Type of work</span>
+          <select defaultValue="" name="workType" required>
+            <option disabled value="">Choose a service</option>
+            {services.map((service) => <option key={service.number} value={service.title}>{service.title}</option>)}
+          </select>
+        </label>
+        <label className="ad-form-field ad-form-message">
+          <span>How can we help?</span>
+          <textarea name="message" placeholder="A few details about your project" required rows={5} />
+        </label>
+      </div>
+      <Button className="ad-primary-cta ad-contact-submit" size="default" type="submit">
+        Prepare your enquiry <ArrowUpRight aria-hidden="true" size={16} />
+      </Button>
+    </form>
+  );
+}
+
+export function ContactPage() {
+  return (
+    <SiteFrame>
+      <PageHero eyebrow="Contact us" title="Let’s talk about your project." />
+      <section aria-labelledby="ad-contact-title" className="ad-contact-page-section">
+        <div className="ad-container ad-contact-page-grid">
+          <div className="ad-contact-page-copy">
+            <Eyebrow>Good work starts with a conversation</Eyebrow>
+            <h2 className="ad-heading" id="ad-contact-title">A considered start. <em>A lasting result.</em></h2>
+            <p className="ad-body-copy">
+              Get in touch about civil repairs, painting, waterproofing or your next building project.
+              We’re here to help you find the right way forward.
+            </p>
+            <div className="ad-contact-details">
+              <a className="ad-contact-detail" href={company.telephone}>
+                <span className="ad-contact-icon"><Phone aria-hidden="true" size={18} /></span>
+                <span><span>Call our team</span><strong>{company.phone}</strong></span>
+                <ArrowUpRight aria-hidden="true" className="ad-contact-detail-arrow" size={17} />
+              </a>
+              <a className="ad-contact-detail" href={`mailto:${company.email}`}>
+                <span className="ad-contact-icon"><Mail aria-hidden="true" size={18} /></span>
+                <span><span>Email us</span><strong>{company.email}</strong></span>
+                <ArrowUpRight aria-hidden="true" className="ad-contact-detail-arrow" size={17} />
+              </a>
+              <div className="ad-contact-location">
+                <MapPin aria-hidden="true" size={17} />
+                <span>Working with residential, commercial and corporate properties.</span>
+              </div>
+            </div>
+          </div>
+          <ContactEnquiryForm />
         </div>
       </section>
       <ContactBand />
