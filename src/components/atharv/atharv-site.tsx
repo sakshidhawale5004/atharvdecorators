@@ -728,15 +728,96 @@ export const sectorCards = [
 ] as const;
 
 export const featured3x3Projects = [
-  { image: "/atharv-images/unsplash-luxury-facade.jpg", alt: "Contemporary geometric architectural glass skyscraper facade" },
-  { image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
-  { image: "/atharv-images/unsplash-modern-interior.jpg", alt: "Refined luxury architectural interior with contemporary finish" },
-  { image: "/atharv-images/project-modern-architecture.jpeg", alt: "Stepped white geometric building facade" },
-  { image: "/atharv-images/commercial-glass-building.jpg", alt: "Contemporary glass commercial building" },
-  { image: "/atharv-images/unsplash-tower-construction.jpg", alt: "Architectural tower under construction" },
-  { image: "/atharv-images/unsplash-corporate-atrium.jpg", alt: "Modern architectural glass atrium interior" },
-  { image: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern curved architectural structure" },
-  { image: "/atharv-images/interior-painting-hero.webp", alt: "Contemporary luxury residential villa with pool and interior finish" },
+  {
+    id: "perpustakaan-nasional-jakarta",
+    title: "Perpustakaan Nasional Jakarta",
+    category: "Public Building",
+    image: "/atharv-images/project-site-3.jpg",
+    alt: "Perpustakaan Nasional Jakarta - Public Building",
+    summary: "Iconic public library and cultural center featuring expansive glass facades and refined architectural finishes.",
+    location: "Jakarta, Indonesia",
+    scope: "Architectural Finishing & Surface Treatments",
+  },
+  {
+    id: "silver-grid-office",
+    title: "Silver Grid Office",
+    category: "Office Building",
+    image: "/atharv-images/project-site-4.jpg",
+    alt: "Silver Grid Office - Contemporary Office Building",
+    summary: "Geometric modern corporate workplace with angular glazing, premium insulation and civil structural maintenance.",
+    location: "Commercial Business District",
+    scope: "Civil Repairs & Exterior Glazing",
+  },
+  {
+    id: "java-news-agency",
+    title: "Java News Agency",
+    category: "Office Building",
+    image: "/atharv-images/project-site-9.jpg",
+    alt: "Java News Agency - Modern Media Headquarters",
+    summary: "Curvilinear glass skyscraper designed for high-density broadcast media operations with weather-resistant exterior coatings.",
+    location: "Metropolitan Media Center",
+    scope: "Exterior Waterproofing & Painting",
+  },
+  {
+    id: "the-phiramada",
+    title: "The Phiramada",
+    category: "Art Center",
+    image: "/atharv-images/project-site-5.jpg",
+    alt: "The Phiramada - Architectural Art Center",
+    summary: "Sculptural tiered cultural pavilion with deep fluted concrete reliefs and protective architectural coatings.",
+    location: "Cultural Arts District",
+    scope: "Texture & Decorative PU Coatings",
+  },
+  {
+    id: "black-badoo-gym",
+    title: "Black Badoo Gym",
+    category: "Sport Center",
+    image: "/atharv-images/project-site-2.jpg",
+    alt: "Black Badoo Gym - Modern Sport Center",
+    summary: "State-of-the-art sports and fitness complex enclosed in dark architectural glass with seamless waterproofing.",
+    location: "Urban Athletic Park",
+    scope: "Structural Glazing & Waterproofing",
+  },
+  {
+    id: "thinkpod-stadium",
+    title: "Thinkpod Stadium",
+    category: "Sport Center",
+    image: "/atharv-images/project-site-1.jpg",
+    alt: "Thinkpod Stadium - Futuristic Civic Arena",
+    summary: "Monumental fluid arena structure built for international sporting events with heavy-duty civil works and protective coatings.",
+    location: "National Sports Complex",
+    scope: "Civic Infrastructure & Concrete Sealing",
+  },
+  {
+    id: "cikuya-station",
+    title: "Cikuya Station",
+    category: "Public Transportation",
+    image: "/atharv-images/project-site-7.jpg",
+    alt: "Cikuya Station - Public Transportation Transit Hub",
+    summary: "High-capacity subterranean transit platform engineered with coffered vaulted arches and durable civil treatments.",
+    location: "Central Transit Corridor",
+    scope: "Road & Miscellaneous Civil Works",
+  },
+  {
+    id: "souta-airport",
+    title: "Souta Airport",
+    category: "Public Transportation",
+    image: "/atharv-images/project-site-8.jpg",
+    alt: "Souta Airport - Public Transportation Terminal",
+    summary: "Air terminal galleria featuring soaring ribbed vaults, polished high-gloss surfaces and premium finishes.",
+    location: "International Gateway",
+    scope: "High-Gloss PU Polishing & Civil Repairs",
+  },
+  {
+    id: "ophelia-luxury-hotel",
+    title: "Ophelia Luxury Hotel",
+    category: "Commercial Building",
+    image: "/atharv-images/project-site-6.jpg",
+    alt: "Ophelia Luxury Hotel - Commercial Hospitality Building",
+    summary: "Five-star resort hospitality destination with infinity pool deck waterproofing and architectural surface detailing.",
+    location: "Luxury Coastal Enclave",
+    scope: "Civil Repairs, PU Coating & Waterproofing",
+  },
 ] as const;
 
 export const latestCollageProjects = [
@@ -1002,9 +1083,9 @@ export function ServiceAboutSplit({
   );
 }
 
-/* Featured Projects 3x3 Grid (Reference 1-7) */
+/* Featured Projects 3x3 Grid (Reference 1-7, 9 New Projects) */
 export function FeaturedProjects3x3Section({
-  kicker = "FEatured Project",
+  kicker = "Featured Project",
   title = "Our Featured Project",
   description = "A curated showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results.",
 }: {
@@ -1012,6 +1093,8 @@ export function FeaturedProjects3x3Section({
   title?: string;
   description?: string;
 }) {
+  const [selectedProject, setSelectedProject] = useState<(typeof featured3x3Projects)[number] | null>(null);
+
   return (
     <section aria-labelledby="ad-featured-3x3-title" className="ad-featured-projects-section">
       <div className="ad-container">
@@ -1022,13 +1105,128 @@ export function FeaturedProjects3x3Section({
         </div>
         <div className="ad-projects-3x3-grid">
           {featured3x3Projects.map((item, idx) => (
-            <div key={idx} className="ad-project-tile">
+            <div
+              key={idx}
+              className="ad-project-tile group"
+              onClick={() => setSelectedProject(item)}
+            >
               <img src={item.image} alt={item.alt} loading="lazy" />
+              <div className="ad-project-tile-overlay">
+                <div className="ad-project-tile-content">
+                  <h3 className="ad-project-tile-title">{item.title}</h3>
+                  <p className="ad-project-tile-cat">{item.category}</p>
+                  <button
+                    type="button"
+                    className="ad-project-tile-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(item);
+                    }}
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Project Lightbox Detail Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
+  );
+}
+
+function ProjectModal({
+  project,
+  onClose,
+}: {
+  project: (typeof featured3x3Projects)[number];
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-white/15 bg-[#0b0f17] text-white shadow-2xl animate-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 rounded-full bg-black/70 p-2 text-white/80 hover:bg-black hover:text-white transition-colors"
+          aria-label="Close modal"
+        >
+          <X size={20} />
+        </button>
+
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+          <img
+            src={project.image}
+            alt={project.alt || project.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-transparent to-black/30" />
+          <div className="absolute bottom-4 left-6 right-6">
+            <span className="inline-block rounded-full bg-amber-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-400 border border-amber-500/40">
+              {project.category}
+            </span>
+            <h2 className="mt-2 font-display text-2xl sm:text-3xl font-semibold text-white">
+              {project.title}
+            </h2>
+          </div>
+        </div>
+
+        <div className="p-6 space-y-4">
+          <p className="text-sm text-white/80 leading-relaxed">
+            {project.summary}
+          </p>
+
+          <div className="grid grid-cols-2 gap-4 pt-3 border-t border-white/10 text-xs sm:text-sm">
+            <div>
+              <span className="text-white/40 block text-xs">Scope of Work</span>
+              <span className="font-semibold text-white/90">{project.scope}</span>
+            </div>
+            <div>
+              <span className="text-white/40 block text-xs">Project Delivery</span>
+              <span className="font-semibold text-amber-400">Atharv Decorators (25+ Years)</span>
+            </div>
+          </div>
+
+          <div className="pt-3 flex flex-wrap gap-3">
+            <Link
+              to={contactPath}
+              onClick={onClose}
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md"
+            >
+              Enquire About This Project <ArrowRight size={14} />
+            </Link>
+            <a
+              href={company.telephone}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-amber-500/50 text-white font-medium text-xs hover:bg-white/5 transition-colors"
+            >
+              <Phone size={13} className="text-amber-400" />
+              <span>Call +91 8879 555 125</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -1516,20 +1714,92 @@ export function ServicesPage() {
 }
 
 export const projects = [
+  {
+    title: "Perpustakaan Nasional Jakarta",
+    category: "Public Building",
+    image: "/atharv-images/project-site-3.jpg",
+    alt: "Perpustakaan Nasional Jakarta - Public Building",
+    summary: "Iconic public library and cultural center featuring expansive glass facades and refined architectural finishes.",
+    location: "Jakarta, Indonesia",
+    scope: "Architectural Finishing & Surface Treatments",
+  },
+  {
+    title: "Silver Grid Office",
+    category: "Office Building",
+    image: "/atharv-images/project-site-4.jpg",
+    alt: "Silver Grid Office - Contemporary Office Building",
+    summary: "Geometric modern corporate workplace with angular glazing, premium insulation and civil structural maintenance.",
+    location: "Commercial Business District",
+    scope: "Civil Repairs & Exterior Glazing",
+  },
+  {
+    title: "Java News Agency",
+    category: "Office Building",
+    image: "/atharv-images/project-site-9.jpg",
+    alt: "Java News Agency - Modern Media Headquarters",
+    summary: "Curvilinear glass skyscraper designed for high-density broadcast media operations with weather-resistant exterior coatings.",
+    location: "Metropolitan Media Center",
+    scope: "Exterior Waterproofing & Painting",
+  },
+  {
+    title: "The Phiramada",
+    category: "Art Center",
+    image: "/atharv-images/project-site-5.jpg",
+    alt: "The Phiramada - Architectural Art Center",
+    summary: "Sculptural tiered cultural pavilion with deep fluted concrete reliefs and protective architectural coatings.",
+    location: "Cultural Arts District",
+    scope: "Texture & Decorative PU Coatings",
+  },
+  {
+    title: "Black Badoo Gym",
+    category: "Sport Center",
+    image: "/atharv-images/project-site-2.jpg",
+    alt: "Black Badoo Gym - Modern Sport Center",
+    summary: "State-of-the-art sports and fitness complex enclosed in dark architectural glass with seamless waterproofing.",
+    location: "Urban Athletic Park",
+    scope: "Structural Glazing & Waterproofing",
+  },
+  {
+    title: "Thinkpod Stadium",
+    category: "Sport Center",
+    image: "/atharv-images/project-site-1.jpg",
+    alt: "Thinkpod Stadium - Futuristic Civic Arena",
+    summary: "Monumental fluid arena structure built for international sporting events with heavy-duty civil works and protective coatings.",
+    location: "National Sports Complex",
+    scope: "Civic Infrastructure & Concrete Sealing",
+  },
+  {
+    title: "Cikuya Station",
+    category: "Public Transportation",
+    image: "/atharv-images/project-site-7.jpg",
+    alt: "Cikuya Station - Public Transportation Transit Hub",
+    summary: "High-capacity subterranean transit platform engineered with coffered vaulted arches and durable civil treatments.",
+    location: "Central Transit Corridor",
+    scope: "Road & Miscellaneous Civil Works",
+  },
+  {
+    title: "Souta Airport",
+    category: "Public Transportation",
+    image: "/atharv-images/project-site-8.jpg",
+    alt: "Souta Airport - Public Transportation Terminal",
+    summary: "Air terminal galleria featuring soaring ribbed vaults, polished high-gloss surfaces and premium finishes.",
+    location: "International Gateway",
+    scope: "High-Gloss PU Polishing & Civil Repairs",
+  },
+  {
+    title: "Ophelia Luxury Hotel",
+    category: "Commercial Building",
+    image: "/atharv-images/project-site-6.jpg",
+    alt: "Ophelia Luxury Hotel - Commercial Hospitality Building",
+    summary: "Five-star resort hospitality destination with infinity pool deck waterproofing and architectural surface detailing.",
+    location: "Luxury Coastal Enclave",
+    scope: "Civil Repairs, PU Coating & Waterproofing",
+  },
   { title: "Commercial tower development", category: "Commercial buildings", image: "/atharv-images/project-towers-construction.jpeg", alt: "Commercial towers under construction with cranes against the sky" },
   { title: "Contemporary glass architecture", category: "Building exteriors", image: "/atharv-images/project-glass-building.jpeg", alt: "Modern dark glass office building with reflective facade" },
   { title: "A new perspective on the skyline", category: "Architectural buildings", image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
   { title: "Care on every construction site", category: "Project delivery", image: "/atharv-images/project-site-architects.jpeg", alt: "Construction professionals with blueprints at a building site" },
   { title: "A refreshed building exterior", category: "Painting & restoration", image: "/atharv-images/exterior-painting-repairing.webp", alt: "Building with scaffolding undergoing exterior painting and repair" },
-  { title: "Purpose-built road works", category: "Road & civil works", image: "/atharv-images/road-civil-works-hero.webp", alt: "Road construction with heavy yellow machinery at work" },
-  { title: "Interior finishing details", category: "Interior finishes", image: "/atharv-images/interior-painting-hero.webp", alt: "Beautifully finished modern living room interior with designer ceiling" },
-  { title: "Building from the ground up", category: "Civil construction", image: "/atharv-images/project-excavator-action.jpeg", alt: "Excavator pouring dirt at an active construction site" },
-  { title: "Practical waterproofing", category: "Waterproofing", image: "/atharv-images/waterproofing-solutions.webp", alt: "Worker applying waterproof coating on a surface" },
-  { title: "Structural repair in progress", category: "Civil repairs", image: "/atharv-images/civil-repairs-maintenance.webp", alt: "Construction workers with safety gear at a repair site" },
-  { title: "Refined surface finishes", category: "Texture & polishing", image: "/atharv-images/texture-pu-polishing.webp", alt: "Detailed textured wall panel finish with herringbone pattern" },
-  { title: "Modern architectural landmark", category: "Architecture", image: "/atharv-images/project-modern-architecture.jpeg", alt: "Modern white architectural building with geometric facade" },
-  { title: "Futuristic civic building", category: "Commercial buildings", image: "/atharv-images/project-futuristic-building.jpeg", alt: "Curved futuristic civic building with sweeping design" },
-  { title: "Contemporary structure", category: "Building exteriors", image: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern glass and concrete civic structure with reflective pool" },
 ] as const;
 
 export function ProjectsPage() {

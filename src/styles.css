@@ -2515,19 +2515,117 @@
   position: relative;
   overflow: hidden;
   aspect-ratio: 1.25;
-  border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  background: #0b0f17;
+  cursor: pointer;
 }
 
 .ad-project-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 600ms ease;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 500ms ease;
 }
 
 .ad-project-tile:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08);
+  filter: brightness(0.85);
+}
+
+.ad-project-tile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 14, 0.05) 0%,
+    rgba(6, 9, 14, 0.5) 45%,
+    rgba(6, 9, 14, 0.94) 100%
+  );
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 300ms ease, transform 300ms ease;
+  pointer-events: none;
+}
+
+.ad-project-tile:hover .ad-project-tile-overlay,
+.ad-project-tile:focus-within .ad-project-tile-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.ad-project-tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.ad-project-tile-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-display), "Cinzel", Georgia, serif;
+  font-size: clamp(17px, 1.4vw, 21px);
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.ad-project-tile-cat {
+  margin: 0 0 10px;
+  color: #fcedc5;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.92;
+}
+
+/* Matching the gold outline button in the user's reference screenshot */
+.ad-project-tile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 18px;
+  border-radius: 4px;
+  border: 1.5px solid #d4af37;
+  background: rgba(212, 175, 55, 0.14);
+  backdrop-filter: blur(8px);
+  color: #fcedc5;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.ad-project-tile-btn:hover {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.45);
+}
+
+@media (max-width: 768px) {
+  .ad-project-tile-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    padding: 16px 14px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(6, 9, 14, 0.55) 35%,
+      rgba(6, 9, 14, 0.95) 100%
+    );
+  }
 }
 
 /* 9. Powerful Solutions Banner (Reference 7, 12) */
