@@ -321,6 +321,26 @@ export function Header() {
   return (
     <>
       <header className={`ad-header${isScrolled ? " is-scrolled" : ""}`}>
+        {/* Top Contact Info Bar above header */}
+        <div className="ad-topbar">
+          <div className="ad-topbar-inner">
+            <div className="ad-topbar-contact">
+              <a href={company.telephone} className="ad-topbar-link" title="Call Us">
+                <Phone size={12} className="ad-topbar-icon" />
+                <span>+91 8879 555 125</span>
+              </a>
+              <span className="ad-topbar-sep">•</span>
+              <a href={`mailto:${company.email}`} className="ad-topbar-link" title="Email Us">
+                <Mail size={12} className="ad-topbar-icon" />
+                <span>atharvdecorators1@gmail.com</span>
+              </a>
+            </div>
+            <div className="ad-topbar-badge hidden sm:inline-flex">
+              <span>Civil Repairs &bull; Painting &bull; Waterproofing</span>
+            </div>
+          </div>
+        </div>
+
         <div className="ad-header-inner">
           <Link
             aria-label="Atharv Decorators home"
@@ -431,14 +451,21 @@ export function Header() {
               </Link>
             </Link001>
 
-            {/* Mobile Call CTA in menu drawer */}
-            <div className="lg:hidden mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2 w-full">
+            {/* Mobile Call & Email CTA in menu drawer */}
+            <div className="lg:hidden mt-3 pt-3 border-t border-white/20 flex flex-col gap-2 w-full">
               <a
                 href={company.telephone}
-                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full border border-amber-500 text-slate-900 font-bold text-xs hover:bg-amber-50"
+                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full border border-amber-500 text-amber-300 font-bold text-xs hover:bg-amber-500/20"
               >
-                <Phone size={13} className="text-amber-600" />
+                <Phone size={13} className="text-amber-400" />
                 <span>Call +91 8879 555 125</span>
+              </a>
+              <a
+                href={`mailto:${company.email}`}
+                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full border border-white/20 text-white/90 font-medium text-xs hover:bg-white/10"
+              >
+                <Mail size={13} className="text-amber-400" />
+                <span>{company.email}</span>
               </a>
             </div>
           </nav>
