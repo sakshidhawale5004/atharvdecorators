@@ -463,47 +463,65 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  padding: 4px 0;
 }
 
 .ad-services-trigger {
   cursor: pointer;
+  user-select: none;
 }
 
 .ad-nav-chevron {
-  transition: transform 220ms ease;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0.85;
   color: rgba(255, 255, 255, 0.85);
+  margin-left: 2px;
 }
 
-.ad-nav-dropdown-container:hover .ad-nav-chevron {
+.ad-nav-dropdown-container:hover .ad-nav-chevron,
+.ad-nav-dropdown-container.is-open .ad-nav-chevron {
   transform: rotate(180deg);
   opacity: 1;
   color: #fbbf24;
 }
 
+/* Invisible bridge so mouse moving from "Services" to the dropdown menu never drops hover */
+.ad-nav-service-menu::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  right: -20px;
+  height: 28px;
+  background: transparent;
+  pointer-events: auto;
+}
+
 .ad-nav-service-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  z-index: 60;
+  transform: translateX(-50%) translateY(6px);
+  z-index: 100;
   display: grid;
   width: min(340px, calc(100vw - 36px));
-  max-height: min(70vh, 490px);
-  overflow: auto;
+  max-height: min(75vh, 520px);
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 16px;
-  border: 1.5px solid rgba(212, 175, 55, 0.4);
-  background: rgba(15, 23, 42, 0.96);
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  background: rgba(11, 15, 23, 0.98);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
 }
 
-.ad-nav-dropdown-container:hover .ad-nav-service-menu {
+.ad-nav-dropdown-container:hover .ad-nav-service-menu,
+.ad-nav-dropdown-container.is-open .ad-nav-service-menu {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
@@ -512,23 +530,25 @@
 
 .ad-nav-service-menu a {
   display: flex;
-  min-height: 44px;
+  min-height: 46px;
   align-items: center;
   gap: 12px;
-  padding: 11px 16px;
+  padding: 12px 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: #ffffff;
   font-family: var(--font-display), "Cinzel", Georgia, serif;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
-  line-height: 1.5;
-  transition: background-color 160ms ease, color 160ms ease;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, padding-left 160ms ease;
 }
 
 .ad-nav-service-menu a:hover,
 .ad-nav-service-menu a[aria-current="page"] {
-  background: rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.18);
   color: #fbbf24;
+  padding-left: 22px;
 }
 
 .ad-nav-service-menu a > span {
@@ -543,7 +563,13 @@
   color: #d4af37;
   font-weight: 700;
   background: rgba(212, 175, 55, 0.1);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.ad-nav-service-menu .ad-nav-service-overview:hover {
+  background: rgba(212, 175, 55, 0.22);
+  color: #fde68a;
+  padding-left: 20px;
 }
 
 .ad-menu-toggle {

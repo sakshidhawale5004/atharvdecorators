@@ -296,7 +296,40 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  const handleServicesEnter = () => {
+    if (servicesTimeoutRef.current) {
+      clearTimeout(servicesTimeoutRef.current);
+      servicesTimeoutRef.current = null;
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    if (servicesTimeoutRef.current) {
+      clearTimeout(servicesTimeoutRef.current);
+    }
+    servicesTimeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 240);
+  };
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     function handleScroll() {
@@ -384,7 +417,12 @@ export function Header() {
               </Link>
             </Link001>
 
-            <div className="ad-nav-dropdown-container">
+            <div
+              ref={dropdownRef}
+              className={`ad-nav-dropdown-container${isServicesOpen ? " is-open" : ""}`}
+              onMouseEnter={handleServicesEnter}
+              onMouseLeave={handleServicesLeave}
+            >
               <Link001
                 asChild
                 active={isServicesActive}
@@ -392,8 +430,10 @@ export function Header() {
               >
                 <Link
                   aria-current={isServicesActive ? "page" : undefined}
+                  aria-expanded={isServicesOpen}
+                  aria-haspopup="true"
                   className={`ad-nav-link ad-services-trigger${isServicesActive ? " is-active" : ""}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsServicesOpen((prev) => !prev)}
                   from="/"
                   to={servicesPath}
                 >
@@ -401,15 +441,30 @@ export function Header() {
                 </Link>
               </Link001>
 
-              <div className="ad-nav-service-menu">
-                <Link className="ad-nav-service-overview" onClick={() => setIsOpen(false)} from="/" to={servicesPath}>
+              <div
+                className="ad-nav-service-menu"
+                onMouseEnter={handleServicesEnter}
+                onMouseLeave={handleServicesLeave}
+              >
+                <Link
+                  className="ad-nav-service-overview"
+                  onClick={() => {
+                    setIsServicesOpen(false);
+                    setIsOpen(false);
+                  }}
+                  from="/"
+                  to={servicesPath}
+                >
                   View all services <ArrowRight aria-hidden="true" size={14} />
                 </Link>
                 {services.map((service) => (
                   <Link
                     aria-current={pathname === service.href ? "page" : undefined}
                     key={service.number}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsServicesOpen(false);
+                      setIsOpen(false);
+                    }}
                     from="/"
                     to={service.href}
                   >

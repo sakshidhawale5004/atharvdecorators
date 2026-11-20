@@ -1,0 +1,1 @@
+import{o as e}from"./index-BNIOTrEL.js";var t=e;export{t as component};

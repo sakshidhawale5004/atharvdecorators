@@ -6,7 +6,7 @@ import { _ as ArrowRight, a as Phone, c as Menu, d as Linkedin, f as Instagram, 
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/atharv-site-nihMsy2t.js
+//#region node_modules/.nitro/vite/services/ssr/assets/atharv-site-CvzqgNAE.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -495,7 +495,33 @@ function Header() {
 	const [isOpen, setIsOpen] = (0, import_react.useState)(false);
 	const [isSearchOpen, setIsSearchOpen] = (0, import_react.useState)(false);
 	const [isScrolled, setIsScrolled] = (0, import_react.useState)(false);
+	const [isServicesOpen, setIsServicesOpen] = (0, import_react.useState)(false);
+	const servicesTimeoutRef = (0, import_react.useRef)(null);
+	const dropdownRef = (0, import_react.useRef)(null);
 	const pathname = useRouterState({ select: (state) => state.location.pathname });
+	const handleServicesEnter = () => {
+		if (servicesTimeoutRef.current) {
+			clearTimeout(servicesTimeoutRef.current);
+			servicesTimeoutRef.current = null;
+		}
+		setIsServicesOpen(true);
+	};
+	const handleServicesLeave = () => {
+		if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+		servicesTimeoutRef.current = setTimeout(() => {
+			setIsServicesOpen(false);
+		}, 240);
+	};
+	(0, import_react.useEffect)(() => {
+		function handleClickOutside(e) {
+			if (dropdownRef.current && !dropdownRef.current.contains(e.target)) setIsServicesOpen(false);
+		}
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+			if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+		};
+	}, []);
 	(0, import_react.useEffect)(() => {
 		function handleScroll() {
 			setIsScrolled(window.scrollY > 20);
@@ -592,15 +618,20 @@ function Header() {
 							})
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "ad-nav-dropdown-container",
+							ref: dropdownRef,
+							className: `ad-nav-dropdown-container${isServicesOpen ? " is-open" : ""}`,
+							onMouseEnter: handleServicesEnter,
+							onMouseLeave: handleServicesLeave,
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link001, {
 								asChild: true,
 								active: isServicesActive,
 								underlineColor: "bg-amber-500",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 									"aria-current": isServicesActive ? "page" : void 0,
+									"aria-expanded": isServicesOpen,
+									"aria-haspopup": "true",
 									className: `ad-nav-link ad-services-trigger${isServicesActive ? " is-active" : ""}`,
-									onClick: () => setIsOpen(false),
+									onClick: () => setIsServicesOpen((prev) => !prev),
 									from: "/",
 									to: servicesPath,
 									children: ["Services ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, {
@@ -610,9 +641,14 @@ function Header() {
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "ad-nav-service-menu",
+								onMouseEnter: handleServicesEnter,
+								onMouseLeave: handleServicesLeave,
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 									className: "ad-nav-service-overview",
-									onClick: () => setIsOpen(false),
+									onClick: () => {
+										setIsServicesOpen(false);
+										setIsOpen(false);
+									},
 									from: "/",
 									to: servicesPath,
 									children: ["View all services ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, {
@@ -621,7 +657,10 @@ function Header() {
 									})]
 								}), services.map((service) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 									"aria-current": pathname === service.href ? "page" : void 0,
-									onClick: () => setIsOpen(false),
+									onClick: () => {
+										setIsServicesOpen(false);
+										setIsOpen(false);
+									},
 									from: "/",
 									to: service.href,
 									children: [
