@@ -198,7 +198,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
       onClick={onClose}
     >
       <div
-        className="w-full max-w-2xl overflow-hidden rounded-2xl border border-white/15 bg-[#0e161a] text-white shadow-2xl animate-in zoom-in-95 duration-200"
+        className="w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-[#0a0e16] text-white shadow-2xl animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
@@ -633,7 +633,7 @@ const clientLogos = [
 
 function ClientLogosSection() {
   return (
-    <section aria-label="Trusted Clients" className="py-14 border-b border-border bg-[#faf9f6] dark:bg-card">
+    <section aria-label="Trusted Clients" className="py-14 border-b border-border bg-[#f8f9fb] dark:bg-card">
       <div className="ad-container">
         <p className="text-center text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-8">
           Trusted by Industry Leaders &amp; Prestigious Developments
