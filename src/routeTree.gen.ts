@@ -20,6 +20,7 @@ import { Route as RoadMiscellaneousCivilWorksRouteImport } from './routes/road-m
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TexturePuPolishingWorksRouteImport } from './routes/texture-pu-polishing-works'
 import { Route as WaterproofingSolutionsRouteImport } from './routes/waterproofing-solutions'
+import { Route as ProjectsSlugRouteImport } from './routes/projects_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -80,6 +81,11 @@ const WaterproofingSolutionsRoute = WaterproofingSolutionsRouteImport.update({
   path: '/waterproofing-solutions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
+  id: '/projects_/$slug',
+  path: '/projects/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
   '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
+  '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
   '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
+  '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -120,6 +128,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/texture-pu-polishing-works': typeof TexturePuPolishingWorksRoute
   '/waterproofing-solutions': typeof WaterproofingSolutionsRoute
+  '/projects_/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -135,6 +144,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/texture-pu-polishing-works'
     | '/waterproofing-solutions'
+    | '/projects/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -148,6 +158,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/texture-pu-polishing-works'
     | '/waterproofing-solutions'
+    | '/projects/$slug'
   id:
     | '__root__'
     | '/'
@@ -161,6 +172,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/texture-pu-polishing-works'
     | '/waterproofing-solutions'
+    | '/projects_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -175,6 +187,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   TexturePuPolishingWorksRoute: typeof TexturePuPolishingWorksRoute
   WaterproofingSolutionsRoute: typeof WaterproofingSolutionsRoute
+  ProjectsSlugRoute: typeof ProjectsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -256,6 +269,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WaterproofingSolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects_/$slug': {
+      id: '/projects_/$slug'
+      path: '/projects/$slug'
+      fullPath: '/projects/$slug'
+      preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -273,6 +293,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   TexturePuPolishingWorksRoute: TexturePuPolishingWorksRoute,
   WaterproofingSolutionsRoute: WaterproofingSolutionsRoute,
+  ProjectsSlugRoute: ProjectsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

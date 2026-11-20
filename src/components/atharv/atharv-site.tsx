@@ -764,6 +764,20 @@ export const featured3x3Projects = [
     summary: "Iconic public library and cultural center featuring expansive glass facades and refined architectural finishes.",
     location: "Jakarta, Indonesia",
     scope: "Architectural Finishing & Surface Treatments",
+    client: "National Heritage & Cultural Board",
+    year: "2023 - 2024",
+    area: "128,000 sq.ft.",
+    duration: "14 Months",
+    status: "Completed",
+    heading: "Preserving national heritage with modern architectural protection.",
+    description: "The National Library of Indonesia (Perpustakaan Nasional Jakarta) stands as one of Southeast Asia's foremost cultural and educational landmarks. Atharv Decorators was commissioned to execute comprehensive architectural finishing, exterior facade treatment, and specialized weather-proof protective coatings. The project required rigorous coordination to protect interior archival facilities while modernizing exterior concrete and glass surfaces under high tropical humidity.",
+    narrative2: "Our specialist teams deployed low-VOC interior treatments across the reading halls and archival stacks to prevent moisture buildup and safeguard centuries of literary history. The exterior concrete structures received high-durability elastomeric coatings engineered to resist fungal growth and thermal movement.",
+    highlights: [
+      "Precision surface restoration on exterior concrete reliefs",
+      "High-durability anti-fungal PU coatings for tropical climates",
+      "Acoustic sealing and dust-free interior painting for library wings",
+      "Structural joint sealing and glass facade waterproofing",
+    ],
   },
   {
     id: "silver-grid-office",
@@ -774,6 +788,20 @@ export const featured3x3Projects = [
     summary: "Geometric modern corporate workplace with angular glazing, premium insulation and civil structural maintenance.",
     location: "Commercial Business District",
     scope: "Civil Repairs & Exterior Glazing",
+    client: "Apex Corporate Real Estate",
+    year: "2023",
+    area: "94,000 sq.ft.",
+    duration: "9 Months",
+    status: "Completed",
+    heading: "Geometric architectural elegance engineered for modern corporate life.",
+    description: "Silver Grid Office represents the cutting edge of contemporary commercial workplace design. Atharv Decorators undertook structural civil repairs, joint waterproofing, and premium polyurethane coating across its distinctive multi-angled glass and steel facade. The result is a resilient corporate landmark protected against thermal expansion and severe weather.",
+    narrative2: "In addition to structural sealing, our team refinished the double-height executive reception with diamond-honed marble polishing and hand-crafted metallic PU wall accents, creating an imposing corporate entryway that speaks of permanence.",
+    highlights: [
+      "Structural sealant injection across high-wind facade joints",
+      "Energy-reflective exterior elastomeric paint coatings",
+      "Comprehensive lobby refurbishment and marble PU polishing",
+      "Rapid turnaround civil works executed with minimal business downtime",
+    ],
   },
   {
     id: "java-news-agency",
@@ -784,6 +812,20 @@ export const featured3x3Projects = [
     summary: "Curvilinear glass skyscraper designed for high-density broadcast media operations with weather-resistant exterior coatings.",
     location: "Metropolitan Media Center",
     scope: "Exterior Waterproofing & Painting",
+    client: "Java Media & Broadcasting Network",
+    year: "2024",
+    area: "175,000 sq.ft.",
+    duration: "16 Months",
+    status: "Completed",
+    heading: "Dynamic curvilinear skyscraper engineered for 24/7 broadcasting resilience.",
+    description: "Home to high-density round-the-clock news broadcasts, Java News Agency required specialized structural weatherproofing and acoustic-grade exterior treatments. Our engineering team deployed advanced rope-access painting and multi-layer elastomeric waterproofing systems, sealing the exterior against monsoon conditions while providing a spotless aesthetic.",
+    narrative2: "High-level rooftop communication antenna decks were treated with elastomeric membrane tanking to ensure zero water ingress into critical electronic broadcasting infrastructure situated directly beneath the roof slabs.",
+    highlights: [
+      "Specialized rope-access exterior coatings for curvilinear glass facade",
+      "Multi-tier damp-proof membrane installations across rooftop transmission arrays",
+      "High-performance polyurethane surface protection against UV oxidation",
+      "Zero disruption to live 24/7 news broadcast studios",
+    ],
   },
   {
     id: "the-phiramada",
@@ -794,6 +836,20 @@ export const featured3x3Projects = [
     summary: "Sculptural tiered cultural pavilion with deep fluted concrete reliefs and protective architectural coatings.",
     location: "Cultural Arts District",
     scope: "Texture & Decorative PU Coatings",
+    client: "National Arts & Culture Foundation",
+    year: "2023",
+    area: "62,000 sq.ft.",
+    duration: "8 Months",
+    status: "Completed",
+    heading: "Sculptural tiered concrete artistry brought to life with bespoke textures.",
+    description: "With bold pyramid-inspired geometry and expansive public exhibition galleries, The Phiramada presented unique architectural demands. Atharv Decorators applied artisan-grade textural finishes and breathable polyurethane sealants to preserve the sculptural raw concrete look while providing long-term waterproofing.",
+    narrative2: "Interior exhibition halls were coated with gallery-standard matte finishes formulated to diffuse directional spotlights, giving visiting art curators the ideal chromatic background for global exhibitions.",
+    highlights: [
+      "Artisan textured wall plastering complementing brutalist architecture",
+      "Hydrophobic clear sealants preserving exposed concrete tone",
+      "Gallery-grade neutral white interior coatings with ultra-low VOC emissions",
+      "Waterproofed sunken amphitheater and rainwater drainage channels",
+    ],
   },
   {
     id: "black-badoo-gym",
@@ -804,6 +860,20 @@ export const featured3x3Projects = [
     summary: "State-of-the-art sports and fitness complex enclosed in dark architectural glass with seamless waterproofing.",
     location: "Urban Athletic Park",
     scope: "Structural Glazing & Waterproofing",
+    client: "Badoo Fitness Enterprises",
+    year: "2024",
+    area: "48,000 sq.ft.",
+    duration: "6 Months",
+    status: "Completed",
+    heading: "High-performance athletic arena engineered with heavy-duty waterproofing.",
+    description: "Black Badoo Gym combines rigorous athletic utility with a dramatic dark architectural aesthetic. Atharv Decorators was engaged to waterproof high-humidity zones (indoor pools, steam rooms, saunas), execute structural civil reinforcement, and apply slip-resistant industrial coatings across dynamic workout arenas.",
+    narrative2: "The exterior features a bold charcoal palette finished with UV-resistant polyurethane enamel, resisting environmental staining and preserving its sleek silhouette through extreme weather changes.",
+    highlights: [
+      "Heavy-duty waterproof tanking for hydrotherapy pools and steam suites",
+      "Impact-resistant PU wall and floor coatings for heavy lifting zones",
+      "Matte charcoal architectural facade finishing with anti-graffiti shields",
+      "Precision sealing of floor-to-ceiling panoramic glass panels",
+    ],
   },
   {
     id: "thinkpod-stadium",
@@ -814,6 +884,20 @@ export const featured3x3Projects = [
     summary: "Monumental fluid arena structure built for international sporting events with heavy-duty civil works and protective coatings.",
     location: "National Sports Complex",
     scope: "Civic Infrastructure & Concrete Sealing",
+    client: "Sports Authority of India & Civic Council",
+    year: "2022 - 2024",
+    area: "320,000 sq.ft.",
+    duration: "22 Months",
+    status: "Completed",
+    heading: "Monumental civic sporting arena built for thousands with enduring strength.",
+    description: "Thinkpod Stadium is an international standard sports arena hosting athletic competitions and civic events. Atharv Decorators managed large-scale civil repairs, expansion joint waterproofing, concourse resurfacing, and high-build weather-resistant painting across grandstands, concourses, and external perimeter colonnades.",
+    narrative2: "Engineered to withstand the footfall of tens of thousands of spectators, all pedestrian bridges, rampways, and viewing corridors were reinforced with polyurethane elastomeric floor sealants and anti-slip quartz broadcasting.",
+    highlights: [
+      "Heavy-capacity expansion joint sealing across 320,000 sq.ft of grandstands",
+      "Weather-shield exterior painting enduring direct tropical sun and monsoon downpours",
+      "Anti-carbonation concrete coatings protecting structural pylons",
+      "Slip-resistant pedestrian coatings across multi-tier stadium ramps",
+    ],
   },
   {
     id: "cikuya-station",
@@ -824,6 +908,20 @@ export const featured3x3Projects = [
     summary: "High-capacity subterranean transit platform engineered with coffered vaulted arches and durable civil treatments.",
     location: "Central Transit Corridor",
     scope: "Road & Miscellaneous Civil Works",
+    client: "Metropolitan Rail & Transport Corporation",
+    year: "2023",
+    area: "115,000 sq.ft.",
+    duration: "12 Months",
+    status: "Completed",
+    heading: "Subterranean vaulted transit infrastructure engineered for non-stop traffic.",
+    description: "Cikuya Station represents high-capacity public transit engineering at its most intricate. Serving thousands of commuters daily, our team delivered subterranean negative-side waterproofing, vault ceiling rehabilitation, durable pedestrian floor polishing, and heavy-duty civil masonry.",
+    narrative2: "The subterranean location required rigorous damp-proof injections and micro-cement masonry repair, followed by specialized vapor-permeable anti-fungal coatings that prevent moisture condensation on vaulted ceiling ribs.",
+    highlights: [
+      "Negative-side hydrostatic pressure waterproofing in underground tunnels",
+      "Restoration and protective coating of historic coffered concrete ceiling arches",
+      "Abrasion-resistant epoxy road and concourse surface treatments",
+      "Round-the-clock nocturnal execution maintaining uninterrupted rail operations",
+    ],
   },
   {
     id: "souta-airport",
@@ -834,6 +932,20 @@ export const featured3x3Projects = [
     summary: "Air terminal galleria featuring soaring ribbed vaults, polished high-gloss surfaces and premium finishes.",
     location: "International Gateway",
     scope: "High-Gloss PU Polishing & Civil Repairs",
+    client: "Airports Authority & Consortium",
+    year: "2023 - 2024",
+    area: "290,000 sq.ft.",
+    duration: "18 Months",
+    status: "Completed",
+    heading: "Soaring aviation terminal galleria elevated through pristine finishes.",
+    description: "Souta Airport's departure terminal features breathtaking soaring white ribbed vaults and reflective open gallerias. Atharv Decorators performed high-spec polyurethane wall and ceiling spray finishing, structural expansion joint sealing, and stone floor polishing to meet global international airport standards.",
+    narrative2: "Our technical craftsmen applied reflective white polyurethane lacquer across expansive parabolic arches, amplifying natural skylight illumination while ensuring effortless cleanability and fire-retardant performance.",
+    highlights: [
+      "High-gloss polyurethane coatings delivering uniform 95%+ light reflectivity",
+      "Fire-retardant intumescent painting across exposed structural steel rafters",
+      "Vibration-resistant sealants absorbing jet engine sound resonance",
+      "Ultra-smooth terrazzo and marble floor resurfacing with diamond polishing",
+    ],
   },
   {
     id: "ophelia-luxury-hotel",
@@ -844,6 +956,20 @@ export const featured3x3Projects = [
     summary: "Five-star resort hospitality destination with infinity pool deck waterproofing and architectural surface detailing.",
     location: "Luxury Coastal Enclave",
     scope: "Civil Repairs, PU Coating & Waterproofing",
+    client: "Ophelia Luxury Hotels & Resorts",
+    year: "2024",
+    area: "145,000 sq.ft.",
+    duration: "15 Months",
+    status: "Completed",
+    heading: "Five-star coastal sanctuary crafted with weather-defying luxury finishes.",
+    description: "Perched along an exclusive coastal headland, Ophelia Luxury Hotel is subject to intense saline winds, marine humidity, and sun exposure. Atharv Decorators executed bespoke civil repair works, multi-layer infinity pool waterproofing, tropical exterior masonry repainting, and hand-finished PU woodwork polishing across suites and oceanfront cabanas.",
+    narrative2: "Marine-grade crystalline waterproofing was integrated into all infinity swimming pools, beachfront retaining walls, and sea-facing decks, guaranteeing long-term resistance against salt-water degradation and chlorinated water penetration.",
+    highlights: [
+      "Marine-grade crystalline waterproofing for cliffside infinity swimming pools",
+      "Salt-spray and UV-resistant exterior elastomeric painting systems",
+      "Fine hand-applied PU furniture and woodwork polishing across luxury villas",
+      "Moisture-proof waterproofing barriers behind marble bathroom walls",
+    ],
   },
 ] as const;
 
@@ -1135,23 +1261,31 @@ export function FeaturedProjects3x3Section({
             <div
               key={idx}
               className="ad-project-tile group"
-              onClick={() => setSelectedProject(item)}
             >
               <img src={item.image} alt={item.alt} loading="lazy" />
               <div className="ad-project-tile-overlay">
                 <div className="ad-project-tile-content">
                   <h3 className="ad-project-tile-title">{item.title}</h3>
                   <p className="ad-project-tile-cat">{item.category}</p>
-                  <button
-                    type="button"
-                    className="ad-project-tile-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedProject(item);
-                    }}
-                  >
-                    View Project
-                  </button>
+                  <div className="flex items-center gap-2 mt-2">
+                    <Link
+                      to={`/projects/${item.id}`}
+                      className="ad-project-tile-btn"
+                    >
+                      View Project
+                    </Link>
+                    <button
+                      type="button"
+                      className="ad-project-tile-quick-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedProject(item);
+                      }}
+                      title="Quick Preview"
+                    >
+                      Quick View
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1230,25 +1364,32 @@ function ProjectModal({
               <span className="font-semibold text-white/90">{project.scope}</span>
             </div>
             <div>
-              <span className="text-white/40 block text-xs">Project Delivery</span>
-              <span className="font-semibold text-amber-400">Atharv Decorators (25+ Years)</span>
+              <span className="text-white/40 block text-xs">Location</span>
+              <span className="font-semibold text-amber-400">{project.location}</span>
             </div>
           </div>
 
-          <div className="pt-3 flex flex-wrap gap-3">
+          <div className="pt-3 flex flex-wrap items-center gap-3">
+            <Link
+              to={`/projects/${project.id}`}
+              onClick={onClose}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md"
+            >
+              View Full Project Page <ArrowRight size={14} />
+            </Link>
             <Link
               to={contactPath}
               onClick={onClose}
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-bold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border border-amber-500/60 text-amber-300 font-semibold text-xs hover:bg-amber-500/10 transition-colors"
             >
-              Enquire About This Project <ArrowRight size={14} />
+              Enquire About Project
             </Link>
             <a
               href={company.telephone}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-amber-500/50 text-white font-medium text-xs hover:bg-white/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border border-white/20 text-white font-medium text-xs hover:bg-white/5 transition-colors"
             >
               <Phone size={13} className="text-amber-400" />
-              <span>Call +91 8879 555 125</span>
+              <span>Call Us</span>
             </a>
           </div>
         </div>
@@ -2059,6 +2200,131 @@ export function ServiceDetailPage({ service }: { service: Service }) {
       />
 
       {/* Powerful Solutions CTA Banner (Reference 7, 12) */}
+      <PowerfulSolutionsBanner />
+    </SiteFrame>
+  );
+}
+
+export function ProjectDetailPage({ project }: { project: (typeof featured3x3Projects)[number] }) {
+  const currentIndex = featured3x3Projects.findIndex((p) => p.id === project.id);
+  const prevProject = featured3x3Projects[(currentIndex - 1 + featured3x3Projects.length) % featured3x3Projects.length];
+  const nextProject = featured3x3Projects[(currentIndex + 1) % featured3x3Projects.length];
+
+  return (
+    <SiteFrame>
+      <PageHero
+        eyebrow={`${project.category} • ${project.location}`}
+        title={project.title}
+        backgroundImage={project.image}
+      />
+
+      {/* Project Meta Bar */}
+      <section className="ad-project-meta-bar">
+        <div className="ad-container">
+          <div className="ad-project-meta-grid">
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Location</span>
+              <span className="ad-meta-value">{project.location}</span>
+            </div>
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Category</span>
+              <span className="ad-meta-value">{project.category}</span>
+            </div>
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Client</span>
+              <span className="ad-meta-value">{project.client}</span>
+            </div>
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Project Scale</span>
+              <span className="ad-meta-value">{project.area}</span>
+            </div>
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Duration</span>
+              <span className="ad-meta-value">{project.duration}</span>
+            </div>
+            <div className="ad-project-meta-item">
+              <span className="ad-meta-label">Scope</span>
+              <span className="ad-meta-value">{project.scope}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Overview Split Section */}
+      <section className="ad-project-overview-section">
+        <div className="ad-container">
+          <div className="ad-project-overview-grid">
+            <div className="ad-project-overview-copy">
+              <div className="ad-eyebrow-gold">Project Case Study</div>
+              <h2 className="ad-project-heading">{project.heading}</h2>
+              <p className="ad-project-lead">{project.summary}</p>
+              <p className="ad-project-body">{project.description}</p>
+              {project.narrative2 && <p className="ad-project-body">{project.narrative2}</p>}
+
+              <div className="ad-project-highlights">
+                <h3 className="ad-highlights-title">Key Engineering & Execution Highlights</h3>
+                <ul className="ad-highlights-list">
+                  {project.highlights.map((h, i) => (
+                    <li key={i}>
+                      <Check className="ad-highlight-icon text-amber-500" size={16} />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="ad-project-cta-row">
+                <Link to={contactPath} className="ad-pill-solid-btn">
+                  Enquire About Similar Project <ArrowRight size={14} />
+                </Link>
+                <a href={company.telephone} className="ad-pill-outline-btn">
+                  <Phone size={13} className="text-amber-500" />
+                  <span>Call +91 8879 555 125</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="ad-project-overview-visual">
+              <div className="ad-project-image-card">
+                <img src={project.image} alt={project.alt || project.title} className="ad-project-showcase-img" />
+                <div className="ad-project-badge-overlay">
+                  <span className="ad-badge-gold">Atharv Decorators • 25+ Years Excellence</span>
+                  <p className="ad-badge-subtitle">Delivered with architectural precision & ISO compliance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore More Projects 3x3 Section */}
+      <FeaturedProjects3x3Section
+        kicker="More Works"
+        title="Explore Related Projects"
+        description="Discover our diverse portfolio across residential, commercial, industrial, and civic landmarks."
+      />
+
+      {/* Prev / Next Project Navigation Bar */}
+      <section className="ad-project-nav-section">
+        <div className="ad-container">
+          <div className="ad-project-nav-grid">
+            <Link to={`/projects/${prevProject.id}`} className="ad-project-nav-link ad-project-nav-prev">
+              <span className="ad-nav-direction">&larr; Previous Project</span>
+              <span className="ad-nav-proj-title">{prevProject.title}</span>
+              <span className="ad-nav-proj-cat">{prevProject.category}</span>
+            </Link>
+            <Link to={projectsPath} className="ad-project-nav-all">
+              <span>View All 9 Projects</span>
+            </Link>
+            <Link to={`/projects/${nextProject.id}`} className="ad-project-nav-link ad-project-nav-next">
+              <span className="ad-nav-direction">Next Project &rarr;</span>
+              <span className="ad-nav-proj-title">{nextProject.title}</span>
+              <span className="ad-nav-proj-cat">{nextProject.category}</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <PowerfulSolutionsBanner />
     </SiteFrame>
   );

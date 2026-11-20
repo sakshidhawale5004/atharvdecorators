@@ -26,6 +26,15 @@ describe("App routing", () => {
     "/civil-repairs-structural-maintenance",
     "/texture-pu-polishing-works",
     "/road-miscellaneous-civil-works",
+    "/projects/perpustakaan-nasional-jakarta",
+    "/projects/silver-grid-office",
+    "/projects/java-news-agency",
+    "/projects/the-phiramada",
+    "/projects/black-badoo-gym",
+    "/projects/thinkpod-stadium",
+    "/projects/cikuya-station",
+    "/projects/souta-airport",
+    "/projects/ophelia-luxury-hotel",
   ])("matches the requested page at %s", (pathname) => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
