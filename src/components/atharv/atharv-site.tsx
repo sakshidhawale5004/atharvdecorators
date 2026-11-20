@@ -544,21 +544,19 @@ export function SitePreloader() {
   return (
     <div className={`ad-site-preloader${fading ? " is-fading" : ""}`} aria-hidden="true">
       <div className="ad-preloader-content">
-        <div className="ad-preloader-emblem">
-          <div className="ad-compass-ring" />
-          <div className="ad-preloader-logo-wrap">
-            <img
-              src="/atharv-images/atharv-decorators-logo.webp"
-              alt="Atharv Decorators"
-              className="ad-preloader-logo-img"
-            />
-          </div>
+        <div className="ad-preloader-brand">
+          <img
+            src="/atharv-images/atharv-decorators-logo.webp"
+            alt="Atharv Decorators"
+            className="ad-preloader-logo-horizontal"
+            width="240"
+            height="58"
+          />
         </div>
-        <div className="ad-preloader-title">ATHARV DECORATORS</div>
-        <div className="ad-preloader-subtitle">BUILDING CARE &bull; THOUGHTFULLY DELIVERED</div>
         <div className="ad-preloader-bar">
           <div className="ad-preloader-fill" />
         </div>
+        <div className="ad-preloader-subtitle">CIVIL REPAIRS &bull; PAINTING &bull; WATERPROOFING</div>
       </div>
     </div>
   );

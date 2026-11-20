@@ -2669,71 +2669,36 @@
   animation: ad-preloader-appear 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.ad-preloader-emblem {
+.ad-preloader-brand {
   position: relative;
-  width: 92px;
-  height: 92px;
-  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 22px;
 }
 
-.ad-compass-ring {
-  position: absolute;
-  inset: -6px;
-  border: 2px dashed rgba(212, 175, 55, 0.65);
-  border-radius: 50%;
-  animation: ad-spin-compass 9s linear infinite;
-}
-
-.ad-preloader-logo-wrap {
-  width: 72px;
-  height: 72px;
-  border: 1.5px solid rgba(212, 175, 55, 0.85);
-  border-radius: 50%;
-  background: rgba(14, 20, 32, 0.95);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), inset 0 0 16px rgba(212, 175, 55, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  overflow: hidden;
-}
-
-.ad-preloader-logo-img {
-  width: 100%;
-  height: 100%;
+.ad-preloader-logo-horizontal {
+  width: auto;
+  max-width: 240px;
+  height: 56px;
   object-fit: contain;
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.55));
+  filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.45)) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.7));
+  animation: ad-logo-pulse 2s ease-in-out infinite alternate;
 }
 
-.ad-preloader-title {
-  font-family: var(--font-display), "Cinzel", Georgia, serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  color: #ffffff;
-  margin-bottom: 8px;
-}
-
-.ad-preloader-subtitle {
-  font-family: var(--font-sans), sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  color: #d4af37;
-  text-transform: uppercase;
-  margin-bottom: 26px;
+@keyframes ad-logo-pulse {
+  from { filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.35)); }
+  to { filter: drop-shadow(0 0 28px rgba(212, 175, 55, 0.65)); }
 }
 
 .ad-preloader-bar {
-  width: 190px;
+  width: 170px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 2px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 14px;
 }
 
 .ad-preloader-fill {
@@ -2742,9 +2707,18 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #b88a24, #f5e08c, #c49a32);
+  background: linear-gradient(90deg, #aa7c11, #f5e08c, #c49a32);
   transform-origin: left;
-  animation: ad-preloader-progress 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: ad-preloader-progress 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ad-preloader-subtitle {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: #d4af37;
+  text-transform: uppercase;
 }
 
 @keyframes ad-spin-compass {
@@ -3268,11 +3242,12 @@
   z-index: 3;
   background: linear-gradient(
     90deg,
-    rgba(6, 9, 14, 0.88) 0%,
-    rgba(6, 9, 14, 0.68) 25%,
-    rgba(6, 9, 14, 0.28) 46%,
-    rgba(6, 9, 14, 0.05) 60%,
-    transparent 72%,
+    rgba(6, 9, 14, 0.94) 0%,
+    rgba(6, 9, 14, 0.88) 28%,
+    rgba(6, 9, 14, 0.65) 46%,
+    rgba(6, 9, 14, 0.20) 62%,
+    rgba(6, 9, 14, 0.04) 72%,
+    transparent 80%,
     transparent 100%
   );
   pointer-events: none;
@@ -3301,10 +3276,12 @@
   align-items: center;
   gap: 40px;
   width: 100%;
+  padding-left: clamp(28px, 6vw, 90px);
 }
 
 .ad-hero-video-copy {
-  max-width: 720px;
+  max-width: 740px;
+  padding-left: clamp(14px, 2.5vw, 36px);
   animation: ad-rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
