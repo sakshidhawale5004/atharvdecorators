@@ -3194,6 +3194,466 @@
   }
 }
 
+/* ==========================================================================
+   Full-Bleed YouTube Background Video Hero (Nagothane Bungalow Project)
+   ========================================================================== */
+.ad-hero-video-section {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  min-height: 85svh;
+  padding-block: calc(80px + 60px) 70px;
+  overflow: hidden;
+  background: #06090e;
+  color: #ffffff;
+}
+
+.ad-hero-video-bg-container {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ad-hero-video-poster {
+  position: absolute;
+  inset: 0;
+  background-image: url("/atharv-images/hero-video-poster.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.ad-hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.ad-hero-video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw; /* 16:9 aspect ratio */
+  min-height: 100%;
+  min-width: 177.77vh; /* 16:9 aspect ratio */
+  border: 0;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .ad-hero-video-iframe {
+    width: 177.77vh;
+    height: 100vh;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .ad-hero-video-iframe {
+    width: 100vw;
+    height: 56.25vw;
+  }
+}
+
+.ad-hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 9, 14, 0.94) 0%,
+    rgba(6, 9, 14, 0.82) 42%,
+    rgba(6, 9, 14, 0.52) 75%,
+    rgba(6, 9, 14, 0.72) 100%
+  );
+  pointer-events: none;
+}
+
+.ad-hero-video-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 14, 0.75) 0%,
+    transparent 25%,
+    transparent 70%,
+    rgba(6, 9, 14, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+.ad-hero-video-inner {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.ad-hero-video-copy {
+  max-width: 720px;
+  animation: ad-rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ad-hero-ss-title {
+  margin: 0 0 20px;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-size: clamp(38px, 6.2vw, 68px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.ad-hero-video-desc {
+  max-width: 580px;
+  margin: 0 0 32px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ad-hero-video-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.ad-hero-quote-btn {
+  min-height: 50px !important;
+  padding-inline: 28px !important;
+  border-radius: 4px !important;
+  background: linear-gradient(135deg, #d4af37 0%, #c49a32 50%, #aa7c11 100%) !important;
+  color: #070a0f !important;
+  font-family: var(--font-sans), sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 8px 25px rgba(196, 154, 50, 0.55) !important;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.ad-hero-quote-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 30px rgba(196, 154, 50, 0.7) !important;
+}
+
+.ad-hero-outline-btn {
+  min-height: 50px !important;
+  padding-inline: 22px !important;
+  border-radius: 4px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #ffffff !important;
+  font-family: var(--font-sans), sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.ad-hero-outline-btn:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: #d4af37 !important;
+  color: #fcedc5 !important;
+}
+
+.ad-hero-call-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding-inline: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(13, 18, 28, 0.7);
+  backdrop-filter: blur(8px);
+  color: #fcedc5 !important;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ad-hero-call-pill:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.18);
+  color: #ffffff !important;
+}
+
+/* Pause / Play Video Toggle Button (Matching Screenshot) */
+.ad-hero-video-controls-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.ad-video-playpause-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  background: rgba(15, 22, 34, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.25);
+  transition: all 0.25s ease;
+}
+
+.ad-video-playpause-btn:hover {
+  transform: scale(1.1);
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.25);
+  color: #fcedc5;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 28px rgba(212, 175, 55, 0.4);
+}
+
+.ad-hero-video-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  background: rgba(13, 18, 28, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.ad-hero-video-stat-number {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, #fcedc5 0%, #c49a32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ad-hero-video-stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-hero-video-stat-text strong {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.ad-hero-video-stat-text span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   Comprehensive Mobile Optimization Across All Pages
+   ========================================================================== */
+@media (max-width: 960px) {
+  .ad-hero-video-section {
+    min-height: 75vh;
+    min-height: 75svh;
+    padding-block: calc(75px + 40px) 60px;
+  }
+
+  .ad-hero-video-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ad-hero-video-controls-col {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .ad-hero-ss-title {
+    font-size: clamp(34px, 8vw, 54px);
+  }
+
+  .ad-hero-video-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 9, 14, 0.88) 0%,
+      rgba(6, 9, 14, 0.82) 55%,
+      rgba(6, 9, 14, 0.95) 100%
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  .ad-hero-video-section {
+    min-height: 82vh;
+    min-height: 82svh;
+    padding-block: calc(70px + 30px) 45px;
+  }
+
+  .ad-hero-ss-title {
+    font-size: clamp(30px, 9.2vw, 44px);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .ad-hero-video-desc {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .ad-hero-video-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .ad-hero-quote-btn,
+  .ad-hero-outline-btn,
+  .ad-hero-call-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ad-video-playpause-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ad-container {
+    width: calc(100% - 32px);
+    margin-inline: auto;
+  }
+
+  /* Sector strip on mobile */
+  .ad-sectors-strip {
+    grid-template-columns: 1fr;
+  }
+
+  /* Who we are stats row on mobile */
+  .ad-who-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .ad-who-stat-item strong {
+    font-size: 24px;
+  }
+
+  .ad-who-stat-item span {
+    font-size: 9.5px;
+  }
+
+  /* Services Grid on mobile */
+  .ad-replica-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Client cards on mobile */
+  .ad-clients-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .ad-client-white-card {
+    height: 60px;
+    padding: 8px;
+  }
+
+  /* Latest project collage on mobile */
+  .ad-collage-top {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 10px;
+  }
+
+  .ad-collage-top-right {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 10px;
+  }
+
+  .ad-collage-bottom {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 10px;
+  }
+
+  .ad-collage-item {
+    aspect-ratio: 16/10;
+  }
+
+  /* 3x3 featured projects on mobile */
+  .ad-projects-3x3-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Powerful solutions banner on mobile */
+  .ad-powerful-inner {
+    padding-block: 40px;
+    text-align: center;
+  }
+
+  .ad-powerful-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ad-powerful-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Contact page floating bar on mobile */
+  .ad-contact-floating-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-contact-bar-item {
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .ad-contact-bar-item:last-child {
+    border-bottom: none;
+  }
+
+  .ad-contact-direct-actions {
+    flex-direction: column;
+  }
+
+  .ad-direct-call-btn,
+  .ad-direct-whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
   ArrowDown,
@@ -15,7 +15,9 @@ import {
   MapPin,
   Menu,
   MessageSquare,
+  Pause,
   Phone,
+  Play,
   Search,
   ShieldCheck,
   X,
@@ -1319,40 +1321,110 @@ export function InteractiveHeroShowcase() {
 }
 
 /* ==========================================================================
+   FULL-BLEED YOUTUBE VIDEO BACKGROUND HERO (Nagothane Bungalow Project)
+   ========================================================================== */
+
+export function HeroVideoBackground({
+  isPlaying,
+}: {
+  isPlaying: boolean;
+}) {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    if (!iframeRef.current) return;
+    const func = isPlaying ? "playVideo" : "pauseVideo";
+    iframeRef.current.contentWindow?.postMessage(
+      JSON.stringify({ event: "command", func, args: "" }),
+      "*"
+    );
+  }, [isPlaying]);
+
+  return (
+    <div className="ad-hero-video-bg-container" aria-hidden="true">
+      <div className="ad-hero-video-poster" />
+      <div className="ad-hero-video-wrapper">
+        <iframe
+          ref={iframeRef}
+          className="ad-hero-video-iframe"
+          src="https://www.youtube-nocookie.com/embed/BF_4wxrrByY?autoplay=1&mute=1&loop=1&playlist=BF_4wxrrByY&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1"
+          title="Atharv Decorators Nagothane Bungalow Project Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          tabIndex={-1}
+        />
+      </div>
+      <div className="ad-hero-video-overlay" />
+      <div className="ad-hero-video-vignette" />
+    </div>
+  );
+}
+
+/* ==========================================================================
    PAGE DEFINITIONS (Using the exact replica reference structure)
    ========================================================================== */
 
 export function HomePage() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+
+  const toggleVideoPlay = () => {
+    setIsVideoPlaying((prev) => !prev);
+  };
+
   return (
     <SiteFrame>
-      <section aria-labelledby="ad-home-title" className="ad-hero">
-        <div className="ad-container ad-hero-inner">
-          <div className="ad-hero-copy">
-            <Eyebrow light>Building care, thoughtfully delivered</Eyebrow>
-            <h1 className="ad-display ad-hero-title" id="ad-home-title">
-              Built with care.
-              <br />
-              <em>Made to last.</em>
+      <section aria-labelledby="ad-home-title" className="ad-hero-video-section">
+        {/* Full-bleed YouTube Background Video */}
+        <HeroVideoBackground isPlaying={isVideoPlaying} />
+
+        <div className="ad-container ad-hero-video-inner">
+          <div className="ad-hero-video-copy">
+            <h1 className="ad-hero-ss-title" id="ad-home-title">
+              BUILDING<br />
+              STRENGTH.<br />
+              DELIVERING<br />
+              TRUST.
             </h1>
-            <p className="ad-hero-text">
-              Professional civil repair, painting and waterproofing for residential, commercial and
-              corporate spaces. Engineered with architectural precision, premium materials, and lasting durability.
+
+            <p className="ad-hero-video-desc">
+              Professional Civil Repair, Painting &amp; Waterproofing Solutions for Residential, Commercial &amp; Corporate Spaces.
             </p>
-            <div className="ad-hero-actions">
-              <Button asChild className="ad-primary-cta" size="default">
+
+            <div className="ad-hero-video-actions">
+              <Button asChild className="ad-hero-quote-btn" size="default">
+                <Link to={contactPath}>Get A Quote</Link>
+              </Button>
+              <Button asChild className="ad-hero-outline-btn" size="default" variant="ghost">
                 <Link to={servicesPath}>
-                  Explore our services <ArrowRight aria-hidden="true" size={16} />
+                  Explore Services <ArrowRight aria-hidden="true" size={15} />
                 </Link>
               </Button>
-              <a className="ad-text-cta" href={company.telephone}>
-                <span className="ad-call-status-dot" />
-                Call {company.phone} <ArrowUpRight aria-hidden="true" size={15} />
+              <a className="ad-hero-call-pill" href={company.telephone}>
+                <Phone size={14} className="text-amber-400" />
+                <span>Call {company.phone}</span>
               </a>
             </div>
           </div>
 
-          {/* Advanced Interactive 3D Hero Showcase */}
-          <InteractiveHeroShowcase />
+          {/* Pause / Play Video Control & Experience Badge (Matching Reference Screenshot) */}
+          <div className="ad-hero-video-controls-col">
+            <button
+              type="button"
+              className="ad-video-playpause-btn"
+              onClick={toggleVideoPlay}
+              aria-label={isVideoPlaying ? "Pause background video" : "Play background video"}
+              title={isVideoPlaying ? "Pause Video" : "Play Video"}
+            >
+              {isVideoPlaying ? <Pause size={22} /> : <Play size={22} className="ml-1" />}
+            </button>
+
+            <div className="ad-hero-video-stat-card hidden lg:flex">
+              <div className="ad-hero-video-stat-number">25+</div>
+              <div className="ad-hero-video-stat-text">
+                <strong>Years Experience</strong>
+                <span>Nagothane Bungalow &amp; 150+ Sites</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
