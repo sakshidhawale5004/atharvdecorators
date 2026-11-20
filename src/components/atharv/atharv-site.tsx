@@ -546,8 +546,12 @@ export function SitePreloader() {
       <div className="ad-preloader-content">
         <div className="ad-preloader-emblem">
           <div className="ad-compass-ring" />
-          <div className="ad-compass-inner">
-            <span className="ad-monogram">AD</span>
+          <div className="ad-preloader-logo-wrap">
+            <img
+              src="/atharv-images/atharv-decorators-logo.webp"
+              alt="Atharv Decorators"
+              className="ad-preloader-logo-img"
+            />
           </div>
         </div>
         <div className="ad-preloader-title">ATHARV DECORATORS</div>
@@ -1378,19 +1382,21 @@ export function HomePage() {
 
         <div className="ad-container ad-hero-video-inner">
           <div className="ad-hero-video-copy">
-            <h1 className="ad-hero-ss-title" id="ad-home-title">
-              BUILDING<br />
-              STRENGTH.<br />
-              DELIVERING<br />
-              TRUST.
+            <Eyebrow light>Building care, thoughtfully delivered</Eyebrow>
+
+            <h1 className="ad-display ad-hero-title ad-hero-video-title" id="ad-home-title">
+              BUILDING STRENGTH.
+              <br />
+              <em>DELIVERING TRUST.</em>
             </h1>
 
-            <p className="ad-hero-video-desc">
-              Professional Civil Repair, Painting &amp; Waterproofing Solutions for Residential, Commercial &amp; Corporate Spaces.
+            <p className="ad-hero-text ad-hero-video-desc">
+              Professional civil repair, painting and waterproofing solutions for residential, commercial and
+              corporate spaces. Engineered with architectural precision, premium materials, and lasting durability.
             </p>
 
             <div className="ad-hero-video-actions">
-              <Button asChild className="ad-hero-quote-btn" size="default">
+              <Button asChild className="ad-primary-cta ad-hero-quote-btn" size="default">
                 <Link to={contactPath}>Get A Quote</Link>
               </Button>
               <Button asChild className="ad-hero-outline-btn" size="default" variant="ghost">
@@ -1398,8 +1404,8 @@ export function HomePage() {
                   Explore Services <ArrowRight aria-hidden="true" size={15} />
                 </Link>
               </Button>
-              <a className="ad-hero-call-pill" href={company.telephone}>
-                <Phone size={14} className="text-amber-400" />
+              <a className="ad-text-cta ad-hero-call-pill" href={company.telephone}>
+                <span className="ad-call-status-dot" />
                 <span>Call {company.phone}</span>
               </a>
             </div>
