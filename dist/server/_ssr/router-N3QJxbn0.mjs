@@ -2,9 +2,9 @@ import { n as __toESM } from "../_runtime.mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { c as Outlet, d as createRootRouteWithContext, f as Link, i as HeadContent, l as lazyRouteComponent, p as useRouter, r as Scripts, s as createRouter, u as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_jsx_runtime, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
-import { t as Route$12 } from "./projects_._slug-Dsr63bPk.mjs";
+import { t as Route$12 } from "./projects_._slug-CVuVhWuJ.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DSD12cHA.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-N3QJxbn0.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-DBuXILmB.css";
@@ -184,7 +184,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$10 = () => import("./routes-DGyomQ1J.mjs");
+var $$splitComponentImporter$10 = () => import("./routes-JtZ9TxeA.mjs");
 var Route$10 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => ({ meta: [
@@ -211,7 +211,7 @@ var Route$10 = createFileRoute("/")({
 		}
 	] })
 });
-var $$splitComponentImporter$9 = () => import("./about-Cli_zYQ4.mjs");
+var $$splitComponentImporter$9 = () => import("./about-BuS39lek.mjs");
 var Route$9 = createFileRoute("/about")({
 	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
 	head: () => ({ meta: [
@@ -238,7 +238,7 @@ var Route$9 = createFileRoute("/about")({
 		}
 	] })
 });
-var $$splitComponentImporter$8 = () => import("./civil-repairs-structural-maintenance-o9tUk5QD.mjs");
+var $$splitComponentImporter$8 = () => import("./civil-repairs-structural-maintenance-t_MT3TV2.mjs");
 var Route$8 = createFileRoute("/civil-repairs-structural-maintenance")({
 	component: lazyRouteComponent($$splitComponentImporter$8, "component"),
 	head: () => ({ meta: [
@@ -265,7 +265,7 @@ var Route$8 = createFileRoute("/civil-repairs-structural-maintenance")({
 		}
 	] })
 });
-var $$splitComponentImporter$7 = () => import("./contact-Dd0vX2bT.mjs");
+var $$splitComponentImporter$7 = () => import("./contact-oozZNLaP.mjs");
 var Route$7 = createFileRoute("/contact")({
 	component: lazyRouteComponent($$splitComponentImporter$7, "component"),
 	head: () => ({ meta: [
@@ -292,7 +292,7 @@ var Route$7 = createFileRoute("/contact")({
 		}
 	] })
 });
-var $$splitComponentImporter$6 = () => import("./exterior-painting-building-repainting-BNHnVjeJ.mjs");
+var $$splitComponentImporter$6 = () => import("./exterior-painting-building-repainting--AJsgaKI.mjs");
 var Route$6 = createFileRoute("/exterior-painting-building-repainting")({
 	component: lazyRouteComponent($$splitComponentImporter$6, "component"),
 	head: () => ({ meta: [
@@ -319,7 +319,7 @@ var Route$6 = createFileRoute("/exterior-painting-building-repainting")({
 		}
 	] })
 });
-var $$splitComponentImporter$5 = () => import("./interior-painting-finishing-DQZSo-0N.mjs");
+var $$splitComponentImporter$5 = () => import("./interior-painting-finishing-DzA2FVNv.mjs");
 var Route$5 = createFileRoute("/interior-painting-finishing")({
 	component: lazyRouteComponent($$splitComponentImporter$5, "component"),
 	head: () => ({ meta: [
@@ -346,7 +346,7 @@ var Route$5 = createFileRoute("/interior-painting-finishing")({
 		}
 	] })
 });
-var $$splitComponentImporter$4 = () => import("./projects-CQkS6sBh.mjs");
+var $$splitComponentImporter$4 = () => import("./projects-C6vklbHi.mjs");
 var Route$4 = createFileRoute("/projects")({
 	component: lazyRouteComponent($$splitComponentImporter$4, "component"),
 	head: () => ({ meta: [
@@ -373,7 +373,7 @@ var Route$4 = createFileRoute("/projects")({
 		}
 	] })
 });
-var $$splitComponentImporter$3 = () => import("./road-miscellaneous-civil-works-CzsWNI8D.mjs");
+var $$splitComponentImporter$3 = () => import("./road-miscellaneous-civil-works-CBao7pc8.mjs");
 var Route$3 = createFileRoute("/road-miscellaneous-civil-works")({
 	component: lazyRouteComponent($$splitComponentImporter$3, "component"),
 	head: () => ({ meta: [
@@ -400,7 +400,7 @@ var Route$3 = createFileRoute("/road-miscellaneous-civil-works")({
 		}
 	] })
 });
-var $$splitComponentImporter$2 = () => import("./services-BPSnsi4g.mjs");
+var $$splitComponentImporter$2 = () => import("./services-Cs2CCGvU.mjs");
 var Route$2 = createFileRoute("/services")({
 	component: lazyRouteComponent($$splitComponentImporter$2, "component"),
 	head: () => ({ meta: [
@@ -427,7 +427,7 @@ var Route$2 = createFileRoute("/services")({
 		}
 	] })
 });
-var $$splitComponentImporter$1 = () => import("./texture-pu-polishing-works-CuS0y5d1.mjs");
+var $$splitComponentImporter$1 = () => import("./texture-pu-polishing-works-4-LuNcEw.mjs");
 var Route$1 = createFileRoute("/texture-pu-polishing-works")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => ({ meta: [
@@ -454,7 +454,7 @@ var Route$1 = createFileRoute("/texture-pu-polishing-works")({
 		}
 	] })
 });
-var $$splitComponentImporter = () => import("./waterproofing-solutions-BhVv-qN8.mjs");
+var $$splitComponentImporter = () => import("./waterproofing-solutions-D5nUfm5U.mjs");
 var Route = createFileRoute("/waterproofing-solutions")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	head: () => ({ meta: [

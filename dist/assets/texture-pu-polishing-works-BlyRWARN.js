@@ -1,0 +1,1 @@
+import{d as e,s as t,u as n}from"./index-DVHI7Fz0.js";var r=e(),i=()=>(0,r.jsx)(t,{service:n[4]});export{i as component};

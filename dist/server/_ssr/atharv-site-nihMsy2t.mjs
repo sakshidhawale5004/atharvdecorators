@@ -6,7 +6,7 @@ import { _ as ArrowRight, a as Phone, c as Menu, d as Linkedin, f as Instagram, 
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/atharv-site-BslrFpwy.js
+//#region node_modules/.nitro/vite/services/ssr/assets/atharv-site-nihMsy2t.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -1193,28 +1193,6 @@ var featured3x3Projects = [
 		]
 	}
 ];
-var latestCollageProjects = [
-	{
-		image: "/atharv-images/unsplash-luxury-facade.jpg",
-		alt: "Contemporary architectural skyscraper with glass facade"
-	},
-	{
-		image: "/atharv-images/unsplash-modern-interior.jpg",
-		alt: "Luxury interior finish and architecture"
-	},
-	{
-		image: "/atharv-images/unsplash-corporate-atrium.jpg",
-		alt: "Corporate architectural atrium interior"
-	},
-	{
-		image: "/atharv-images/commercial-glass-building.jpg",
-		alt: "Glass commercial corporate office"
-	},
-	{
-		image: "/atharv-images/unsplash-tower-construction.jpg",
-		alt: "High-rise structural tower development"
-	}
-];
 function SectorCardsSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "ad-container ad-sectors-strip-wrapper",
@@ -1375,83 +1353,6 @@ function CompanyReputationSection() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "ad-floating-exp-card",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "25+" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "INDUSTRY EXPERIENCE" })]
-						})
-					]
-				})]
-			})]
-		})
-	});
-}
-function LatestProjectsSection() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		"aria-labelledby": "ad-latest-title",
-		className: "ad-latest-proj-section",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "ad-container",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "ad-latest-proj-header",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "ad-latest-proj-header-left",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "ad-section-eyebrow",
-						children: "Our Latest Project"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						id: "ad-latest-title",
-						children: "Construction makes dreams happen"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "ad-latest-proj-header-right",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "A showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-						to: projectsPath,
-						className: "ad-gold-btn",
-						children: ["View All Projects ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { size: 15 })]
-					})]
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "ad-latest-collage-grid",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "ad-collage-top",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "ad-collage-item",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: latestCollageProjects[0].image,
-							alt: latestCollageProjects[0].alt,
-							loading: "lazy"
-						})
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "ad-collage-item",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: latestCollageProjects[1].image,
-							alt: latestCollageProjects[1].alt,
-							loading: "lazy"
-						})
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "ad-collage-bottom",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "ad-collage-item",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: latestCollageProjects[2].image,
-								alt: latestCollageProjects[2].alt,
-								loading: "lazy"
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "ad-collage-item",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: latestCollageProjects[3].image,
-								alt: latestCollageProjects[3].alt,
-								loading: "lazy"
-							})
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "ad-collage-item",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: latestCollageProjects[4].image,
-								alt: latestCollageProjects[4].alt,
-								loading: "lazy"
-							})
 						})
 					]
 				})]
@@ -1994,7 +1895,6 @@ function HomePage() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WhoWeAreSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ReplicaServicesGridSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CompanyReputationSection, {}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LatestProjectsSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturedProjects3x3Section, {
 			kicker: "About Project",
 			title: "Our work is our reputation, and we protect it with every project we do",
@@ -2177,7 +2077,6 @@ function ProjectsPage() {
 			description2: "Backed by 25+ years of trusted engineering experience, our team approaches every structure with thorough inspection, premium materials, and impeccable craftsmanship."
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeaturedProjects3x3Section, {}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LatestProjectsSection, {}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PowerfulSolutionsBanner, {})
 	] });
 }

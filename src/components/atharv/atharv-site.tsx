@@ -1811,9 +1811,6 @@ export function HomePage() {
       {/* Company Reputation with 25+ Badge (Reference 17) */}
       <CompanyReputationSection />
 
-      {/* Latest Projects Showcase Collage (Reference 13) */}
-      <LatestProjectsSection />
-
       {/* Featured Projects 3×3 Grid */}
       <FeaturedProjects3x3Section
         kicker="About Project"
@@ -2003,9 +2000,6 @@ export function ProjectsPage() {
 
       {/* Featured Projects 3x3 Grid (Reference 1) */}
       <FeaturedProjects3x3Section />
-
-      {/* Latest Projects Showcase Collage (Reference 13) */}
-      <LatestProjectsSection />
 
       {/* Powerful Solutions CTA Banner (Reference 12) */}
       <PowerfulSolutionsBanner />
