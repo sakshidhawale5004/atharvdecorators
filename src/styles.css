@@ -240,8 +240,8 @@
   gap: 20px;
   width: min(100%, 1240px);
   margin: 0 auto;
-  min-height: 64px;
-  padding: 6px 14px 6px 26px;
+  min-height: 72px;
+  padding: 6px 18px 6px 28px;
   background: #ffffff;
   border-radius: 9999px;
   border: 1px solid rgba(226, 232, 240, 0.95);
@@ -262,9 +262,9 @@
 
 .ad-header .ad-logo {
   display: block;
-  height: 36px;
+  height: 50px;
   width: auto;
-  max-width: 180px;
+  max-width: 235px;
   object-fit: contain;
   transition: opacity 200ms ease, transform 200ms ease;
 }
@@ -1684,13 +1684,13 @@
     padding-inline: 12px;
   }
   .ad-header-inner {
-    min-height: 56px;
-    padding: 6px 10px 6px 18px;
+    min-height: 60px;
+    padding: 6px 12px 6px 20px;
     gap: 12px;
   }
   .ad-header .ad-logo {
-    height: 32px;
-    max-width: 145px;
+    height: 40px;
+    max-width: 180px;
   }
   .ad-menu-toggle {
     display: inline-flex !important;

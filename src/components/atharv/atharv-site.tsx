@@ -431,7 +431,7 @@ export function Header() {
               </Link>
             </Link001>
 
-            {/* Mobile Call & Action Buttons in menu drawer */}
+            {/* Mobile Call CTA in menu drawer */}
             <div className="lg:hidden mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2 w-full">
               <a
                 href={company.telephone}
@@ -440,13 +440,6 @@ export function Header() {
                 <Phone size={13} className="text-amber-600" />
                 <span>Call +91 8879 555 125</span>
               </a>
-              <Link
-                to={contactPath}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold text-xs shadow-md"
-              >
-                Get Started
-              </Link>
             </div>
           </nav>
 
@@ -466,16 +459,9 @@ export function Header() {
               className="ad-pill-outline-btn hidden md:inline-flex"
               title="Call +91 8879 555 125"
             >
+              <Phone size={13} className="text-amber-500" />
               <span>Call Now</span>
             </a>
-
-            <Link
-              to={contactPath}
-              className="ad-pill-solid-btn hidden sm:inline-flex"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Started
-            </Link>
 
             <Button
               aria-expanded={isOpen}
