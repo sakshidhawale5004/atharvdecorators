@@ -1737,6 +1737,888 @@
   }
 }
 
+/* ==========================================================================
+   ATHARV REPLICA REFERENCE SECTIONS (From public/ATHARV)
+   ========================================================================== */
+
+/* 1. Sector Cards Strip (Reference 16) */
+.ad-sectors-strip-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: -65px;
+  margin-bottom: 40px;
+}
+
+.ad-sectors-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--card);
+  border-top: 3px solid var(--brand-gold);
+  border-radius: 4px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+}
+
+.ad-sector-card {
+  padding: 32px 28px;
+  border-right: 1px solid var(--border);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.ad-sector-card:last-child {
+  border-right: none;
+}
+
+.ad-sector-card:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ad-sector-icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.ad-sector-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-ink);
+  letter-spacing: -0.01em;
+}
+
+.ad-sector-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+
+/* 2. Who We Are Section (Reference 11 & 18) */
+.ad-who-we-are-section {
+  padding: 95px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.ad-who-visual {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.ad-who-visual img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1.05;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.ad-who-visual:hover img {
+  transform: scale(1.03);
+}
+
+.ad-who-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-section-eyebrow {
+  color: var(--brand-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.ad-section-heading {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--brand-ink);
+  margin: 0 0 20px;
+}
+
+.ad-section-desc {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted-foreground);
+  margin: 0 0 35px;
+}
+
+.ad-who-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 35px;
+  padding-bottom: 10px;
+}
+
+.ad-who-stat-item {
+  border-right: 1px solid var(--border);
+  padding-right: 16px;
+}
+
+.ad-who-stat-item:last-child {
+  border-right: none;
+}
+
+.ad-who-stat-item strong {
+  display: block;
+  font-size: clamp(34px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-gold);
+  line-height: 1;
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.ad-who-stat-item span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-ink);
+  margin-top: 8px;
+}
+
+.ad-gold-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 26px;
+  background: linear-gradient(135deg, #dfbe6f 0%, #c49a32 50%, #ab8222 100%);
+  color: #070a0f !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px -4px rgba(196, 154, 50, 0.45);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  align-self: flex-start;
+}
+
+.ad-gold-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 10px 25px -4px rgba(196, 154, 50, 0.6);
+}
+
+.ad-white-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 26px;
+  background: #ffffff;
+  color: #080c14 !important;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 180ms ease;
+  align-self: flex-start;
+}
+
+.ad-white-btn:hover {
+  transform: translateY(-2px);
+  background: #f8f9fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+/* 3. Services Grid Section (Reference 15) */
+.ad-replica-services-section {
+  padding: 95px 0;
+  background: var(--brand-paper);
+}
+
+.ad-replica-services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ad-replica-services-header h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 0;
+}
+
+.ad-title-underline {
+  width: 60px;
+  height: 3px;
+  background: var(--brand-gold);
+  margin: 14px auto 0;
+}
+
+.ad-replica-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.ad-replica-service-card {
+  background: var(--card);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.ad-replica-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.ad-replica-service-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.45;
+}
+
+.ad-replica-service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.ad-replica-service-card:hover .ad-replica-service-img img {
+  transform: scale(1.05);
+}
+
+.ad-replica-service-body {
+  padding: 24px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ad-replica-service-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.ad-replica-service-body p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.ad-learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border: 1px solid var(--brand-gold);
+  border-radius: 3px;
+  color: #9e741a;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 180ms ease;
+  align-self: flex-start;
+}
+
+.ad-learn-more-btn:hover {
+  background: var(--brand-gold);
+  color: #070a0f;
+}
+
+/* 4. Company Reputation Gold Banner (Reference 8 & 17) */
+.ad-company-gold-section {
+  padding: 95px 0;
+  background: linear-gradient(135deg, #c59b35 0%, #d4af37 50%, #b88d2a 100%);
+  color: #080c14;
+}
+
+.ad-company-gold-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 75px);
+  align-items: center;
+}
+
+.ad-company-gold-left .ad-eyebrow-white {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.ad-company-gold-left h2 {
+  font-size: clamp(34px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #0a0e16;
+  margin: 0 0 20px;
+}
+
+.ad-white-underline {
+  width: 50px;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 28px;
+}
+
+.ad-company-gold-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-company-gold-right > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(10, 14, 22, 0.88);
+  margin: 0 0 30px;
+}
+
+.ad-two-images-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ad-two-images-wrapper img {
+  width: 100%;
+  aspect-ratio: 0.88;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.ad-floating-exp-card {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 16px 28px;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.ad-floating-exp-card strong {
+  display: block;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--brand-gold);
+  line-height: 1;
+}
+
+.ad-floating-exp-card span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0a0e16;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* 5. Latest Project Showcase (Reference 13) */
+.ad-latest-proj-section {
+  padding: 95px 0;
+  background: var(--background);
+}
+
+.ad-latest-proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.ad-latest-proj-header-left h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 8px 0 0;
+}
+
+.ad-latest-proj-header-right {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ad-latest-proj-header-right p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+}
+
+.ad-latest-collage-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.ad-collage-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+.ad-collage-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.ad-collage-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.ad-collage-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  transition: transform 650ms ease;
+}
+
+.ad-collage-item:hover img {
+  transform: scale(1.05);
+}
+
+/* 6. Client Showcase Section (Reference 14) */
+.ad-clients-gold-section {
+  padding: 95px 0;
+  background: linear-gradient(135deg, #c59b35 0%, #d4af37 50%, #b88d2a 100%);
+  color: #080c14;
+}
+
+.ad-clients-gold-header {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.ad-clients-gold-header h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  color: #070a0f;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.ad-clients-gold-header p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(7, 10, 15, 0.85);
+  margin: 0;
+}
+
+.ad-clients-gold-body {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.ad-clients-team-img {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ad-clients-team-img img {
+  width: 100%;
+  aspect-ratio: 0.95;
+  object-fit: cover;
+}
+
+.ad-clients-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.ad-client-white-card {
+  background: #ffffff;
+  border-radius: 4px;
+  aspect-ratio: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.ad-client-white-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.ad-client-white-card img {
+  max-height: 48px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 7. Service Page About Split Section (Reference 1-7) */
+.ad-service-about-split {
+  padding: 95px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 75px);
+  align-items: start;
+}
+
+.ad-service-about-left h2 {
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-ink);
+  margin: 0 0 16px;
+}
+
+.ad-gold-bar {
+  width: 50px;
+  height: 3px;
+  background: var(--brand-gold);
+  margin-bottom: 24px;
+}
+
+.ad-service-about-right p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted-foreground);
+  margin: 0 0 20px;
+}
+
+.ad-service-two-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.ad-service-two-photos img {
+  width: 100%;
+  aspect-ratio: 1.1;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* 8. Featured Projects 3x3 Grid (Reference 1-7) */
+.ad-featured-projects-section {
+  padding: 95px 0;
+  background: var(--brand-paper);
+}
+
+.ad-featured-projects-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.ad-featured-projects-header .ad-eyebrow-gold {
+  color: var(--brand-gold);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ad-featured-projects-header h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 6px 0 12px;
+}
+
+.ad-featured-projects-header p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.ad-projects-3x3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ad-project-tile {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.25;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ad-project-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.ad-project-tile:hover img {
+  transform: scale(1.06);
+}
+
+/* 9. Powerful Solutions Banner (Reference 7, 12) */
+.ad-powerful-solutions-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background-image: linear-gradient(
+    rgba(8, 11, 17, 0.85),
+    rgba(8, 11, 17, 0.85)
+  ), url("/atharv-images/curved-civic-building.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ad-powerful-solutions-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.ad-powerful-solutions-inner h2 {
+  font-size: clamp(34px, 4.5vw, 50px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+.ad-powerful-solutions-inner p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 35px;
+}
+
+.ad-banner-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* 10. Vision, Mission, Motto (Reference 9) */
+.ad-vision-mission-section {
+  padding: 95px 0;
+  background: var(--background);
+  text-align: center;
+}
+
+.ad-vision-mission-section h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin: 0 0 55px;
+}
+
+.ad-vision-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+
+.ad-vision-mission-item {
+  padding-inline: 24px;
+  border-right: 1px solid var(--border);
+}
+
+.ad-vision-mission-item:last-child {
+  border-right: none;
+}
+
+.ad-vision-mission-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand-gold);
+  margin: 0 0 12px;
+}
+
+.ad-vision-mission-item p {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+/* 11. Core Values Section (Reference 8) */
+.ad-core-values-section {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.ad-core-values-card {
+  background: var(--brand-gold);
+  color: #080c14;
+  padding: 45px 40px;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.ad-core-values-card h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #070a0f;
+  margin: 0 0 24px;
+}
+
+.ad-core-values-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ad-core-values-card li {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #080c14;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ad-core-values-card li::before {
+  content: "•";
+  font-size: 20px;
+  color: #080c14;
+}
+
+.ad-core-values-img {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.ad-core-values-img img {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}
+
+/* 12. Contact Floating Banner (Reference 19) */
+.ad-contact-strip-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: -65px;
+  margin-bottom: 50px;
+}
+
+.ad-contact-floating-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #0d121c;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.ad-contact-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 30px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ad-contact-bar-item:last-child {
+  border-right: none;
+}
+
+.ad-contact-bar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--brand-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-contact-bar-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand-gold);
+  margin-bottom: 4px;
+}
+
+.ad-contact-bar-text span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ad-sectors-strip { grid-template-columns: repeat(2, 1fr); }
+  .ad-sector-card:nth-child(2) { border-right: none; }
+  .ad-who-we-are-section { grid-template-columns: 1fr; }
+  .ad-replica-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .ad-company-gold-grid { grid-template-columns: 1fr; }
+  .ad-clients-gold-body { grid-template-columns: 1fr; }
+  .ad-clients-card-grid { grid-template-columns: repeat(3, 1fr); }
+  .ad-service-about-split { grid-template-columns: 1fr; }
+  .ad-projects-3x3-grid { grid-template-columns: repeat(2, 1fr); }
+  .ad-vision-mission-grid { grid-template-columns: 1fr; }
+  .ad-vision-mission-item { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+  .ad-core-values-section { grid-template-columns: 1fr; }
+  .ad-contact-floating-bar { grid-template-columns: 1fr; }
+  .ad-contact-bar-item { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+}
+
+@media (max-width: 600px) {
+  .ad-sectors-strip { grid-template-columns: 1fr; }
+  .ad-sector-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .ad-replica-services-grid { grid-template-columns: 1fr; }
+  .ad-clients-card-grid { grid-template-columns: repeat(2, 1fr); }
+  .ad-projects-3x3-grid { grid-template-columns: 1fr; }
+  .ad-latest-proj-header { flex-direction: column; align-items: flex-start; }
+  .ad-collage-top, .ad-collage-bottom { grid-template-columns: 1fr; }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

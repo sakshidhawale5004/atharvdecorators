@@ -7,7 +7,10 @@ import {
   Check,
   ChevronDown,
   Clock3,
+  Facebook,
+  Instagram,
   Layers3,
+  Linkedin,
   Mail,
   MapPin,
   Menu,
@@ -15,6 +18,7 @@ import {
   Search,
   ShieldCheck,
   X,
+  Youtube,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -616,41 +620,155 @@ function ContactBand() {
   );
 }
 
-const clientLogos = [
+export const clientShowcaseLogos = [
+  { name: "R Galleria", src: "/atharv-images/client-r-galleria.webp" },
+  { name: "Runwal Greens", src: "/atharv-images/client-runwal-greens.webp" },
+  { name: "Rebel Foods", src: "/atharv-images/client-rebel-foods.webp" },
+  { name: "Amazon", src: "/atharv-images/client-amazon.webp" },
+  { name: "Turner", src: "/atharv-images/client-turner.webp" },
   { name: "Taj Hotels", src: "/atharv-images/client-taj.webp" },
   { name: "MSC Bank", src: "/atharv-images/client-msc-bank.webp" },
   { name: "Talwalkars", src: "/atharv-images/client-talwalkars.webp" },
   { name: "L&T Construction", src: "/atharv-images/client-lt-construction.webp" },
   { name: "MAN Infraconstruction", src: "/atharv-images/client-man-infra.webp" },
   { name: "Unity Construction", src: "/atharv-images/client-unity-construction.webp" },
-  { name: "Turner", src: "/atharv-images/client-turner.webp" },
-  { name: "Amazon", src: "/atharv-images/client-amazon.webp" },
   { name: "Balsan Developers", src: "/atharv-images/client-balsan-developers.webp" },
-  { name: "Rebel Foods", src: "/atharv-images/client-rebel-foods.webp" },
-  { name: "Runwal Greens", src: "/atharv-images/client-runwal-greens.webp" },
-  { name: "R Galleria", src: "/atharv-images/client-r-galleria.webp" },
 ] as const;
 
-function ClientLogosSection() {
+export const sectorCards = [
+  {
+    title: "Residential",
+    icon: "/atharv-images/icon-residential.png",
+    description:
+      "Thoughtfully designed homes that balance comfort, functionality, and personal style. We create living spaces that reflect your lifestyle and feel truly yours.",
+  },
+  {
+    title: "Commercial",
+    icon: "/atharv-images/icon-commercial.png",
+    description:
+      "Smart, efficient interiors designed to enhance productivity and brand identity. We craft workspaces that are functional, modern, and future-ready.",
+  },
+  {
+    title: "Hospitality",
+    icon: "/atharv-images/icon-hospitality.png",
+    description:
+      "Inviting interiors that create memorable experiences for guests. Designed to blend aesthetics, comfort, and operational efficiency seamlessly.",
+  },
+  {
+    title: "Multipurpose",
+    icon: "/atharv-images/icon-multipurpose.png",
+    description:
+      "Flexible spaces designed to adapt to multiple functions with ease. Intelligent planning ensures versatility without compromising on design or comfort.",
+  },
+] as const;
+
+export const featured3x3Projects = [
+  { image: "/atharv-images/modern-architectural-facade.jpg", alt: "Contemporary geometric architectural facade" },
+  { image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
+  { image: "/atharv-images/curved-civic-building.jpg", alt: "Curved civic building with reflective facade" },
+  { image: "/atharv-images/project-modern-architecture.jpeg", alt: "Stepped white geometric building facade" },
+  { image: "/atharv-images/commercial-glass-building.jpg", alt: "Contemporary glass commercial building" },
+  { image: "/atharv-images/project-futuristic-building.jpeg", alt: "Curved futuristic civic building with sweeping rooflines" },
+  { image: "/atharv-images/modern-atrium.jpg", alt: "Modern architectural glass atrium interior" },
+  { image: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern curved architectural structure" },
+  { image: "/atharv-images/interior-painting-hero.webp", alt: "Contemporary luxury residential villa with pool and interior finish" },
+] as const;
+
+export const latestCollageProjects = [
+  { image: "/atharv-images/curved-civic-building.jpg", alt: "Curved civic building with reflective pool" },
+  { image: "/atharv-images/project-angular-building.jpeg", alt: "Angular geometric cantilever facade" },
+  { image: "/atharv-images/project-modern-architecture.jpeg", alt: "Stepped white facade" },
+  { image: "/atharv-images/commercial-glass-building.jpg", alt: "Glass commercial corporate office" },
+  { image: "/atharv-images/project-futuristic-building.jpeg", alt: "Futuristic sweeping architectural structure" },
+] as const;
+
+/* Sector Cards Strip Section (Reference 16) */
+export function SectorCardsSection() {
   return (
-    <section aria-label="Trusted Clients" className="py-14 border-b border-border bg-[#f8f9fb] dark:bg-card">
-      <div className="ad-container">
-        <p className="text-center text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-8">
-          Trusted by Industry Leaders &amp; Prestigious Developments
+    <div className="ad-container ad-sectors-strip-wrapper">
+      <div className="ad-sectors-strip">
+        {sectorCards.map((sector) => (
+          <div key={sector.title} className="ad-sector-card">
+            <img src={sector.icon} alt={sector.title} className="ad-sector-icon" />
+            <h3>{sector.title}</h3>
+            <p>{sector.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* Who We Are Section (Reference 11 & 18) */
+export function WhoWeAreSection({
+  stat1 = { count: "150+", label: "Completed Projects" },
+  stat2 = { count: "98%", label: "Happy Clients" },
+  stat3 = { count: "256+", label: "Expert Workers" },
+  image = "/atharv-images/project-towers-construction.jpeg",
+}: {
+  stat1?: { count: string; label: string };
+  stat2?: { count: string; label: string };
+  stat3?: { count: string; label: string };
+  image?: string;
+}) {
+  return (
+    <section aria-label="Who We Are" className="ad-container ad-who-we-are-section">
+      <div className="ad-who-visual">
+        <img src={image} alt="High rise towers under construction" loading="lazy" />
+      </div>
+      <div className="ad-who-content">
+        <span className="ad-section-eyebrow">Who We Are</span>
+        <h2 className="ad-section-heading">We create buildings that meet your needs</h2>
+        <p className="ad-section-desc">
+          With over 25+ years of industry experience and 150+ successfully completed projects, Atharva
+          Decorators is a trusted name in civil repairs, waterproofing, and painting solutions. We deliver
+          durable workmanship, modern techniques, and timely execution—ensuring structures remain safe,
+          strong, and visually refined.
         </p>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center">
-          {clientLogos.map((client) => (
-            <div
-              key={client.name}
-              className="p-3 flex items-center justify-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
-              title={client.name}
-            >
-              <img
-                src={client.src}
-                alt={client.name}
-                className="max-h-12 w-auto object-contain transition-transform duration-200 hover:scale-105"
-                loading="lazy"
-              />
+        <div className="ad-who-stats-row">
+          <div className="ad-who-stat-item">
+            <strong>{stat1.count}</strong>
+            <span>{stat1.label}</span>
+          </div>
+          <div className="ad-who-stat-item">
+            <strong>{stat2.count}</strong>
+            <span>{stat2.label}</span>
+          </div>
+          <div className="ad-who-stat-item">
+            <strong>{stat3.count}</strong>
+            <span>{stat3.label}</span>
+          </div>
+        </div>
+        <Link to={aboutPath} className="ad-gold-btn">
+          Discover More <ArrowRight size={15} />
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+/* Services Grid Section (Reference 15) */
+export function ReplicaServicesGridSection() {
+  return (
+    <section aria-labelledby="ad-replica-services-title" className="ad-replica-services-section">
+      <div className="ad-container">
+        <div className="ad-replica-services-header">
+          <h2 id="ad-replica-services-title">Sure, we construct impressive structures</h2>
+          <div className="ad-title-underline" />
+        </div>
+        <div className="ad-replica-services-grid">
+          {services.map((service) => (
+            <div key={service.number} className="ad-replica-service-card">
+              <div className="ad-replica-service-img">
+                <img src={service.image} alt={service.title} loading="lazy" />
+              </div>
+              <div className="ad-replica-service-body">
+                <h3>{service.title}</h3>
+                <p>{service.summary}</p>
+                <Link to={service.href} className="ad-learn-more-btn">
+                  Learn More <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -658,6 +776,357 @@ function ClientLogosSection() {
     </section>
   );
 }
+
+/* Company Reputation Gold Section (Reference 8 & 17) */
+export function CompanyReputationSection() {
+  return (
+    <section aria-label="Our Company Reputation" className="ad-company-gold-section">
+      <div className="ad-container ad-company-gold-grid">
+        <div className="ad-company-gold-left">
+          <div className="ad-eyebrow-white">Our Company</div>
+          <h2>Our work is our reputation, and we protect it with every project we do</h2>
+          <div className="ad-white-underline" />
+          <Link to={aboutPath} className="ad-white-btn">
+            Discover More <ArrowRight size={15} />
+          </Link>
+        </div>
+        <div className="ad-company-gold-right">
+          <p>
+            At Atharva Decorators, we deliver high-quality civil repair and painting services that enhance
+            the safety, durability, and aesthetics of buildings. Backed by skilled professionals, modern
+            tools, and industry-standard practices, we ensure every project is executed with precision and
+            care.
+          </p>
+          <div className="ad-two-images-wrapper">
+            <img
+              src="/atharv-images/commercial-construction.webp"
+              alt="Construction building with cranes"
+              loading="lazy"
+            />
+            <img
+              src="/atharv-images/project-excavator-action.jpeg"
+              alt="Excavator at construction site under blue sky"
+              loading="lazy"
+            />
+            <div className="ad-floating-exp-card">
+              <strong>25+</strong>
+              <span>INDUSTRY EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Latest Projects Showcase Collage (Reference 13) */
+export function LatestProjectsSection() {
+  return (
+    <section aria-labelledby="ad-latest-title" className="ad-latest-proj-section">
+      <div className="ad-container">
+        <div className="ad-latest-proj-header">
+          <div className="ad-latest-proj-header-left">
+            <span className="ad-section-eyebrow">Our Latest Project</span>
+            <h2 id="ad-latest-title">Construction makes dreams happen</h2>
+          </div>
+          <div className="ad-latest-proj-header-right">
+            <p>
+              A showcase of our recently completed projects reflecting quality workmanship, timely
+              execution, and lasting results.
+            </p>
+            <Link to={projectsPath} className="ad-gold-btn">
+              View All Projects <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+        <div className="ad-latest-collage-grid">
+          <div className="ad-collage-top">
+            <div className="ad-collage-item">
+              <img src={latestCollageProjects[0].image} alt={latestCollageProjects[0].alt} loading="lazy" />
+            </div>
+            <div className="ad-collage-item">
+              <img src={latestCollageProjects[1].image} alt={latestCollageProjects[1].alt} loading="lazy" />
+            </div>
+          </div>
+          <div className="ad-collage-bottom">
+            <div className="ad-collage-item">
+              <img src={latestCollageProjects[2].image} alt={latestCollageProjects[2].alt} loading="lazy" />
+            </div>
+            <div className="ad-collage-item">
+              <img src={latestCollageProjects[3].image} alt={latestCollageProjects[3].alt} loading="lazy" />
+            </div>
+            <div className="ad-collage-item">
+              <img src={latestCollageProjects[4].image} alt={latestCollageProjects[4].alt} loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Client Showcase Section (Reference 14) */
+export function ClientsShowcaseSection() {
+  return (
+    <section aria-label="Clients Who Trust Us" className="ad-clients-gold-section">
+      <div className="ad-container">
+        <div className="ad-clients-gold-header">
+          <h2>Proud to Serve Clients Who Trust Us to Transform Their Spaces</h2>
+          <p>
+            Our clients choose us for our commitment to excellence, transparent processes, and results that
+            deliver long-term value. From small-scale projects to large developments, our diverse client
+            base reflects the trust we've earned through consistent performance.
+          </p>
+        </div>
+        <div className="ad-clients-gold-body">
+          <div className="ad-clients-team-img">
+            <img
+              src="/atharv-images/building-construction-worker-site-with-architect.jpg.jpeg"
+              alt="Engineers and architects on site"
+              loading="lazy"
+            />
+          </div>
+          <div className="ad-clients-card-grid">
+            {clientShowcaseLogos.map((client) => (
+              <div key={client.name} className="ad-client-white-card" title={client.name}>
+                <img src={client.src} alt={client.name} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Service Page About Split Section (Reference 1-7) */
+export function ServiceAboutSplit({
+  kicker = "About",
+  heading,
+  description1,
+  description2,
+  image1 = "/atharv-images/commercial-construction.webp",
+  image2 = "/atharv-images/project-excavator-action.jpeg",
+}: {
+  kicker?: string;
+  heading: string;
+  description1: string;
+  description2: string;
+  image1?: string;
+  image2?: string;
+}) {
+  return (
+    <section aria-label="About Service" className="ad-container ad-service-about-split">
+      <div className="ad-service-about-left">
+        <div className="ad-section-eyebrow">{kicker}</div>
+        <h2>{heading}</h2>
+        <div className="ad-gold-bar" />
+      </div>
+      <div className="ad-service-about-right">
+        <p>{description1}</p>
+        <p>{description2}</p>
+        <div className="ad-service-two-photos">
+          <img src={image1} alt="Construction project site" loading="lazy" />
+          <img src={image2} alt="Active construction machinery" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Featured Projects 3x3 Grid (Reference 1-7) */
+export function FeaturedProjects3x3Section({
+  kicker = "FEatured Project",
+  title = "Our Featured Project",
+  description = "A curated showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results.",
+}: {
+  kicker?: string;
+  title?: string;
+  description?: string;
+}) {
+  return (
+    <section aria-labelledby="ad-featured-3x3-title" className="ad-featured-projects-section">
+      <div className="ad-container">
+        <div className="ad-featured-projects-header">
+          <div className="ad-eyebrow-gold">{kicker}</div>
+          <h2 id="ad-featured-3x3-title">{title}</h2>
+          <p>{description}</p>
+        </div>
+        <div className="ad-projects-3x3-grid">
+          {featured3x3Projects.map((item, idx) => (
+            <div key={idx} className="ad-project-tile">
+              <img src={item.image} alt={item.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Powerful Solutions Banner (Reference 7, 12) */
+export function PowerfulSolutionsBanner() {
+  return (
+    <section aria-label="Construction Solutions Call to Action" className="ad-powerful-solutions-banner">
+      <div className="ad-container ad-powerful-solutions-inner">
+        <h2>Powerful straightforward solutions for your construction needs</h2>
+        <p>
+          Comprehensive civil repairs, premium architectural painting, and certified waterproofing
+          solutions tailored to your building requirements.
+        </p>
+        <div className="ad-banner-btn-row">
+          <Link to={servicesPath} className="ad-gold-btn">
+            Discover More <ArrowRight size={15} />
+          </Link>
+          <Link to={contactPath} className="ad-white-btn">
+            Get a Quote <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Vision, Mission, Motto Section (Reference 9) */
+export function VisionMissionSection() {
+  return (
+    <section aria-label="Vision and Mission" className="ad-vision-mission-section">
+      <div className="ad-container">
+        <h2>We’re growing, and we want you to join us</h2>
+        <div className="ad-vision-mission-grid">
+          <div className="ad-vision-mission-item">
+            <h3>Vision</h3>
+            <p>
+              To be the most trusted and innovative civil repair and painting solutions provider,
+              transforming spaces with quality, reliability, and modern craftsmanship.
+            </p>
+          </div>
+          <div className="ad-vision-mission-item">
+            <h3>Mission</h3>
+            <p>
+              To deliver durable, professional, and customer-focused repair and painting services using
+              advanced techniques, skilled teams, and sustainable practices.
+            </p>
+          </div>
+          <div className="ad-vision-mission-item">
+            <h3>Motto</h3>
+            <p>
+              Building lasting trust through engineering precision, uncompromising safety, and flawless
+              surface protection across every square foot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Core Values Section (Reference 8) */
+export function CoreValuesSection() {
+  return (
+    <section aria-label="Core Values" className="ad-container ad-core-values-section">
+      <div className="ad-core-values-card">
+        <h3>Core Values</h3>
+        <ul>
+          <li>Expertise You Can Trust</li>
+          <li>Professional Workmanship</li>
+          <li>Timely Project Delivery</li>
+          <li>Transparent &amp; Hassle-Free Service</li>
+          <li>End-to-End Solutions</li>
+        </ul>
+      </div>
+      <div className="ad-core-values-img">
+        <img
+          src="/atharv-images/project-site-architects.jpeg"
+          alt="Architectural construction tower structure"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  );
+}
+
+/* Trusted Brands Legacy Section (Reference 10) */
+export function TrustedBrandsLegacySection() {
+  return (
+    <section aria-label="Our Trusted Heritage" className="ad-container py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="rounded-md overflow-hidden shadow-xl">
+          <img
+            src="/atharv-images/building-construction-worker-site-with-architect.jpg.jpeg"
+            alt="Site engineer and architect on site"
+            className="w-full aspect-[1.1] object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+            We are trusted by 35,000+ world-class brands and organizations of all sizes
+          </h2>
+          <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            A second-generation entrepreneur, <strong>Avinash Deshmukh</strong> carries forward a legacy of
+            excellence started by his father, <strong>Mr. Parshuram Deshmukh</strong>. After graduating in
+            Chemistry in <strong>1998</strong>, he gained hands-on experience in painting and project
+            execution before founding <strong>Atharva Decorators in 2001</strong>. Guided by innovation,
+            integrity, and quality, he continues to transform spaces across Maharashtra.
+          </p>
+          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+            {clientShowcaseLogos.slice(0, 6).map((c) => (
+              <div key={c.name} className="p-3 bg-secondary/30 rounded flex items-center justify-center">
+                <img src={c.src} alt={c.name} className="max-h-8 object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Contact Floating Bar (Reference 19) */
+export function ContactFloatingBar() {
+  return (
+    <div className="ad-container ad-contact-strip-wrapper">
+      <div className="ad-contact-floating-bar">
+        <div className="ad-contact-bar-item">
+          <div className="ad-contact-bar-icon">
+            <MapPin size={22} />
+          </div>
+          <div className="ad-contact-bar-text">
+            <strong>Our Location</strong>
+            <span>Mumbai &amp; Thane, Maharashtra, India</span>
+          </div>
+        </div>
+        <div className="ad-contact-bar-item">
+          <div className="ad-contact-bar-icon">
+            <Phone size={22} />
+          </div>
+          <div className="ad-contact-bar-text">
+            <strong>Phone</strong>
+            <a href={company.telephone} className="hover:text-amber-400 transition-colors">
+              <span>{company.phone}</span>
+            </a>
+          </div>
+        </div>
+        <div className="ad-contact-bar-item">
+          <div className="ad-contact-bar-icon">
+            <Mail size={22} />
+          </div>
+          <div className="ad-contact-bar-text">
+            <strong>Mail Address</strong>
+            <a href={`mailto:${company.email}`} className="hover:text-amber-400 transition-colors">
+              <span>{company.email}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ==========================================================================
+   PAGE DEFINITIONS (Using the exact replica reference structure)
+   ========================================================================== */
 
 export function HomePage() {
   return (
@@ -705,129 +1174,26 @@ export function HomePage() {
         </div>
       </section>
 
-      <div aria-label="Our experience" className="ad-container ad-trustbar">
-        <div className="ad-trustbar-inner">
-          <div className="ad-trust-intro">
-            <strong>Trusted to care for buildings.</strong>
-            <span>Experience that shows in every detail.</span>
-          </div>
-          <div className="ad-stat">
-            <strong>25+</strong>
-            <span>Years of experience</span>
-          </div>
-          <div className="ad-stat">
-            <strong>150+</strong>
-            <span>Projects completed</span>
-          </div>
-          <div className="ad-stat">
-            <strong>6</strong>
-            <span>Specialist services</span>
-          </div>
-        </div>
-      </div>
+      {/* Sector Cards Strip (Reference 16) */}
+      <SectorCardsSection />
 
-      <ClientLogosSection />
+      {/* Who We Are (Reference 18) */}
+      <WhoWeAreSection />
 
-      <section aria-labelledby="ad-about-title" className="ad-container ad-about-section">
-        <div className="ad-about-visual">
-          <div className="ad-about-image">
-            <img
-              alt="Construction professionals working together at a building site"
-              height="512"
-              loading="lazy"
-              src="/atharv-images/project-team-site.jpg"
-              width="768"
-            />
-          </div>
-          <div className="ad-about-note">
-            <span aria-hidden="true" className="ad-note-icon">
-              <ShieldCheck size={20} />
-            </span>
-            <span>
-              <strong>Quality in every detail</strong>
-              <span>Careful work, from first inspection to finish.</span>
-            </span>
-          </div>
-        </div>
-        <div>
-          <Eyebrow>Built on experience, guided by care</Eyebrow>
-          <h2 className="ad-heading" id="ad-about-title">
-            A stronger standard for <em>building care.</em>
-          </h2>
-          <p className="ad-body-copy">
-            Atharv Decorators is a trusted name in civil repairs, waterproofing, painting and
-            interior works. Since 2001, we have worked with residential societies, businesses and
-            independent property owners with a focus on quality, safety and lasting value.
-          </p>
-          <ArrowLink to={aboutPath}>Get to know us</ArrowLink>
-        </div>
-      </section>
+      {/* Replica Services Grid (Reference 15) */}
+      <ReplicaServicesGridSection />
 
-      <section aria-labelledby="ad-services-title" className="ad-section ad-services-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>Made for your building</Eyebrow>
-              <h2 className="ad-heading" id="ad-services-title">
-                Care from <em>ground to finish.</em>
-              </h2>
-            </div>
-            <p className="ad-body-copy">
-              Practical, considered solutions for the spaces you live, work and build in.
-            </p>
-          </div>
-          <ServiceGrid />
-        </div>
-      </section>
+      {/* Company Reputation with 25+ Badge (Reference 17) */}
+      <CompanyReputationSection />
 
-      <section aria-labelledby="ad-projects-title" className="ad-section ad-project-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow light>Built for people and place</Eyebrow>
-              <h2 className="ad-heading" id="ad-projects-title">
-                Spaces that <em>stand out.</em>
-              </h2>
-            </div>
-            <p className="ad-body-copy">
-              From refined interiors to building restoration, good work is designed to last.
-            </p>
-          </div>
-          <div className="ad-project-grid">
-            <article className="ad-feature-card">
-              <div className="ad-feature-image">
-                <img
-                  alt="Contemporary civic building with sweeping glazed rooflines"
-                  height="667"
-                  loading="lazy"
-                  src="/atharv-images/modern-atrium.jpg"
-                  width="1000"
-                />
-              </div>
-              <span>Architecture &amp; shared spaces</span>
-            </article>
-            <article className="ad-feature-card">
-              <div className="ad-feature-image">
-                <img
-                  alt="Distinctive modern public building with contemporary architecture"
-                  height="683"
-                  loading="lazy"
-                  src="/atharv-images/curved-civic-building.jpg"
-                  width="1024"
-                />
-              </div>
-              <span>Thoughtful finishes</span>
-            </article>
-            <div className="ad-project-aside">
-              <ShieldCheck aria-hidden="true" size={24} />
-              <p>Careful planning and considered execution, shaped around every property.</p>
-              <strong>Good work is seen in the details.</strong>
-              <ArrowLink to={projectsPath}>Explore our projects</ArrowLink>
-            </div>
-          </div>
-        </div>
-      </section>
-      <ContactBand />
+      {/* Latest Projects Showcase Collage (Reference 13) */}
+      <LatestProjectsSection />
+
+      {/* Clients Showcase (Reference 14) */}
+      <ClientsShowcaseSection />
+
+      {/* Powerful Solutions CTA Banner (Reference 7, 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
@@ -835,73 +1201,30 @@ export function HomePage() {
 export function AboutPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="About us" title="A legacy built on trust." backgroundImage="/atharv-images/project-modern-architecture.jpeg" />
-      <section aria-labelledby="ad-company-title" className="ad-container ad-about-section">
-        <div className="ad-about-visual">
-          <div className="ad-about-image">
-            <img
-              alt="Building professionals collaborating on a construction site"
-              height="512"
-              loading="lazy"
-              src="/atharv-images/project-team-site.jpg"
-              width="768"
-            />
-          </div>
-          <div className="ad-about-note">
-            <span aria-hidden="true" className="ad-note-icon">
-              <Check size={20} />
-            </span>
-            <span>
-              <strong>Serving since 2001</strong>
-              <span>Built on skill, honesty and lasting care.</span>
-            </span>
-          </div>
-        </div>
-        <div>
-          <Eyebrow>Our story</Eyebrow>
-          <h2 className="ad-heading" id="ad-company-title">
-            Experience, handed down. <em>Quality, carried forward.</em>
-          </h2>
-          <p className="ad-body-copy">
-            Atharv Decorators was founded in 2001 by Avinash Deshmukh, continuing a legacy begun by
-            his father, Mr. Parshuram Deshmukh. After graduating in Chemistry in 1998, Avinash built
-            his experience in painting and project execution, bringing a practical understanding of
-            the work to every project.
-          </p>
-          <p className="ad-body-copy">
-            Today, we work with residential societies, commercial buildings, businesses and
-            independent property owners, bringing civil repairs, waterproofing, painting and
-            finishing together with thoughtful attention to each site.
-          </p>
-        </div>
-      </section>
-      <section aria-labelledby="ad-principles-title" className="ad-section ad-services-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>What guides our work</Eyebrow>
-              <h2 className="ad-heading" id="ad-principles-title">
-                Every project starts with <em>care.</em>
-              </h2>
-            </div>
-          </div>
-          <div className="ad-value-strip">
-            <div className="ad-value-item">
-              <ShieldCheck aria-hidden="true" />
-              <span>Quality workmanship</span>
-            </div>
-            <div className="ad-value-item">
-              <Clock3 aria-hidden="true" />
-              <span>Reliable project delivery</span>
-            </div>
-            <div className="ad-value-item">
-              <Layers3 aria-hidden="true" />
-              <span>End-to-end solutions</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <ContactBand />
+      <PageHero
+        eyebrow="About Us"
+        title="A legacy built on trust."
+        backgroundImage="/atharv-images/project-modern-architecture.jpeg"
+      />
+
+      {/* Who We Are (Reference 11) */}
+      <WhoWeAreSection
+        stat1={{ count: "4K", label: "Project Done" }}
+        stat2={{ count: "98%", label: "Happy Clients" }}
+        stat3={{ count: "256+", label: "Professional Workers" }}
+      />
+
+      {/* Trusted Brands & Founder Heritage (Reference 10) */}
+      <TrustedBrandsLegacySection />
+
+      {/* Core Values Section (Reference 8) */}
+      <CoreValuesSection />
+
+      {/* Vision, Mission, Motto (Reference 9) */}
+      <VisionMissionSection />
+
+      {/* Powerful Solutions CTA Banner (Reference 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
@@ -909,30 +1232,31 @@ export function AboutPage() {
 export function ServicesPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Our services" title="Complete care for your property." backgroundImage="/atharv-images/project-glass-building.jpeg" />
-      <section aria-labelledby="ad-services-title" className="ad-section ad-services-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>Our scope of work</Eyebrow>
-              <h2 className="ad-heading" id="ad-services-title">
-                Six ways to <em>care for your building.</em>
-              </h2>
-            </div>
-            <p className="ad-body-copy">
-              From building repaints to interior finishes, our work is tailored to the space and
-              the people who use it.
-            </p>
-          </div>
-          <ServiceGrid />
-        </div>
-      </section>
-      <ContactBand />
+      <PageHero
+        eyebrow="Our Services"
+        title="Complete care for your property."
+        backgroundImage="/atharv-images/project-glass-building.jpeg"
+      />
+
+      {/* Sector Cards Strip (Reference 16) */}
+      <SectorCardsSection />
+
+      {/* Services Grid (Reference 15) */}
+      <ReplicaServicesGridSection />
+
+      {/* Company Reputation Section (Reference 17) */}
+      <CompanyReputationSection />
+
+      {/* Featured Projects 3x3 Grid (Reference 1-7) */}
+      <FeaturedProjects3x3Section />
+
+      {/* Powerful Solutions CTA Banner (Reference 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
 
-const projects = [
+export const projects = [
   { title: "Commercial tower development", category: "Commercial buildings", image: "/atharv-images/project-towers-construction.jpeg", alt: "Commercial towers under construction with cranes against the sky" },
   { title: "Contemporary glass architecture", category: "Building exteriors", image: "/atharv-images/project-glass-building.jpeg", alt: "Modern dark glass office building with reflective facade" },
   { title: "A new perspective on the skyline", category: "Architectural buildings", image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
@@ -952,44 +1276,28 @@ const projects = [
 export function ProjectsPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Our projects" title="Built with care. Made to last." backgroundImage="/atharv-images/project-tower-site.jpeg" />
-      <section aria-labelledby="ad-project-gallery-title" className="ad-section ad-project-gallery-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>Across every surface and structure</Eyebrow>
-              <h2 className="ad-heading" id="ad-project-gallery-title">
-                A closer look at <em>building care.</em>
-              </h2>
-            </div>
-            <p className="ad-body-copy">
-              Painting, building care and civil works come together in the places where we live, work and gather.
-            </p>
-          </div>
-          <div className="ad-project-gallery">
-            {projects.map((project, index) => (
-              <figure className="ad-gallery-item" key={project.image}>
-                <div className="ad-gallery-image">
-                  <img
-                    alt={project.alt}
-                    decoding="async"
-                    height="680"
-                    loading={index < 3 ? "eager" : "lazy"}
-                    src={project.image}
-                    width="1000"
-                  />
-                  <span className="ad-gallery-index">{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <figcaption>
-                  <span>{project.category}</span>
-                  <strong>{project.title}</strong>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-      <ContactBand />
+      <PageHero
+        eyebrow="Our Projects"
+        title="Construction makes dreams happen."
+        backgroundImage="/atharv-images/project-tower-site.jpeg"
+      />
+
+      {/* About Project Section (Reference 1) */}
+      <ServiceAboutSplit
+        kicker="About Project"
+        heading="Our work is our reputation, and we protect it with every project we do"
+        description1="We deliver high-quality civil repair, building painting and certified waterproofing solutions for residential societies, commercial developments and corporate campuses."
+        description2="Backed by 25+ years of trusted engineering experience, our team approaches every structure with thorough inspection, premium materials, and impeccable craftsmanship."
+      />
+
+      {/* Featured Projects 3x3 Grid (Reference 1) */}
+      <FeaturedProjects3x3Section />
+
+      {/* Latest Projects Showcase Collage (Reference 13) */}
+      <LatestProjectsSection />
+
+      {/* Powerful Solutions CTA Banner (Reference 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
@@ -1004,7 +1312,9 @@ function ContactEnquiryForm() {
     const workType = String(formData.get("workType") ?? "General enquiry");
     const message = String(formData.get("message") ?? "").trim();
     const subject = encodeURIComponent(`Project enquiry — ${workType}`);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nWork type: ${workType}\n\nProject details:\n${message}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nWork type: ${workType}\n\nProject details:\n${message}`,
+    );
 
     window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
   }
@@ -1013,36 +1323,48 @@ function ContactEnquiryForm() {
     <form className="ad-contact-form" onSubmit={handleSubmit}>
       <div className="ad-contact-form-heading">
         <Eyebrow>Tell us what you have in mind</Eyebrow>
-        <h2 className="ad-heading" id="ad-contact-form-title">Drop us a line.</h2>
-        <p>Your enquiry opens in your email app, ready for you to send.</p>
+        <h2 className="ad-heading" id="ad-contact-form-title">
+          Drop us a line.
+        </h2>
+        <p>Fill out the form below and share your project details. We’ll get back to you with the right solution.</p>
       </div>
       <div className="ad-form-grid">
         <label className="ad-form-field">
-          <span>Your name</span>
+          <span>Name</span>
           <input autoComplete="name" name="name" placeholder="Name" required />
         </label>
         <label className="ad-form-field">
           <span>Phone</span>
-          <input autoComplete="tel" name="phone" placeholder="Your phone number" required type="tel" />
+          <input autoComplete="tel" name="phone" placeholder="Phone" required type="tel" />
         </label>
         <label className="ad-form-field">
-          <span>Email address</span>
-          <input autoComplete="email" name="email" placeholder="you@example.com" required type="email" />
+          <span>Email</span>
+          <input autoComplete="email" name="email" placeholder="Email" required type="email" />
         </label>
         <label className="ad-form-field">
-          <span>Type of work</span>
+          <span>Subject</span>
+          <input name="subject" placeholder="Subject" required />
+        </label>
+        <label className="ad-form-field ad-form-message">
+          <span>Select the type of Work</span>
           <select defaultValue="" name="workType" required>
-            <option disabled value="">Choose a service</option>
-            {services.map((service) => <option key={service.number} value={service.title}>{service.title}</option>)}
+            <option disabled value="">
+              Choose a service
+            </option>
+            {services.map((service) => (
+              <option key={service.number} value={service.title}>
+                {service.title}
+              </option>
+            ))}
           </select>
         </label>
         <label className="ad-form-field ad-form-message">
-          <span>How can we help?</span>
-          <textarea name="message" placeholder="A few details about your project" required rows={5} />
+          <span>Message</span>
+          <textarea name="message" placeholder="A few details about your project" required rows={4} />
         </label>
       </div>
-      <Button className="ad-primary-cta ad-contact-submit" size="default" type="submit">
-        Prepare your enquiry <ArrowUpRight aria-hidden="true" size={16} />
+      <Button className="ad-gold-btn mt-6" size="default" type="submit">
+        Send My Message <ArrowUpRight aria-hidden="true" size={16} />
       </Button>
     </form>
   );
@@ -1051,37 +1373,82 @@ function ContactEnquiryForm() {
 export function ContactPage() {
   return (
     <SiteFrame>
-      <PageHero eyebrow="Contact us" title="Let’s talk about your project." backgroundImage="/atharv-images/project-site-architects.jpeg" />
-      <section aria-labelledby="ad-contact-title" className="ad-contact-page-section">
+      <PageHero
+        eyebrow="Contact Us"
+        title="Let’s talk about your project."
+        backgroundImage="/atharv-images/construction-skyline.jpg"
+      />
+
+      {/* Contact Floating Bar (Reference 19) */}
+      <ContactFloatingBar />
+
+      <section aria-labelledby="ad-contact-title" className="ad-contact-page-section pt-4">
         <div className="ad-container ad-contact-page-grid">
           <div className="ad-contact-page-copy">
             <Eyebrow>Good work starts with a conversation</Eyebrow>
-            <h2 className="ad-heading" id="ad-contact-title">A considered start. <em>A lasting result.</em></h2>
+            <h2 className="ad-heading" id="ad-contact-title">
+              A considered start. <em>A lasting result.</em>
+            </h2>
             <p className="ad-body-copy">
-              Get in touch about civil repairs, painting, waterproofing or your next building project.
-              We’re here to help you find the right way forward.
+              Have a project in mind or need expert guidance for your civil, painting, or waterproofing requirements?
+              Our team is here to help with reliable solutions and honest advice. Reach out to us today to discuss your
+              needs or schedule a site inspection.
             </p>
-            <div className="ad-contact-details">
-              <a className="ad-contact-detail" href={company.telephone}>
-                <span className="ad-contact-icon"><Phone aria-hidden="true" size={18} /></span>
-                <span><span>Call our team</span><strong>{company.phone}</strong></span>
-                <ArrowUpRight aria-hidden="true" className="ad-contact-detail-arrow" size={17} />
-              </a>
-              <a className="ad-contact-detail" href={`mailto:${company.email}`}>
-                <span className="ad-contact-icon"><Mail aria-hidden="true" size={18} /></span>
-                <span><span>Email us</span><strong>{company.email}</strong></span>
-                <ArrowUpRight aria-hidden="true" className="ad-contact-detail-arrow" size={17} />
-              </a>
-              <div className="ad-contact-location">
-                <MapPin aria-hidden="true" size={17} />
-                <span>Working with residential, commercial and corporate properties.</span>
+            <div className="mt-8">
+              <h3 className="text-base font-bold text-foreground mb-4">Our Social Media</h3>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded bg-[#c49a32] text-black flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded bg-[#c49a32] text-black flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Youtube size={18} />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded bg-[#c49a32] text-black flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Instagram size={18} />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded bg-[#c49a32] text-black flex items-center justify-center hover:scale-110 transition-transform"
+                >
+                  <Linkedin size={18} />
+                </a>
               </div>
+            </div>
+            <div className="mt-10 rounded-md overflow-hidden border border-border shadow-md aspect-[16/9]">
+              <iframe
+                title="Atharv Decorators Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120638.1685361009!2d72.9099882!3d19.1098485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b713bf39d107%3A0xb35a09e5399ec6eb!2sThane%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+              />
             </div>
           </div>
           <ContactEnquiryForm />
         </div>
       </section>
-      <ContactBand />
+
+      {/* Powerful Solutions CTA Banner (Reference 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
@@ -1094,85 +1461,24 @@ export function ServiceDetailPage({ service }: { service: Service }) {
         title={service.title}
         backgroundImage="/atharv-images/project-futuristic-building.jpeg"
       />
-      <section aria-labelledby="ad-service-detail-title" className="ad-container ad-detail-layout">
-        <div className="ad-detail-copy">
-          <Eyebrow>About this service</Eyebrow>
-          <h2 id="ad-service-detail-title">{service.heading}</h2>
-          <p>{service.description}</p>
-          <ul className="ad-detail-points">
-            {service.points.map((point) => (
-              <li key={point}>
-                <Check aria-hidden="true" size={15} /> {point}
-              </li>
-            ))}
-          </ul>
-          <Button asChild className="ad-primary-cta" size="default">
-            <a href={`mailto:${company.email}?subject=${encodeURIComponent(service.title)}%20enquiry`}>
-              Ask about this service <ArrowRight aria-hidden="true" size={16} />
-            </a>
-          </Button>
-        </div>
-        <div className="ad-detail-image">
-          <img alt={service.title} height="677" loading="eager" src={service.image} width="1000" />
-        </div>
-        <div className="ad-detail-proof">
-          <ValueStrip />
-        </div>
-      </section>
 
-      {/* Featured Projects Gallery for this service (as on reference site) */}
-      <section aria-labelledby="ad-service-gallery-title" className="ad-section ad-project-gallery-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>Featured Project Work</Eyebrow>
-              <h2 className="ad-heading" id="ad-service-gallery-title">
-                On-site execution &amp; <em>workmanship.</em>
-              </h2>
-            </div>
-            <p className="ad-body-copy">
-              A curated gallery of civil repairs, painting, restoration and waterproofing projects delivered across Maharashtra.
-            </p>
-          </div>
-          <div className="ad-project-gallery">
-            {projects.slice(0, 6).map((project, index) => (
-              <figure className="ad-gallery-item" key={project.title}>
-                <div className="ad-gallery-image">
-                  <img
-                    alt={project.alt}
-                    decoding="async"
-                    height="680"
-                    loading="lazy"
-                    src={project.image}
-                    width="1000"
-                  />
-                  <span className="ad-gallery-index">{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <figcaption>
-                  <span>{project.category}</span>
-                  <strong>{project.title}</strong>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Service Page About Split Section (Reference 1-7) */}
+      <ServiceAboutSplit
+        kicker="About"
+        heading={service.heading}
+        description1={service.description}
+        description2={service.points.join(". ") + "."}
+      />
 
-      <section aria-labelledby="ad-related-services-title" className="ad-section ad-services-section">
-        <div className="ad-container">
-          <div className="ad-section-topline">
-            <div>
-              <Eyebrow>Whole-building solutions</Eyebrow>
-              <h2 className="ad-heading" id="ad-related-services-title">
-                More ways we can <em>help.</em>
-              </h2>
-            </div>
-            <ArrowLink to={servicesPath}>See all services</ArrowLink>
-          </div>
-          <ServiceGrid items={services.filter((item) => item.number !== service.number).slice(0, 3)} />
-        </div>
-      </section>
-      <ContactBand />
+      {/* Featured Projects 3x3 Grid (Reference 1-7) */}
+      <FeaturedProjects3x3Section
+        kicker="FEatured Project"
+        title="Our Featured Project"
+        description="A showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results."
+      />
+
+      {/* Powerful Solutions CTA Banner (Reference 7, 12) */}
+      <PowerfulSolutionsBanner />
     </SiteFrame>
   );
 }
