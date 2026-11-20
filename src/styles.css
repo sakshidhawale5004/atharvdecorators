@@ -3407,18 +3407,18 @@
 
 .ad-hero-video-title {
   margin: 0 0 20px;
-  font-family: var(--font-display), "Cinzel", Georgia, serif !important;
-  font-size: clamp(40px, 5.8vw, 76px) !important;
-  font-weight: 600 !important;
-  line-height: 1.05 !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(44px, 6.2vw, 84px) !important;
+  font-weight: 500 !important;
+  line-height: 1.06 !important;
   letter-spacing: -0.01em !important;
   color: #ffffff !important;
-  text-transform: uppercase !important;
+  text-transform: none !important;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
 }
 
 .ad-hero-video-title em {
-  font-style: normal !important;
+  font-style: italic !important;
   background: linear-gradient(135deg, #fcedc5 0%, #d4af37 50%, #f5e08c 80%, #b38827 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;

@@ -1384,9 +1384,9 @@ export function HomePage() {
             <Eyebrow light>Building care, thoughtfully delivered</Eyebrow>
 
             <h1 className="ad-display ad-hero-title ad-hero-video-title" id="ad-home-title">
-              BUILDING STRENGTH.
+              Building strength.
               <br />
-              <em>DELIVERING TRUST.</em>
+              <em>Delivering trust.</em>
             </h1>
 
             <p className="ad-hero-text ad-hero-video-desc">
