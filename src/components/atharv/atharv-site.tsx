@@ -321,7 +321,7 @@ export function Header() {
   return (
     <>
       <header className={`ad-header${isScrolled ? " is-scrolled" : ""}`}>
-        <div className="ad-container ad-header-inner">
+        <div className="ad-header-inner">
           <Link
             aria-label="Atharv Decorators home"
             className="ad-brand-link"
@@ -331,22 +331,12 @@ export function Header() {
           >
             <Logo />
           </Link>
-          <Button
-            aria-expanded={isOpen}
-            aria-label={isOpen ? "Close navigation" : "Open navigation"}
-            className="ad-menu-toggle"
-            onClick={() => setIsOpen((current) => !current)}
-            size="icon"
-            variant="outline"
-          >
-            {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-          </Button>
 
           <nav aria-label="Main navigation" className={`ad-nav${isOpen ? " is-open" : ""}`}>
             <Link001
               asChild
               active={pathname === homePath}
-              underlineColor="bg-amber-400"
+              underlineColor="bg-amber-500"
             >
               <Link
                 aria-current={pathname === homePath ? "page" : undefined}
@@ -361,7 +351,7 @@ export function Header() {
             <Link001
               asChild
               active={pathname === aboutPath}
-              underlineColor="bg-amber-400"
+              underlineColor="bg-amber-500"
             >
               <Link
                 aria-current={pathname === aboutPath ? "page" : undefined}
@@ -378,7 +368,7 @@ export function Header() {
               <Link001
                 asChild
                 active={isServicesActive}
-                underlineColor="bg-amber-400"
+                underlineColor="bg-amber-500"
               >
                 <Link
                   aria-current={isServicesActive ? "page" : undefined}
@@ -387,7 +377,7 @@ export function Header() {
                   from="/"
                   to={servicesPath}
                 >
-                  Services <ChevronDown className="ad-nav-chevron" size={14} />
+                  Services <ChevronDown className="ad-nav-chevron" size={13} />
                 </Link>
               </Link001>
 
@@ -412,7 +402,7 @@ export function Header() {
             <Link001
               asChild
               active={pathname === projectsPath}
-              underlineColor="bg-amber-400"
+              underlineColor="bg-amber-500"
             >
               <Link
                 aria-current={pathname === projectsPath ? "page" : undefined}
@@ -428,7 +418,7 @@ export function Header() {
             <Link001
               asChild
               active={pathname === contactPath}
-              underlineColor="bg-amber-400"
+              underlineColor="bg-amber-500"
             >
               <Link
                 aria-current={pathname === contactPath ? "page" : undefined}
@@ -441,38 +431,63 @@ export function Header() {
               </Link>
             </Link001>
 
-            <a
-              href={company.telephone}
-              className="ad-header-phone-btn hidden md:inline-flex"
-              title="Call +91 8879 555 125"
-            >
-              <Phone size={13} className="text-amber-400" />
-              <span>+91 8879 555 125</span>
-            </a>
+            {/* Mobile Call & Action Buttons in menu drawer */}
+            <div className="lg:hidden mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2 w-full">
+              <a
+                href={company.telephone}
+                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full border border-amber-500 text-slate-900 font-bold text-xs hover:bg-amber-50"
+              >
+                <Phone size={13} className="text-amber-600" />
+                <span>Call +91 8879 555 125</span>
+              </a>
+              <Link
+                to={contactPath}
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold text-xs shadow-md"
+              >
+                Get Started
+              </Link>
+            </div>
+          </nav>
 
-            <span className="ad-nav-divider" aria-hidden="true" />
-
+          <div className="ad-header-actions">
             <button
               type="button"
-              className="ad-search-btn"
+              className="ad-search-pill-btn"
               onClick={() => setIsSearchOpen(true)}
               aria-label="Search website"
               title="Search (Ctrl+K)"
             >
-              <Search size={18} />
+              <Search size={15} />
             </button>
 
-            {/* Mobile Call CTA Button in menu drawer */}
-            <div className="md:hidden mt-4 pt-4 border-t border-white/10 w-full">
-              <a
-                href={company.telephone}
-                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded bg-[#c49a32] text-black font-bold text-xs shadow-md"
-              >
-                <Phone size={14} />
-                <span>Call +91 8879 555 125</span>
-              </a>
-            </div>
-          </nav>
+            <a
+              href={company.telephone}
+              className="ad-pill-outline-btn hidden md:inline-flex"
+              title="Call +91 8879 555 125"
+            >
+              <span>Call Now</span>
+            </a>
+
+            <Link
+              to={contactPath}
+              className="ad-pill-solid-btn hidden sm:inline-flex"
+              onClick={() => setIsOpen(false)}
+            >
+              Get Started
+            </Link>
+
+            <Button
+              aria-expanded={isOpen}
+              aria-label={isOpen ? "Close navigation" : "Open navigation"}
+              className="ad-menu-toggle lg:hidden"
+              onClick={() => setIsOpen((current) => !current)}
+              size="icon"
+              variant="outline"
+            >
+              {isOpen ? <X aria-hidden="true" size={17} /> : <Menu aria-hidden="true" size={17} />}
+            </Button>
+          </div>
         </div>
       </header>
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
