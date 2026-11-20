@@ -23,110 +23,12 @@ var public_assets_data_default = {
 		"size": 12014,
 		"path": "../public/favicon.ico"
 	},
-	"/assets/about-B--LQhsb.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"47-pi4V/oDcBbRnqO873+Vrz0snAkc\"",
-		"mtime": "2026-11-20T10:12:20.605Z",
-		"size": 71,
-		"path": "../public/assets/about-B--LQhsb.js"
-	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"a0-CKGXSIe7TSsqDTmGm/nY1t/o5d0\"",
 		"mtime": "2026-11-19T14:05:11.750Z",
 		"size": 160,
 		"path": "../public/robots.txt"
-	},
-	"/assets/contact-BgSk9ULo.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"47-TTnLRRDcEVvkxDaIoW6jaKIHArY\"",
-		"mtime": "2026-11-20T10:12:20.613Z",
-		"size": 71,
-		"path": "../public/assets/contact-BgSk9ULo.js"
-	},
-	"/assets/civil-repairs-structural-maintenance-pl4m4VLB.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-aEJyzGQTgchp29XbEgtxb0QhrqM\"",
-		"mtime": "2026-11-20T10:12:20.613Z",
-		"size": 121,
-		"path": "../public/assets/civil-repairs-structural-maintenance-pl4m4VLB.js"
-	},
-	"/assets/exterior-painting-building-repainting-gxGx2YJN.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-bD61yz7L4CGb65ecVwnKF1Pqgpk\"",
-		"mtime": "2026-11-20T10:12:20.618Z",
-		"size": 121,
-		"path": "../public/assets/exterior-painting-building-repainting-gxGx2YJN.js"
-	},
-	"/assets/interior-painting-finishing-DANixOio.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-Dy6xTSSGDK8QPKBSzTxmrEauwes\"",
-		"mtime": "2026-11-20T10:12:20.618Z",
-		"size": 121,
-		"path": "../public/assets/interior-painting-finishing-DANixOio.js"
-	},
-	"/assets/projects-C3MSy250.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"47-QcJTg9/oNK2ZZQdwclJi5mkg7k0\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 71,
-		"path": "../public/assets/projects-C3MSy250.js"
-	},
-	"/assets/road-miscellaneous-civil-works-Dv8AfzKu.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-SVjNj4Gu33vlxk5TUkCA70fNCWk\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 121,
-		"path": "../public/assets/road-miscellaneous-civil-works-Dv8AfzKu.js"
-	},
-	"/assets/index-CWWqMGkt.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"78800-60v+0KGCkMziIjSfa8hjlG0ahXg\"",
-		"mtime": "2026-11-20T10:12:20.599Z",
-		"size": 493568,
-		"path": "../public/assets/index-CWWqMGkt.js"
-	},
-	"/assets/projects_._slug-BxcHIlAT.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"d1-M+f1udezfyCK7x63dk5LzeqGWzE\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 209,
-		"path": "../public/assets/projects_._slug-BxcHIlAT.js"
-	},
-	"/assets/routes-CVRkU9x3.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"47-mYrDUSfbp/95JRoO3lbSJkUlP7s\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 71,
-		"path": "../public/assets/routes-CVRkU9x3.js"
-	},
-	"/assets/waterproofing-solutions-Buejc_38.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-Fr5fDhJPh6MtqxAo1ZIC/TDOxZk\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 121,
-		"path": "../public/assets/waterproofing-solutions-Buejc_38.js"
-	},
-	"/assets/services-5-fBR5iZ.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"47-Tidxfnby7ww0zv5V5bJt52TevY0\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 71,
-		"path": "../public/assets/services-5-fBR5iZ.js"
-	},
-	"/assets/styles-DBuXILmB.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"26072-4IBvrDjOb1kEIt2X7KewPZlth0U\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 155762,
-		"path": "../public/assets/styles-DBuXILmB.css"
-	},
-	"/assets/texture-pu-polishing-works-BRB0ZWN3.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"79-j6ZkWKxq6Jm+ByYPZfliG0RK1lM\"",
-		"mtime": "2026-11-20T10:12:20.620Z",
-		"size": 121,
-		"path": "../public/assets/texture-pu-polishing-works-BRB0ZWN3.js"
 	},
 	"/ATHARV/ATHARV SECTION REFERENCE (10).png": {
 		"type": "image/png",
@@ -142,48 +44,6 @@ var public_assets_data_default = {
 		"size": 114940,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (16).png"
 	},
-	"/ATHARV/ATHARV SECTION REFERENCE (1).png": {
-		"type": "image/png",
-		"etag": "\"9461b-AHAoPRHQhcqe7YkXZoEZyoWAdG0\"",
-		"mtime": "2026-11-20T06:55:06.629Z",
-		"size": 607771,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (1).png"
-	},
-	"/ATHARV/ATHARV SECTION REFERENCE (13).png": {
-		"type": "image/png",
-		"etag": "\"9eee6-z/8OfqIAMwhXwVGuNSnnquA9udw\"",
-		"mtime": "2026-11-20T06:55:06.662Z",
-		"size": 650982,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (13).png"
-	},
-	"/ATHARV/ATHARV SECTION REFERENCE (12).png": {
-		"type": "image/png",
-		"etag": "\"b9d4e-EcVUoVTYljJxckV5DzzoYt/CWBE\"",
-		"mtime": "2026-11-20T06:55:06.662Z",
-		"size": 761166,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (12).png"
-	},
-	"/ATHARV/ATHARV SECTION REFERENCE (11).png": {
-		"type": "image/png",
-		"etag": "\"f29ae-LDRqtWeT9Rc1BrHvnOer7agm/1I\"",
-		"mtime": "2026-11-20T06:55:06.646Z",
-		"size": 993710,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (11).png"
-	},
-	"/ATHARV/ATHARV SECTION REFERENCE (14).png": {
-		"type": "image/png",
-		"etag": "\"81ae1-M3/BAiF4/6xMyBhlwe/iPO/KR/o\"",
-		"mtime": "2026-11-20T06:55:06.679Z",
-		"size": 531169,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (14).png"
-	},
-	"/ATHARV/ATHARV SECTION REFERENCE (15).png": {
-		"type": "image/png",
-		"etag": "\"b5cd7-kVQ4gXkNAQSaLiB7+9AhaCvnjWU\"",
-		"mtime": "2026-11-20T06:55:06.679Z",
-		"size": 744663,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (15).png"
-	},
 	"/ATHARV/ATHARV SECTION REFERENCE (17).png": {
 		"type": "image/png",
 		"etag": "\"6976d-Cm+9Bewopx1f0+OEFxKGEifMOUI\"",
@@ -198,40 +58,19 @@ var public_assets_data_default = {
 		"size": 455997,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (19).png"
 	},
-	"/ATHARV/ATHARV SECTION REFERENCE (9).png": {
-		"type": "image/png",
-		"etag": "\"d8d5-9ic/ZZbi7Aw+CSKBa/Qwj2Cve7Q\"",
-		"mtime": "2026-11-20T06:55:06.798Z",
-		"size": 55509,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (9).png"
+	"/assets/civil-repairs-structural-maintenance-B5RotbGa.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-bUs+nJgK4YaJLMtSKzDVOmJkvRQ\"",
+		"mtime": "2026-11-20T10:44:15.573Z",
+		"size": 121,
+		"path": "../public/assets/civil-repairs-structural-maintenance-B5RotbGa.js"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142726.png": {
-		"type": "image/png",
-		"etag": "\"a10f-sKRimI+nlyEGytm82utDv516res\"",
-		"mtime": "2026-11-20T08:57:26.882Z",
-		"size": 41231,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142726.png"
-	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142736.png": {
-		"type": "image/png",
-		"etag": "\"d2ea-Fp+O0t+ljotVtBZFVRZUthSN55c\"",
-		"mtime": "2026-11-20T08:57:36.778Z",
-		"size": 53994,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142736.png"
-	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142730.png": {
-		"type": "image/png",
-		"etag": "\"5cff-sOmnlbKosMwtskS/cZfVKMV0PxQ\"",
-		"mtime": "2026-11-20T08:57:31.040Z",
-		"size": 23807,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142730.png"
-	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142740.png": {
-		"type": "image/png",
-		"etag": "\"846f-202QnduNMjn3g1MvarlIYPmRxQY\"",
-		"mtime": "2026-11-20T08:57:40.852Z",
-		"size": 33903,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142740.png"
+	"/assets/about-CzzfELoc.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"47-57xoS/6GDMHPz/2ocRZRTBZwnOc\"",
+		"mtime": "2026-11-20T10:44:15.573Z",
+		"size": 71,
+		"path": "../public/assets/about-CzzfELoc.js"
 	},
 	"/ATHARV/ATHARV SECTION REFERENCE (8).png": {
 		"type": "image/png",
@@ -240,40 +79,54 @@ var public_assets_data_default = {
 		"size": 345929,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (8).png"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142749.png": {
-		"type": "image/png",
-		"etag": "\"5780-9e9JD7tv97D0yTSIB3l14m5+1lo\"",
-		"mtime": "2026-11-20T08:57:49.921Z",
-		"size": 22400,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142749.png"
+	"/assets/contact-Bhf6VABG.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"47-f2G5xmpXpID54TF4/DqxL8L6nPk\"",
+		"mtime": "2026-11-20T10:44:15.583Z",
+		"size": 71,
+		"path": "../public/assets/contact-Bhf6VABG.js"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142754.png": {
-		"type": "image/png",
-		"etag": "\"82a5-3GtUdM4RjhQuG76Y3Jvwc3gu13M\"",
-		"mtime": "2026-11-20T08:57:54.415Z",
-		"size": 33445,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142754.png"
+	"/assets/exterior-painting-building-repainting-C8sz3AyV.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-xXt7kl8fCt3be1voSnHUDOjJbAA\"",
+		"mtime": "2026-11-20T10:44:15.583Z",
+		"size": 121,
+		"path": "../public/assets/exterior-painting-building-repainting-C8sz3AyV.js"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142745.png": {
+	"/ATHARV/ATHARV SECTION REFERENCE (9).png": {
 		"type": "image/png",
-		"etag": "\"a072-o/3mnPbLVUxfXoHDX+Tu7+jrvoY\"",
-		"mtime": "2026-11-20T08:57:45.823Z",
-		"size": 41074,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142745.png"
+		"etag": "\"d8d5-9ic/ZZbi7Aw+CSKBa/Qwj2Cve7Q\"",
+		"mtime": "2026-11-20T06:55:06.798Z",
+		"size": 55509,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (9).png"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142757.png": {
+	"/ATHARV/ATHARV SECTION REFERENCE (1).png": {
 		"type": "image/png",
-		"etag": "\"6e37-BTApqwXs1Trh8zUxsvghOWgVWWY\"",
-		"mtime": "2026-11-20T08:57:58.164Z",
-		"size": 28215,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142757.png"
+		"etag": "\"9461b-AHAoPRHQhcqe7YkXZoEZyoWAdG0\"",
+		"mtime": "2026-11-20T06:55:06.629Z",
+		"size": 607771,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (1).png"
 	},
-	"/ATHARV/ATHARV SECTION REFERENCE (4).png": {
+	"/ATHARV/ATHARV SECTION REFERENCE (12).png": {
 		"type": "image/png",
-		"etag": "\"addc9-pioz5BBUh+FieQMJlcDZr3DpX2c\"",
-		"mtime": "2026-11-20T06:55:06.747Z",
-		"size": 712137,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (4).png"
+		"etag": "\"b9d4e-EcVUoVTYljJxckV5DzzoYt/CWBE\"",
+		"mtime": "2026-11-20T06:55:06.662Z",
+		"size": 761166,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (12).png"
+	},
+	"/ATHARV/ATHARV SECTION REFERENCE (14).png": {
+		"type": "image/png",
+		"etag": "\"81ae1-M3/BAiF4/6xMyBhlwe/iPO/KR/o\"",
+		"mtime": "2026-11-20T06:55:06.679Z",
+		"size": 531169,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (14).png"
+	},
+	"/ATHARV/ATHARV SECTION REFERENCE (13).png": {
+		"type": "image/png",
+		"etag": "\"9eee6-z/8OfqIAMwhXwVGuNSnnquA9udw\"",
+		"mtime": "2026-11-20T06:55:06.662Z",
+		"size": 650982,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (13).png"
 	},
 	"/ATHARV/ATHARV SECTION REFERENCE (3).png": {
 		"type": "image/png",
@@ -282,12 +135,19 @@ var public_assets_data_default = {
 		"size": 577310,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (3).png"
 	},
-	"/ATHARV/ATHARV SECTION REFERENCE (2).png": {
+	"/ATHARV/ATHARV SECTION REFERENCE (11).png": {
 		"type": "image/png",
-		"etag": "\"8f3a3-ZwDmgraRiqa7Fk5gKlLOQk0oZ4Y\"",
-		"mtime": "2026-11-20T06:55:06.730Z",
-		"size": 586659,
-		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (2).png"
+		"etag": "\"f29ae-LDRqtWeT9Rc1BrHvnOer7agm/1I\"",
+		"mtime": "2026-11-20T06:55:06.646Z",
+		"size": 993710,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (11).png"
+	},
+	"/ATHARV/ATHARV SECTION REFERENCE (15).png": {
+		"type": "image/png",
+		"etag": "\"b5cd7-kVQ4gXkNAQSaLiB7+9AhaCvnjWU\"",
+		"mtime": "2026-11-20T06:55:06.679Z",
+		"size": 744663,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (15).png"
 	},
 	"/ATHARV/ATHARV SECTION REFERENCE (5).png": {
 		"type": "image/png",
@@ -296,26 +156,12 @@ var public_assets_data_default = {
 		"size": 571343,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (5).png"
 	},
-	"/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142802.png": {
+	"/ATHARV/ATHARV SECTION REFERENCE (2).png": {
 		"type": "image/png",
-		"etag": "\"b071-H3eTckq0RAzzLj+6wYKYuByxNVA\"",
-		"mtime": "2026-11-20T08:58:02.966Z",
-		"size": 45169,
-		"path": "../public/ATHARV DECORS PROJECT PAGES NAME/Screenshot 2026-11-20 142802.png"
-	},
-	"/atharv-images/atharv-decorators-logo.webp": {
-		"type": "image/webp",
-		"etag": "\"4fca-XL1z8+Quf1AkisHjgIRMxZFcMtY\"",
-		"mtime": "2026-11-19T14:05:11.786Z",
-		"size": 20426,
-		"path": "../public/atharv-images/atharv-decorators-logo.webp"
-	},
-	"/atharv-images/Atharv_Decorators_logo.webp": {
-		"type": "image/webp",
-		"etag": "\"4fca-XL1z8+Quf1AkisHjgIRMxZFcMtY\"",
-		"mtime": "2026-11-19T14:06:27.622Z",
-		"size": 20426,
-		"path": "../public/atharv-images/Atharv_Decorators_logo.webp"
+		"etag": "\"8f3a3-ZwDmgraRiqa7Fk5gKlLOQk0oZ4Y\"",
+		"mtime": "2026-11-20T06:55:06.730Z",
+		"size": 586659,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (2).png"
 	},
 	"/ATHARV/ATHARV SECTION REFERENCE (7).png": {
 		"type": "image/png",
@@ -324,13 +170,6 @@ var public_assets_data_default = {
 		"size": 809422,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (7).png"
 	},
-	"/atharv-images/blueprint-pattern.png": {
-		"type": "image/png",
-		"etag": "\"2b1b6-pXtWM+igPZ/kFPxnDJQ5iwH3NgQ\"",
-		"mtime": "2026-11-19T14:06:27.796Z",
-		"size": 176566,
-		"path": "../public/atharv-images/blueprint-pattern.png"
-	},
 	"/ATHARV/ATHARV SECTION REFERENCE (6).png": {
 		"type": "image/png",
 		"etag": "\"a56d1-KyYSF0y4hOTroBhgUV2Yjof//vk\"",
@@ -338,12 +177,117 @@ var public_assets_data_default = {
 		"size": 677585,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (6).png"
 	},
+	"/ATHARV/ATHARV SECTION REFERENCE (4).png": {
+		"type": "image/png",
+		"etag": "\"addc9-pioz5BBUh+FieQMJlcDZr3DpX2c\"",
+		"mtime": "2026-11-20T06:55:06.747Z",
+		"size": 712137,
+		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (4).png"
+	},
 	"/ATHARV/ATHARV SECTION REFERENCE (18).png": {
 		"type": "image/png",
 		"etag": "\"141bbe-7YxpnQn8HFc3vsrIs6XT+LLCumk\"",
 		"mtime": "2026-11-20T06:55:06.714Z",
 		"size": 1317822,
 		"path": "../public/ATHARV/ATHARV SECTION REFERENCE (18).png"
+	},
+	"/assets/interior-painting-finishing-CQ6K4GIk.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-cLwzmHaGRXTjcn2YNdAyYBqRw9A\"",
+		"mtime": "2026-11-20T10:44:15.583Z",
+		"size": 121,
+		"path": "../public/assets/interior-painting-finishing-CQ6K4GIk.js"
+	},
+	"/assets/index-ZT2nRoeG.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"789cc-nEEIymdZWyuIVvuCZxdcOBcZ8ck\"",
+		"mtime": "2026-11-20T10:44:15.573Z",
+		"size": 494028,
+		"path": "../public/assets/index-ZT2nRoeG.js"
+	},
+	"/assets/projects-DVwB5m7O.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"47-oBp5o0krJIn13H0ziIMrE7tqsc0\"",
+		"mtime": "2026-11-20T10:44:15.583Z",
+		"size": 71,
+		"path": "../public/assets/projects-DVwB5m7O.js"
+	},
+	"/assets/projects_._slug-BGH69RBz.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"d1-Yz0l0CufFvYHxnbcLJUjUua2M4k\"",
+		"mtime": "2026-11-20T10:44:15.587Z",
+		"size": 209,
+		"path": "../public/assets/projects_._slug-BGH69RBz.js"
+	},
+	"/assets/road-miscellaneous-civil-works-9DIXmuD3.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-En1DcdzMYAkbDloWIYTuBNw2H/E\"",
+		"mtime": "2026-11-20T10:44:15.587Z",
+		"size": 121,
+		"path": "../public/assets/road-miscellaneous-civil-works-9DIXmuD3.js"
+	},
+	"/assets/routes-D0FIDyAw.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"47-x2FIWtDTjOgQtqfVKqhU2MmJy/E\"",
+		"mtime": "2026-11-20T10:44:15.588Z",
+		"size": 71,
+		"path": "../public/assets/routes-D0FIDyAw.js"
+	},
+	"/assets/services--EH-Qk-d.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"47-6xd7ojnZZauIAuOS2pxenGylbxE\"",
+		"mtime": "2026-11-20T10:44:15.588Z",
+		"size": 71,
+		"path": "../public/assets/services--EH-Qk-d.js"
+	},
+	"/assets/waterproofing-solutions-B5vYsYkZ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-uBmLbvL0rKTzO/Cmht9tfQ85+Yo\"",
+		"mtime": "2026-11-20T10:44:15.591Z",
+		"size": 121,
+		"path": "../public/assets/waterproofing-solutions-B5vYsYkZ.js"
+	},
+	"/assets/texture-pu-polishing-works-cMfHX9o8.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"79-fb1wEgWhQI12moTZSSuCHzwr5oM\"",
+		"mtime": "2026-11-20T10:44:15.591Z",
+		"size": 121,
+		"path": "../public/assets/texture-pu-polishing-works-cMfHX9o8.js"
+	},
+	"/atharv-images/atharv-decorators-logo.webp": {
+		"type": "image/webp",
+		"etag": "\"4fca-XL1z8+Quf1AkisHjgIRMxZFcMtY\"",
+		"mtime": "2026-11-19T14:05:11.786Z",
+		"size": 20426,
+		"path": "../public/atharv-images/atharv-decorators-logo.webp"
+	},
+	"/assets/styles-DBuXILmB.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"26072-4IBvrDjOb1kEIt2X7KewPZlth0U\"",
+		"mtime": "2026-11-20T10:44:15.591Z",
+		"size": 155762,
+		"path": "../public/assets/styles-DBuXILmB.css"
+	},
+	"/atharv-images/Atharv_Decorators_logo.webp": {
+		"type": "image/webp",
+		"etag": "\"4fca-XL1z8+Quf1AkisHjgIRMxZFcMtY\"",
+		"mtime": "2026-11-19T14:06:27.622Z",
+		"size": 20426,
+		"path": "../public/atharv-images/Atharv_Decorators_logo.webp"
+	},
+	"/atharv-images/blueprint-pattern.png": {
+		"type": "image/png",
+		"etag": "\"2b1b6-pXtWM+igPZ/kFPxnDJQ5iwH3NgQ\"",
+		"mtime": "2026-11-19T14:06:27.796Z",
+		"size": 176566,
+		"path": "../public/atharv-images/blueprint-pattern.png"
+	},
+	"/atharv-images/civil-repairs-maintenance.webp": {
+		"type": "image/webp",
+		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
+		"mtime": "2026-11-19T14:06:27.341Z",
+		"size": 101518,
+		"path": "../public/atharv-images/civil-repairs-maintenance.webp"
 	},
 	"/atharv-images/client-amazon.webp": {
 		"type": "image/webp",
@@ -358,13 +302,6 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.748Z",
 		"size": 4442,
 		"path": "../public/atharv-images/client-balsan-developers.webp"
-	},
-	"/atharv-images/civil-repairs-maintenance.webp": {
-		"type": "image/webp",
-		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
-		"mtime": "2026-11-19T14:06:27.341Z",
-		"size": 101518,
-		"path": "../public/atharv-images/civil-repairs-maintenance.webp"
 	},
 	"/atharv-images/client-lt-construction.webp": {
 		"type": "image/webp",
@@ -401,19 +338,19 @@ var public_assets_data_default = {
 		"size": 4772,
 		"path": "../public/atharv-images/client-rebel-foods.webp"
 	},
-	"/atharv-images/client-taj.webp": {
-		"type": "image/webp",
-		"etag": "\"10ca-v939U8ej/a6tpwsgdCWf5ZaIg0o\"",
-		"mtime": "2026-11-19T14:06:27.089Z",
-		"size": 4298,
-		"path": "../public/atharv-images/client-taj.webp"
-	},
 	"/atharv-images/client-runwal-greens.webp": {
 		"type": "image/webp",
 		"etag": "\"1624-30VG5x0dnpCwxJHnRJJOqCU/Xfw\"",
 		"mtime": "2026-11-19T14:06:26.556Z",
 		"size": 5668,
 		"path": "../public/atharv-images/client-runwal-greens.webp"
+	},
+	"/atharv-images/client-taj.webp": {
+		"type": "image/webp",
+		"etag": "\"10ca-v939U8ej/a6tpwsgdCWf5ZaIg0o\"",
+		"mtime": "2026-11-19T14:06:27.089Z",
+		"size": 4298,
+		"path": "../public/atharv-images/client-taj.webp"
 	},
 	"/atharv-images/client-talwalkars.webp": {
 		"type": "image/webp",
@@ -450,12 +387,12 @@ var public_assets_data_default = {
 		"size": 182449,
 		"path": "../public/atharv-images/commercial-glass-building.jpg"
 	},
-	"/atharv-images/construction-skyline.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"34331-PMjjvIvh6K2Rfoa+2M5gbW15iqM\"",
-		"mtime": "2026-11-19T14:05:11.879Z",
-		"size": 213809,
-		"path": "../public/atharv-images/construction-skyline.jpg"
+	"/atharv-images/exterior-building-restoration.webp": {
+		"type": "image/webp",
+		"etag": "\"14348-ajCoH6Ku+r9eCYjGsSvbHoBCmnw\"",
+		"mtime": "2026-11-19T14:05:11.938Z",
+		"size": 82760,
+		"path": "../public/atharv-images/exterior-building-restoration.webp"
 	},
 	"/atharv-images/curved-civic-building.jpg": {
 		"type": "image/jpeg",
@@ -464,12 +401,19 @@ var public_assets_data_default = {
 		"size": 148384,
 		"path": "../public/atharv-images/curved-civic-building.jpg"
 	},
-	"/atharv-images/exterior-building-restoration.webp": {
-		"type": "image/webp",
-		"etag": "\"14348-ajCoH6Ku+r9eCYjGsSvbHoBCmnw\"",
-		"mtime": "2026-11-19T14:05:11.938Z",
-		"size": 82760,
-		"path": "../public/atharv-images/exterior-building-restoration.webp"
+	"/atharv-images/construction-skyline.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"34331-PMjjvIvh6K2Rfoa+2M5gbW15iqM\"",
+		"mtime": "2026-11-19T14:05:11.879Z",
+		"size": 213809,
+		"path": "../public/atharv-images/construction-skyline.jpg"
+	},
+	"/atharv-images/icon-commercial.png": {
+		"type": "image/png",
+		"etag": "\"b96-DsT/mGB1lTae1w2K/mYclrE6xkg\"",
+		"mtime": "2026-11-19T14:06:27.389Z",
+		"size": 2966,
+		"path": "../public/atharv-images/icon-commercial.png"
 	},
 	"/atharv-images/hero-video-poster.jpg": {
 		"type": "image/jpeg",
@@ -478,19 +422,19 @@ var public_assets_data_default = {
 		"size": 51840,
 		"path": "../public/atharv-images/hero-video-poster.jpg"
 	},
+	"/atharv-images/icon-hospitality.png": {
+		"type": "image/png",
+		"etag": "\"34ea-xUfB94W/K/3mXocWv3PqrLoiXKQ\"",
+		"mtime": "2026-11-19T14:06:27.972Z",
+		"size": 13546,
+		"path": "../public/atharv-images/icon-hospitality.png"
+	},
 	"/atharv-images/exterior-painting-repairing.webp": {
 		"type": "image/webp",
 		"etag": "\"14348-ajCoH6Ku+r9eCYjGsSvbHoBCmnw\"",
 		"mtime": "2026-11-19T14:06:26.033Z",
 		"size": 82760,
 		"path": "../public/atharv-images/exterior-painting-repairing.webp"
-	},
-	"/atharv-images/icon-commercial.png": {
-		"type": "image/png",
-		"etag": "\"b96-DsT/mGB1lTae1w2K/mYclrE6xkg\"",
-		"mtime": "2026-11-19T14:06:27.389Z",
-		"size": 2966,
-		"path": "../public/atharv-images/icon-commercial.png"
 	},
 	"/atharv-images/engineers-architects-site.jpg": {
 		"type": "image/jpeg",
@@ -505,13 +449,6 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.606Z",
 		"size": 9966,
 		"path": "../public/atharv-images/icon-multipurpose.png"
-	},
-	"/atharv-images/icon-hospitality.png": {
-		"type": "image/png",
-		"etag": "\"34ea-xUfB94W/K/3mXocWv3PqrLoiXKQ\"",
-		"mtime": "2026-11-19T14:06:27.972Z",
-		"size": 13546,
-		"path": "../public/atharv-images/icon-hospitality.png"
 	},
 	"/atharv-images/icon-residential.png": {
 		"type": "image/png",
@@ -541,6 +478,13 @@ var public_assets_data_default = {
 		"size": 506,
 		"path": "../public/atharv-images/icon-service-3.svg"
 	},
+	"/atharv-images/interior-painting-finishing.webp": {
+		"type": "image/webp",
+		"etag": "\"b28e-NIf96+CGoz6wp3sB3T/Vuo/KZiM\"",
+		"mtime": "2026-11-19T14:05:11.956Z",
+		"size": 45710,
+		"path": "../public/atharv-images/interior-painting-finishing.webp"
+	},
 	"/atharv-images/icon-service-4.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"1ac-qlubWS9v9G5+G5hs9SQV/5+uwSE\"",
@@ -554,13 +498,6 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.923Z",
 		"size": 45710,
 		"path": "../public/atharv-images/interior-painting-hero.webp"
-	},
-	"/atharv-images/interior-painting-finishing.webp": {
-		"type": "image/webp",
-		"etag": "\"b28e-NIf96+CGoz6wp3sB3T/Vuo/KZiM\"",
-		"mtime": "2026-11-19T14:05:11.956Z",
-		"size": 45710,
-		"path": "../public/atharv-images/interior-painting-finishing.webp"
 	},
 	"/atharv-images/modern-architectural-facade.jpg": {
 		"type": "image/jpeg",
@@ -576,13 +513,6 @@ var public_assets_data_default = {
 		"size": 152968,
 		"path": "../public/atharv-images/modern-atrium.jpg"
 	},
-	"/atharv-images/project-curved-architecture.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"25588-d2GQpxrpmtohH9Go9muNrMWK5Ig\"",
-		"mtime": "2026-11-19T14:06:27.197Z",
-		"size": 152968,
-		"path": "../public/atharv-images/project-curved-architecture.jpeg"
-	},
 	"/atharv-images/project-angular-building.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"1e6b8-PY/emD+DfLgKs6JM3j8jzrfY/vg\"",
@@ -597,12 +527,12 @@ var public_assets_data_default = {
 		"size": 126070,
 		"path": "../public/atharv-images/project-excavator-action.jpeg"
 	},
-	"/atharv-images/project-glass-building.jpeg": {
+	"/atharv-images/project-curved-architecture.jpeg": {
 		"type": "image/jpeg",
-		"etag": "\"2c8b1-1DhBXgpi7DVgmpeRiDbHslpttgs\"",
-		"mtime": "2026-11-19T14:06:27.489Z",
-		"size": 182449,
-		"path": "../public/atharv-images/project-glass-building.jpeg"
+		"etag": "\"25588-d2GQpxrpmtohH9Go9muNrMWK5Ig\"",
+		"mtime": "2026-11-19T14:06:27.197Z",
+		"size": 152968,
+		"path": "../public/atharv-images/project-curved-architecture.jpeg"
 	},
 	"/atharv-images/project-futuristic-building.jpeg": {
 		"type": "image/jpeg",
@@ -610,6 +540,13 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.251Z",
 		"size": 148384,
 		"path": "../public/atharv-images/project-futuristic-building.jpeg"
+	},
+	"/atharv-images/project-glass-building.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"2c8b1-1DhBXgpi7DVgmpeRiDbHslpttgs\"",
+		"mtime": "2026-11-19T14:06:27.489Z",
+		"size": 182449,
+		"path": "../public/atharv-images/project-glass-building.jpeg"
 	},
 	"/atharv-images/project-modern-architecture.jpeg": {
 		"type": "image/jpeg",
@@ -632,12 +569,12 @@ var public_assets_data_default = {
 		"size": 182449,
 		"path": "../public/atharv-images/project-site-2.jpg"
 	},
-	"/atharv-images/project-site-5.jpg": {
+	"/atharv-images/project-site-4.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"17f83-kZpI9dTUAaZ9dY1xRmEIpYVqgVw\"",
-		"mtime": "2026-11-20T08:54:23.627Z",
-		"size": 98179,
-		"path": "../public/atharv-images/project-site-5.jpg"
+		"etag": "\"1e6b8-PY/emD+DfLgKs6JM3j8jzrfY/vg\"",
+		"mtime": "2026-11-20T08:54:31.906Z",
+		"size": 124600,
+		"path": "../public/atharv-images/project-site-4.jpg"
 	},
 	"/atharv-images/project-site-3.jpg": {
 		"type": "image/jpeg",
@@ -646,19 +583,12 @@ var public_assets_data_default = {
 		"size": 152968,
 		"path": "../public/atharv-images/project-site-3.jpg"
 	},
-	"/atharv-images/project-site-4.jpg": {
+	"/atharv-images/project-site-5.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"1e6b8-PY/emD+DfLgKs6JM3j8jzrfY/vg\"",
-		"mtime": "2026-11-20T08:54:31.906Z",
-		"size": 124600,
-		"path": "../public/atharv-images/project-site-4.jpg"
-	},
-	"/atharv-images/project-site-8.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"16284-AoNjZ2ypa77kedqsDqMxDEhAUF8\"",
-		"mtime": "2026-11-20T08:53:35.074Z",
-		"size": 90756,
-		"path": "../public/atharv-images/project-site-8.jpg"
+		"etag": "\"17f83-kZpI9dTUAaZ9dY1xRmEIpYVqgVw\"",
+		"mtime": "2026-11-20T08:54:23.627Z",
+		"size": 98179,
+		"path": "../public/atharv-images/project-site-5.jpg"
 	},
 	"/atharv-images/project-site-6.jpg": {
 		"type": "image/jpeg",
@@ -667,12 +597,19 @@ var public_assets_data_default = {
 		"size": 201690,
 		"path": "../public/atharv-images/project-site-6.jpg"
 	},
-	"/atharv-images/project-site-7.jpg": {
+	"/atharv-images/project-site-architects.jpeg": {
 		"type": "image/jpeg",
-		"etag": "\"3ed26-ldkLMzkM/2B+oDWhGkSYO0RgXkY\"",
-		"mtime": "2026-11-20T08:53:49.130Z",
-		"size": 257318,
-		"path": "../public/atharv-images/project-site-7.jpg"
+		"etag": "\"bdb6-AaCylKxfVhZ/+1ODrvjqSC/qStM\"",
+		"mtime": "2026-11-19T14:06:27.309Z",
+		"size": 48566,
+		"path": "../public/atharv-images/project-site-architects.jpeg"
+	},
+	"/atharv-images/project-site-8.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"16284-AoNjZ2ypa77kedqsDqMxDEhAUF8\"",
+		"mtime": "2026-11-20T08:53:35.074Z",
+		"size": 90756,
+		"path": "../public/atharv-images/project-site-8.jpg"
 	},
 	"/atharv-images/project-site-9.jpg": {
 		"type": "image/jpeg",
@@ -681,12 +618,12 @@ var public_assets_data_default = {
 		"size": 163089,
 		"path": "../public/atharv-images/project-site-9.jpg"
 	},
-	"/atharv-images/project-site-architects.jpeg": {
+	"/atharv-images/project-site-7.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"bdb6-AaCylKxfVhZ/+1ODrvjqSC/qStM\"",
-		"mtime": "2026-11-19T14:06:27.309Z",
-		"size": 48566,
-		"path": "../public/atharv-images/project-site-architects.jpeg"
+		"etag": "\"3ed26-ldkLMzkM/2B+oDWhGkSYO0RgXkY\"",
+		"mtime": "2026-11-20T08:53:49.130Z",
+		"size": 257318,
+		"path": "../public/atharv-images/project-site-7.jpg"
 	},
 	"/atharv-images/project-team-site.jpg": {
 		"type": "image/jpeg",
@@ -695,33 +632,19 @@ var public_assets_data_default = {
 		"size": 58402,
 		"path": "../public/atharv-images/project-team-site.jpg"
 	},
-	"/atharv-images/project-tower-site.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"3f3ed-+7JFesbTLOUF5oTYzKO6G0YSo6Q\"",
-		"mtime": "2026-11-19T14:06:27.283Z",
-		"size": 259053,
-		"path": "../public/atharv-images/project-tower-site.jpeg"
-	},
-	"/atharv-images/project-towers-construction.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"40e13-6ag9JzGgIXw6Ni5Llo9UdynJkj0\"",
-		"mtime": "2026-11-19T14:06:27.700Z",
-		"size": 265747,
-		"path": "../public/atharv-images/project-towers-construction.jpeg"
-	},
-	"/atharv-images/projects-commercial-towers.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"25a07-dXoFKCH9zuKO6T8Z45wOUhmIesw\"",
-		"mtime": "2026-11-19T14:05:12.051Z",
-		"size": 154119,
-		"path": "../public/atharv-images/projects-commercial-towers.jpg.jpeg"
-	},
 	"/atharv-images/projects-construction-team.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"e422-ifY2GIboXyZGsV6RUN3moQC2MzY\"",
 		"mtime": "2026-11-19T14:05:12.066Z",
 		"size": 58402,
 		"path": "../public/atharv-images/projects-construction-team.jpg.jpeg"
+	},
+	"/atharv-images/project-tower-site.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"3f3ed-+7JFesbTLOUF5oTYzKO6G0YSo6Q\"",
+		"mtime": "2026-11-19T14:06:27.283Z",
+		"size": 259053,
+		"path": "../public/atharv-images/project-tower-site.jpeg"
 	},
 	"/atharv-images/projects-excavation.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -730,6 +653,13 @@ var public_assets_data_default = {
 		"size": 67752,
 		"path": "../public/atharv-images/projects-excavation.jpg.jpeg"
 	},
+	"/atharv-images/project-towers-construction.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"40e13-6ag9JzGgIXw6Ni5Llo9UdynJkj0\"",
+		"mtime": "2026-11-19T14:06:27.700Z",
+		"size": 265747,
+		"path": "../public/atharv-images/project-towers-construction.jpeg"
+	},
 	"/atharv-images/projects-facade-restoration.webp": {
 		"type": "image/webp",
 		"etag": "\"14348-ajCoH6Ku+r9eCYjGsSvbHoBCmnw\"",
@@ -737,12 +667,12 @@ var public_assets_data_default = {
 		"size": 82760,
 		"path": "../public/atharv-images/projects-facade-restoration.webp"
 	},
-	"/atharv-images/projects-interior-finish.webp": {
-		"type": "image/webp",
-		"etag": "\"b28e-NIf96+CGoz6wp3sB3T/Vuo/KZiM\"",
-		"mtime": "2026-11-19T14:05:12.212Z",
-		"size": 45710,
-		"path": "../public/atharv-images/projects-interior-finish.webp"
+	"/atharv-images/projects-commercial-towers.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"25a07-dXoFKCH9zuKO6T8Z45wOUhmIesw\"",
+		"mtime": "2026-11-19T14:05:12.051Z",
+		"size": 154119,
+		"path": "../public/atharv-images/projects-commercial-towers.jpg.jpeg"
 	},
 	"/atharv-images/projects-glass-office.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -750,6 +680,13 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:05:12.192Z",
 		"size": 182449,
 		"path": "../public/atharv-images/projects-glass-office.jpg.jpeg"
+	},
+	"/atharv-images/projects-interior-finish.webp": {
+		"type": "image/webp",
+		"etag": "\"b28e-NIf96+CGoz6wp3sB3T/Vuo/KZiM\"",
+		"mtime": "2026-11-19T14:05:12.212Z",
+		"size": 45710,
+		"path": "../public/atharv-images/projects-interior-finish.webp"
 	},
 	"/atharv-images/projects-road-construction.webp": {
 		"type": "image/webp",
@@ -786,6 +723,20 @@ var public_assets_data_default = {
 		"size": 107394,
 		"path": "../public/atharv-images/projects-waterproofing.webp"
 	},
+	"/atharv-images/road-civil-works-hero.webp": {
+		"type": "image/webp",
+		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
+		"mtime": "2026-11-19T14:06:27.898Z",
+		"size": 103516,
+		"path": "../public/atharv-images/road-civil-works-hero.webp"
+	},
+	"/atharv-images/road-civil-works.webp": {
+		"type": "image/webp",
+		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
+		"mtime": "2026-11-19T14:05:12.339Z",
+		"size": 103516,
+		"path": "../public/atharv-images/road-civil-works.webp"
+	},
 	"/atharv-images/team-member-1.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"5a17-nPrV2o7iGzbUuHIF2jbgGAxYlXo\"",
@@ -800,12 +751,12 @@ var public_assets_data_default = {
 		"size": 28084,
 		"path": "../public/atharv-images/team-member-2.jpeg"
 	},
-	"/atharv-images/road-civil-works.webp": {
+	"/atharv-images/structural-repairs.webp": {
 		"type": "image/webp",
-		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
-		"mtime": "2026-11-19T14:05:12.339Z",
-		"size": 103516,
-		"path": "../public/atharv-images/road-civil-works.webp"
+		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
+		"mtime": "2026-11-19T14:05:12.355Z",
+		"size": 101518,
+		"path": "../public/atharv-images/structural-repairs.webp"
 	},
 	"/atharv-images/team-member-3.jpeg": {
 		"type": "image/jpeg",
@@ -814,13 +765,6 @@ var public_assets_data_default = {
 		"size": 25337,
 		"path": "../public/atharv-images/team-member-3.jpeg"
 	},
-	"/atharv-images/texture-pu-polishing.webp": {
-		"type": "image/webp",
-		"etag": "\"7cd2-bv9cRZdgI/okponOfQiVIZp3/UM\"",
-		"mtime": "2026-11-19T14:06:27.467Z",
-		"size": 31954,
-		"path": "../public/atharv-images/texture-pu-polishing.webp"
-	},
 	"/atharv-images/texture-polishing.webp": {
 		"type": "image/webp",
 		"etag": "\"7cd2-bv9cRZdgI/okponOfQiVIZp3/UM\"",
@@ -828,26 +772,19 @@ var public_assets_data_default = {
 		"size": 31954,
 		"path": "../public/atharv-images/texture-polishing.webp"
 	},
-	"/atharv-images/road-civil-works-hero.webp": {
-		"type": "image/webp",
-		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
-		"mtime": "2026-11-19T14:06:27.898Z",
-		"size": 103516,
-		"path": "../public/atharv-images/road-civil-works-hero.webp"
-	},
-	"/atharv-images/structural-repairs.webp": {
-		"type": "image/webp",
-		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
-		"mtime": "2026-11-19T14:05:12.355Z",
-		"size": 101518,
-		"path": "../public/atharv-images/structural-repairs.webp"
-	},
 	"/atharv-images/unsplash-architect-blueprints.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"17c01-BKNSifdHzYlzgWtgf0XOav6ec24\"",
 		"mtime": "2026-11-20T06:42:46.927Z",
 		"size": 97281,
 		"path": "../public/atharv-images/unsplash-architect-blueprints.jpg"
+	},
+	"/atharv-images/texture-pu-polishing.webp": {
+		"type": "image/webp",
+		"etag": "\"7cd2-bv9cRZdgI/okponOfQiVIZp3/UM\"",
+		"mtime": "2026-11-19T14:06:27.467Z",
+		"size": 31954,
+		"path": "../public/atharv-images/texture-pu-polishing.webp"
 	},
 	"/atharv-images/unsplash-corporate-atrium.jpg": {
 		"type": "image/jpeg",
@@ -863,19 +800,19 @@ var public_assets_data_default = {
 		"size": 215211,
 		"path": "../public/atharv-images/unsplash-luxury-facade.jpg"
 	},
+	"/atharv-images/waterproofing.webp": {
+		"type": "image/webp",
+		"etag": "\"1a382-C91ilxLmOwPwcIecdCUG3/iHieI\"",
+		"mtime": "2026-11-19T14:05:12.403Z",
+		"size": 107394,
+		"path": "../public/atharv-images/waterproofing.webp"
+	},
 	"/atharv-images/unsplash-modern-interior.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"3ab7d-ihl53LWTIGasUcyeSpZbEcVn8aY\"",
 		"mtime": "2026-11-20T06:42:47.570Z",
 		"size": 240509,
 		"path": "../public/atharv-images/unsplash-modern-interior.jpg"
-	},
-	"/atharv-images/unsplash-tower-construction.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"3180b-qIoofpC3BNKBw1q2UgCOALdzLIE\"",
-		"mtime": "2026-11-20T06:43:15.515Z",
-		"size": 202763,
-		"path": "../public/atharv-images/unsplash-tower-construction.jpg"
 	},
 	"/atharv-images/waterproofing-solutions.webp": {
 		"type": "image/webp",
@@ -884,12 +821,12 @@ var public_assets_data_default = {
 		"size": 107394,
 		"path": "../public/atharv-images/waterproofing-solutions.webp"
 	},
-	"/atharv-images/waterproofing.webp": {
-		"type": "image/webp",
-		"etag": "\"1a382-C91ilxLmOwPwcIecdCUG3/iHieI\"",
-		"mtime": "2026-11-19T14:05:12.403Z",
-		"size": 107394,
-		"path": "../public/atharv-images/waterproofing.webp"
+	"/atharv-images/unsplash-tower-construction.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"3180b-qIoofpC3BNKBw1q2UgCOALdzLIE\"",
+		"mtime": "2026-11-20T06:43:15.515Z",
+		"size": 202763,
+		"path": "../public/atharv-images/unsplash-tower-construction.jpg"
 	},
 	"/PROJECTS IMAGES/PROJECTSITES (1).jpg": {
 		"type": "image/jpeg",
@@ -968,19 +905,19 @@ var public_assets_data_default = {
 		"size": 4220,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/10-300x300.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/10.webp": {
-		"type": "image/webp",
-		"etag": "\"171a-pTXcMuOTTqR6m6EeLXlJxuuA4IU\"",
-		"mtime": "2026-11-19T14:06:26.523Z",
-		"size": 5914,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/10.webp"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11-150x150.webp": {
 		"type": "image/webp",
 		"etag": "\"682-oQljzYvvQTn59sqAd17E79iUF/g\"",
 		"mtime": "2026-11-19T14:06:26.184Z",
 		"size": 1666,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11-150x150.webp"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/10.webp": {
+		"type": "image/webp",
+		"etag": "\"171a-pTXcMuOTTqR6m6EeLXlJxuuA4IU\"",
+		"mtime": "2026-11-19T14:06:26.523Z",
+		"size": 5914,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/10.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11-300x300.webp": {
 		"type": "image/webp",
@@ -989,19 +926,19 @@ var public_assets_data_default = {
 		"size": 2974,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11-300x300.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11.webp": {
-		"type": "image/webp",
-		"etag": "\"115a-kSPdfAO0HW+ScRbO/GRQnfzVyfM\"",
-		"mtime": "2026-11-19T14:06:27.748Z",
-		"size": 4442,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11.webp"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/12-150x150.webp": {
 		"type": "image/webp",
 		"etag": "\"882-D5y7vGsfidT5MuBp04yWdHszSB4\"",
 		"mtime": "2026-11-19T14:06:27.769Z",
 		"size": 2178,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/12-150x150.webp"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11.webp": {
+		"type": "image/webp",
+		"etag": "\"115a-kSPdfAO0HW+ScRbO/GRQnfzVyfM\"",
+		"mtime": "2026-11-19T14:06:27.748Z",
+		"size": 4442,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/11.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/12-300x300.webp": {
 		"type": "image/webp",
@@ -1052,13 +989,6 @@ var public_assets_data_default = {
 		"size": 6274,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/14-300x300.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/14.webp": {
-		"type": "image/webp",
-		"etag": "\"2208-oYyCrfmhg7R1DRPNaDoxEd+FO3c\"",
-		"mtime": "2026-11-19T14:06:26.357Z",
-		"size": 8712,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/14.webp"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/3-150x150.webp": {
 		"type": "image/webp",
 		"etag": "\"5ee-HPUVibbmUi0mjkWwWyoZueev+YU\"",
@@ -1073,12 +1003,12 @@ var public_assets_data_default = {
 		"size": 2816,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/3-300x300.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/4-150x150.webp": {
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/14.webp": {
 		"type": "image/webp",
-		"etag": "\"108a-xdPvcUuX8+WtMQxxZsUFpgM7Sx4\"",
-		"mtime": "2026-11-19T14:06:26.157Z",
-		"size": 4234,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/4-150x150.webp"
+		"etag": "\"2208-oYyCrfmhg7R1DRPNaDoxEd+FO3c\"",
+		"mtime": "2026-11-19T14:06:26.357Z",
+		"size": 8712,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/14.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/3.webp": {
 		"type": "image/webp",
@@ -1086,6 +1016,13 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.089Z",
 		"size": 4298,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/3.webp"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/4-150x150.webp": {
+		"type": "image/webp",
+		"etag": "\"108a-xdPvcUuX8+WtMQxxZsUFpgM7Sx4\"",
+		"mtime": "2026-11-19T14:06:26.157Z",
+		"size": 4234,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/4-150x150.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/4-300x300.webp": {
 		"type": "image/webp",
@@ -1115,19 +1052,19 @@ var public_assets_data_default = {
 		"size": 2298,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5-150x150.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5.webp": {
-		"type": "image/webp",
-		"etag": "\"15ca-DxYZKP1yWKvmk2/knCoagbJO1gI\"",
-		"mtime": "2026-11-19T14:06:26.989Z",
-		"size": 5578,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5.webp"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5-300x300.webp": {
 		"type": "image/webp",
 		"etag": "\"10a8-/cwoYTEFlrAmVryyxONR+tIxCGk\"",
 		"mtime": "2026-11-19T14:06:27.219Z",
 		"size": 4264,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5-300x300.webp"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5.webp": {
+		"type": "image/webp",
+		"etag": "\"15ca-DxYZKP1yWKvmk2/knCoagbJO1gI\"",
+		"mtime": "2026-11-19T14:06:26.989Z",
+		"size": 5578,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/5.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/6-150x150.webp": {
 		"type": "image/webp",
@@ -1164,6 +1101,13 @@ var public_assets_data_default = {
 		"size": 4970,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/7-300x300.webp"
 	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/688fna1pwoq.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"17f83-kZpI9dTUAaZ9dY1xRmEIpYVqgVw\"",
+		"mtime": "2026-11-19T14:06:26.741Z",
+		"size": 98179,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/688fna1pwoq.jpg.jpeg"
+	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/7.webp": {
 		"type": "image/webp",
 		"etag": "\"1a72-U4HNNjFiDxFchbBQyfY+FGfg3tg\"",
@@ -1177,13 +1121,6 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.511Z",
 		"size": 2498,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/8-150x150.webp"
-	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/688fna1pwoq.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"17f83-kZpI9dTUAaZ9dY1xRmEIpYVqgVw\"",
-		"mtime": "2026-11-19T14:06:26.741Z",
-		"size": 98179,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/688fna1pwoq.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/8-300x300.webp": {
 		"type": "image/webp",
@@ -1227,13 +1164,6 @@ var public_assets_data_default = {
 		"size": 106826,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-1024x576.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-1536x864.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"34331-PMjjvIvh6K2Rfoa+2M5gbW15iqM\"",
-		"mtime": "2026-11-19T14:06:26.713Z",
-		"size": 213809,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-1536x864.jpg.jpeg"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-300x169.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"2fdc-GnupoohfYw8d3UpdyxWroYzBVMo\"",
@@ -1241,19 +1171,19 @@ var public_assets_data_default = {
 		"size": 12252,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-300x169.jpg.jpeg"
 	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-1536x864.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"34331-PMjjvIvh6K2Rfoa+2M5gbW15iqM\"",
+		"mtime": "2026-11-19T14:06:26.713Z",
+		"size": 213809,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-1536x864.jpg.jpeg"
+	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-768x432.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"f91f-5uSBIUZUHE1qFYAlD/sWuyeRbU4\"",
 		"mtime": "2026-11-19T14:06:27.872Z",
 		"size": 63775,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8-768x432.jpg.jpeg"
-	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"40e13-6ag9JzGgIXw6Ni5Llo9UdynJkj0\"",
-		"mtime": "2026-11-19T14:06:27.700Z",
-		"size": 265747,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/a3e1900d-0581-45b5-b94c-8f5dd9c8087a.svg": {
 		"type": "image/svg+xml",
@@ -1269,12 +1199,26 @@ var public_assets_data_default = {
 		"size": 10204,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/architectural-structure-150x150.png"
 	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"40e13-6ag9JzGgIXw6Ni5Llo9UdynJkj0\"",
+		"mtime": "2026-11-19T14:06:27.700Z",
+		"size": 265747,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/91aqt9p4mo8.jpg.jpeg"
+	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/architectural-structure.png": {
 		"type": "image/png",
 		"etag": "\"34ea-xUfB94W/K/3mXocWv3PqrLoiXKQ\"",
 		"mtime": "2026-11-19T14:06:27.972Z",
 		"size": 13546,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/architectural-structure.png"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Asset-2-100-1-e1660896849159.png": {
+		"type": "image/png",
+		"etag": "\"2b1b6-pXtWM+igPZ/kFPxnDJQ5iwH3NgQ\"",
+		"mtime": "2026-11-19T14:06:27.796Z",
+		"size": 176566,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Asset-2-100-1-e1660896849159.png"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Atharv_Decorators_logo.webp": {
 		"type": "image/webp",
@@ -1283,12 +1227,12 @@ var public_assets_data_default = {
 		"size": 20426,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Atharv_Decorators_logo.webp"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Asset-2-100-1-e1660896849159.png": {
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/BG-Worldmap.png": {
 		"type": "image/png",
-		"etag": "\"2b1b6-pXtWM+igPZ/kFPxnDJQ5iwH3NgQ\"",
-		"mtime": "2026-11-19T14:06:27.796Z",
-		"size": 176566,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Asset-2-100-1-e1660896849159.png"
+		"etag": "\"6539f-lKS+TfKz3AcGQZfvTSRdX4WRY44\"",
+		"mtime": "2026-11-19T14:06:26.598Z",
+		"size": 414623,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/BG-Worldmap.png"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-150x150.png": {
 		"type": "image/png",
@@ -1304,19 +1248,12 @@ var public_assets_data_default = {
 		"size": 13117,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect-300x200.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/BG-Worldmap.png": {
-		"type": "image/png",
-		"etag": "\"6539f-lKS+TfKz3AcGQZfvTSRdX4WRY44\"",
-		"mtime": "2026-11-19T14:06:26.598Z",
-		"size": 414623,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/BG-Worldmap.png"
-	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building.png": {
-		"type": "image/png",
-		"etag": "\"b96-DsT/mGB1lTae1w2K/mYclrE6xkg\"",
-		"mtime": "2026-11-19T14:06:27.389Z",
-		"size": 2966,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building.png"
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"bdb6-AaCylKxfVhZ/+1ODrvjqSC/qStM\"",
+		"mtime": "2026-11-19T14:06:27.309Z",
+		"size": 48566,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/buildings-150x150.png": {
 		"type": "image/png",
@@ -1324,6 +1261,20 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:26.473Z",
 		"size": 7465,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/buildings-150x150.png"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect-768x512.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"e422-ifY2GIboXyZGsV6RUN3moQC2MzY\"",
+		"mtime": "2026-11-19T14:06:26.140Z",
+		"size": 58402,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect-768x512.jpg.jpeg"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building.png": {
+		"type": "image/png",
+		"etag": "\"b96-DsT/mGB1lTae1w2K/mYclrE6xkg\"",
+		"mtime": "2026-11-19T14:06:27.389Z",
+		"size": 2966,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building.png"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/buildings.png": {
 		"type": "image/png",
@@ -1346,12 +1297,12 @@ var public_assets_data_default = {
 		"size": 428,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/ec912d03-ab7f-4d42-9952-7beab767761b.svg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"bdb6-AaCylKxfVhZ/+1ODrvjqSC/qStM\"",
-		"mtime": "2026-11-19T14:06:27.309Z",
-		"size": 48566,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect.jpg.jpeg"
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Civil-Repairs-Structural-Maintenance.webp": {
+		"type": "image/webp",
+		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
+		"mtime": "2026-11-19T14:06:27.341Z",
+		"size": 101518,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Civil-Repairs-Structural-Maintenance.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/excavator-action-300x203.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -1360,26 +1311,12 @@ var public_assets_data_default = {
 		"size": 11817,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/excavator-action-300x203.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Civil-Repairs-Structural-Maintenance.webp": {
-		"type": "image/webp",
-		"etag": "\"18c8e-lpVkboSWRfHK3VHOPE5D78GBAIU\"",
-		"mtime": "2026-11-19T14:06:27.341Z",
-		"size": 101518,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Civil-Repairs-Structural-Maintenance.webp"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/excavator-action-768x520.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"108a8-zmHtGbbSvOsEsEECEOJzAtlMXlY\"",
 		"mtime": "2026-11-19T14:06:26.234Z",
 		"size": 67752,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/excavator-action-768x520.jpg.jpeg"
-	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect-768x512.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"e422-ifY2GIboXyZGsV6RUN3moQC2MzY\"",
-		"mtime": "2026-11-19T14:06:26.140Z",
-		"size": 58402,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/building-construction-worker-site-with-architect-768x512.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/excavator-action.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -1402,13 +1339,6 @@ var public_assets_data_default = {
 		"size": 152968,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/gray-internal-structure-building.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/gvpcevqbxm4.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"2c8b1-1DhBXgpi7DVgmpeRiDbHslpttgs\"",
-		"mtime": "2026-11-19T14:06:27.489Z",
-		"size": 182449,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/gvpcevqbxm4.jpg.jpeg"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/modern-house-150x150.png": {
 		"type": "image/png",
 		"etag": "\"1766-eVobZN49TjODholRZAwieQa6CSg\"",
@@ -1422,6 +1352,13 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:26.207Z",
 		"size": 7260,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/modern-house.png"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/gvpcevqbxm4.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"2c8b1-1DhBXgpi7DVgmpeRiDbHslpttgs\"",
+		"mtime": "2026-11-19T14:06:27.489Z",
+		"size": 182449,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/gvpcevqbxm4.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qdaaasrzhdk.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -1437,13 +1374,6 @@ var public_assets_data_default = {
 		"size": 16583,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-300x200.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-768x512.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"16505-9APX9QpZ6ojsD3cHhUcJINldvcE\"",
-		"mtime": "2026-11-19T14:06:26.633Z",
-		"size": 91397,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-768x512.jpg.jpeg"
-	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-1024x683.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"25a07-dXoFKCH9zuKO6T8Z45wOUhmIesw\"",
@@ -1451,12 +1381,26 @@ var public_assets_data_default = {
 		"size": 154119,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-1024x683.jpg.jpeg"
 	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-768x512.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"16505-9APX9QpZ6ojsD3cHhUcJINldvcE\"",
+		"mtime": "2026-11-19T14:06:26.633Z",
+		"size": 91397,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs-768x512.jpg.jpeg"
+	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs.jpg.jpeg": {
 		"type": "image/jpeg",
 		"etag": "\"3f3ed-+7JFesbTLOUF5oTYzKO6G0YSo6Q\"",
 		"mtime": "2026-11-19T14:06:27.283Z",
 		"size": 259053,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/qyzo7tdsvqs.jpg.jpeg"
+	},
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Road-Miscellaneous-Civil-Works.webp": {
+		"type": "image/webp",
+		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
+		"mtime": "2026-11-19T14:06:27.898Z",
+		"size": 103516,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Road-Miscellaneous-Civil-Works.webp"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_1.jpg.jpeg": {
 		"type": "image/jpeg",
@@ -1472,12 +1416,12 @@ var public_assets_data_default = {
 		"size": 28084,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_5.jpg.jpeg"
 	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Road-Miscellaneous-Civil-Works.webp": {
-		"type": "image/webp",
-		"etag": "\"1945c-54K5TJgtPuEDAHlsLfydsbrRDAQ\"",
-		"mtime": "2026-11-19T14:06:27.898Z",
-		"size": 103516,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Road-Miscellaneous-Civil-Works.webp"
+	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_7.jpg.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"62f9-63rLGGwuOfeIF50zDMZkHLeXBLs\"",
+		"mtime": "2026-11-19T14:06:26.923Z",
+		"size": 25337,
+		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_7.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Texture-PU-Polishing-Works.webp": {
 		"type": "image/webp",
@@ -1485,13 +1429,6 @@ var public_assets_data_default = {
 		"mtime": "2026-11-19T14:06:27.467Z",
 		"size": 31954,
 		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Texture-PU-Polishing-Works.webp"
-	},
-	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_7.jpg.jpeg": {
-		"type": "image/jpeg",
-		"etag": "\"62f9-63rLGGwuOfeIF50zDMZkHLeXBLs\"",
-		"mtime": "2026-11-19T14:06:26.923Z",
-		"size": 25337,
-		"path": "../public/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Team_7.jpg.jpeg"
 	},
 	"/atharvdecorators.relegal.in_3216e22a-5a41-4ac7-bb92-96e91567e9b6/Untitled-design-5.webp": {
 		"type": "image/webp",

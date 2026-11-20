@@ -1,0 +1,1 @@
+import{d as e,s as t,u as n}from"./index-ZT2nRoeG.js";var r=e(),i=()=>(0,r.jsx)(t,{service:n[0]});export{i as component};

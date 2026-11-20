@@ -1814,6 +1814,13 @@ export function HomePage() {
       {/* Latest Projects Showcase Collage (Reference 13) */}
       <LatestProjectsSection />
 
+      {/* Featured Projects 3×3 Grid */}
+      <FeaturedProjects3x3Section
+        kicker="About Project"
+        title="Our work is our reputation, and we protect it with every project we do"
+        description="A curated showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results."
+      />
+
       {/* Clients Showcase (Reference 14) */}
       <ClientsShowcaseSection />
 
@@ -1847,6 +1854,13 @@ export function AboutPage() {
 
       {/* Vision, Mission, Motto (Reference 9) */}
       <VisionMissionSection />
+
+      {/* Featured Projects 3×3 Grid */}
+      <FeaturedProjects3x3Section
+        kicker="Our Projects"
+        title="A legacy of quality, project after project"
+        description="Every project we deliver reflects our commitment to precision, durability, and client satisfaction."
+      />
 
       {/* Powerful Solutions CTA Banner (Reference 12) */}
       <PowerfulSolutionsBanner />
@@ -2194,7 +2208,7 @@ export function ServiceDetailPage({ service }: { service: Service }) {
 
       {/* Featured Projects 3x3 Grid (Reference 1-7) */}
       <FeaturedProjects3x3Section
-        kicker="FEatured Project"
+        kicker="Featured Project"
         title="Our Featured Project"
         description="A showcase of our recently completed projects reflecting quality workmanship, timely execution, and lasting results."
       />

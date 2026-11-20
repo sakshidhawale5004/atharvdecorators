@@ -1,1 +1,0 @@
-import{a as e,d as t,f as n,l as r,t as i}from"./index-CWWqMGkt.js";var a=t();function o(){let{slug:t}=i.useParams(),o=r.find(e=>e.id===t);if(!o)throw n();return(0,a.jsx)(e,{project:o})}export{o as component};
