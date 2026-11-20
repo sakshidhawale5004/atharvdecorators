@@ -14,6 +14,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  MessageSquare,
   Phone,
   Search,
   ShieldCheck,
@@ -438,6 +439,15 @@ export function Header() {
               </Link>
             </Link001>
 
+            <a
+              href={company.telephone}
+              className="ad-header-phone-btn hidden md:inline-flex"
+              title="Call +91 8879 555 125"
+            >
+              <Phone size={13} className="text-amber-400" />
+              <span>+91 8879 555 125</span>
+            </a>
+
             <span className="ad-nav-divider" aria-hidden="true" />
 
             <button
@@ -449,6 +459,17 @@ export function Header() {
             >
               <Search size={18} />
             </button>
+
+            {/* Mobile Call CTA Button in menu drawer */}
+            <div className="md:hidden mt-4 pt-4 border-t border-white/10 w-full">
+              <a
+                href={company.telephone}
+                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded bg-[#c49a32] text-black font-bold text-xs shadow-md"
+              >
+                <Phone size={14} />
+                <span>Call +91 8879 555 125</span>
+              </a>
+            </div>
           </nav>
         </div>
       </header>
@@ -499,9 +520,48 @@ export function Footer() {
   );
 }
 
+export function SitePreloader() {
+  const [visible, setVisible] = useState(true);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setFading(true);
+    }, 600);
+    const hideTimer = setTimeout(() => {
+      setVisible(false);
+    }, 1100);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className={`ad-site-preloader${fading ? " is-fading" : ""}`} aria-hidden="true">
+      <div className="ad-preloader-content">
+        <div className="ad-preloader-emblem">
+          <div className="ad-compass-ring" />
+          <div className="ad-compass-inner">
+            <span className="ad-monogram">AD</span>
+          </div>
+        </div>
+        <div className="ad-preloader-title">ATHARV DECORATORS</div>
+        <div className="ad-preloader-subtitle">BUILDING CARE &bull; THOUGHTFULLY DELIVERED</div>
+        <div className="ad-preloader-bar">
+          <div className="ad-preloader-fill" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function SiteFrame({ children }: { children: ReactNode }) {
   return (
     <div className="atharv-site">
+      <SitePreloader />
       <Header />
       <main>{children}</main>
       <Footer />
@@ -663,23 +723,23 @@ export const sectorCards = [
 ] as const;
 
 export const featured3x3Projects = [
-  { image: "/atharv-images/modern-architectural-facade.jpg", alt: "Contemporary geometric architectural facade" },
+  { image: "/atharv-images/unsplash-luxury-facade.jpg", alt: "Contemporary geometric architectural glass skyscraper facade" },
   { image: "/atharv-images/project-angular-building.jpeg", alt: "Angular modern building with geometric glass facade" },
-  { image: "/atharv-images/curved-civic-building.jpg", alt: "Curved civic building with reflective facade" },
+  { image: "/atharv-images/unsplash-modern-interior.jpg", alt: "Refined luxury architectural interior with contemporary finish" },
   { image: "/atharv-images/project-modern-architecture.jpeg", alt: "Stepped white geometric building facade" },
   { image: "/atharv-images/commercial-glass-building.jpg", alt: "Contemporary glass commercial building" },
-  { image: "/atharv-images/project-futuristic-building.jpeg", alt: "Curved futuristic civic building with sweeping rooflines" },
-  { image: "/atharv-images/modern-atrium.jpg", alt: "Modern architectural glass atrium interior" },
+  { image: "/atharv-images/unsplash-tower-construction.jpg", alt: "Architectural tower under construction" },
+  { image: "/atharv-images/unsplash-corporate-atrium.jpg", alt: "Modern architectural glass atrium interior" },
   { image: "/atharv-images/project-curved-architecture.jpeg", alt: "Modern curved architectural structure" },
   { image: "/atharv-images/interior-painting-hero.webp", alt: "Contemporary luxury residential villa with pool and interior finish" },
 ] as const;
 
 export const latestCollageProjects = [
-  { image: "/atharv-images/curved-civic-building.jpg", alt: "Curved civic building with reflective pool" },
-  { image: "/atharv-images/project-angular-building.jpeg", alt: "Angular geometric cantilever facade" },
-  { image: "/atharv-images/project-modern-architecture.jpeg", alt: "Stepped white facade" },
+  { image: "/atharv-images/unsplash-luxury-facade.jpg", alt: "Contemporary architectural skyscraper with glass facade" },
+  { image: "/atharv-images/unsplash-modern-interior.jpg", alt: "Luxury interior finish and architecture" },
+  { image: "/atharv-images/unsplash-corporate-atrium.jpg", alt: "Corporate architectural atrium interior" },
   { image: "/atharv-images/commercial-glass-building.jpg", alt: "Glass commercial corporate office" },
-  { image: "/atharv-images/project-futuristic-building.jpeg", alt: "Futuristic sweeping architectural structure" },
+  { image: "/atharv-images/unsplash-tower-construction.jpg", alt: "High-rise structural tower development" },
 ] as const;
 
 /* Sector Cards Strip Section (Reference 16) */
@@ -881,9 +941,12 @@ export function ClientsShowcaseSection() {
         <div className="ad-clients-gold-body">
           <div className="ad-clients-team-img">
             <img
-              src="/atharv-images/building-construction-worker-site-with-architect.jpg.jpeg"
+              src="/atharv-images/engineers-architects-site.jpg"
               alt="Engineers and architects on site"
               loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = "/atharv-images/project-site-architects.jpeg";
+              }}
             />
           </div>
           <div className="ad-clients-card-grid">
@@ -1051,12 +1114,15 @@ export function TrustedBrandsLegacySection() {
   return (
     <section aria-label="Our Trusted Heritage" className="ad-container py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="rounded-md overflow-hidden shadow-xl">
+        <div className="rounded-md overflow-hidden shadow-xl border border-border">
           <img
-            src="/atharv-images/building-construction-worker-site-with-architect.jpg.jpeg"
+            src="/atharv-images/unsplash-tower-construction.jpg"
             alt="Site engineer and architect on site"
             className="w-full aspect-[1.1] object-cover"
             loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = "/atharv-images/project-site-architects.jpeg";
+            }}
           />
         </div>
         <div>
@@ -1125,6 +1191,134 @@ export function ContactFloatingBar() {
 }
 
 /* ==========================================================================
+   ADVANCED 3D HERO SHOWCASE
+   ========================================================================== */
+
+const heroScenes = [
+  {
+    id: 1,
+    image: "/atharv-images/commercial-glass-building.jpg",
+    title: "Commercial Facades & Architecture",
+    tag: "High-Rise Development",
+    stat: "25+",
+    statLabel: "Years Industry Experience",
+    alt: "Contemporary glass commercial building with landscape and reflective façade",
+  },
+  {
+    id: 2,
+    image: "/atharv-images/unsplash-tower-construction.jpg",
+    title: "Structural Engineering & Civil Repairs",
+    tag: "Civil & Structural Excellence",
+    stat: "150+",
+    statLabel: "Landmarks Completed",
+    alt: "Architectural tower under construction against sky",
+  },
+  {
+    id: 3,
+    image: "/atharv-images/unsplash-modern-interior.jpg",
+    title: "Refined Luxury Finishes & PU Works",
+    tag: "Flawless Interior Craft",
+    stat: "100%",
+    statLabel: "Client Satisfaction",
+    alt: "Luxury architectural interior finish with contemporary lighting",
+  },
+];
+
+export function InteractiveHeroShowcase() {
+  const [activeScene, setActiveScene] = useState(0);
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(() => {
+      setActiveScene((prev) => (prev + 1) % heroScenes.length);
+    }, 5500);
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const rx = ((y - cy) / cy) * -8;
+    const ry = ((x - cx) / cx) * 10;
+    setTilt({ rx, ry });
+  };
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setTilt({ rx: 0, ry: 0 });
+  };
+
+  const currentScene = heroScenes[activeScene];
+
+  return (
+    <div
+      aria-label="Atharv Decorators architectural showcase"
+      className="ad-hero-3d-wrapper"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        className="ad-hero-3d-card"
+        style={{
+          transform: isHovered
+            ? `perspective(1200px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) scale3d(1.02, 1.02, 1.02)`
+            : "perspective(1200px) rotateY(-8deg) rotateX(3deg) rotateZ(1.2deg)",
+          transition: isHovered ? "transform 100ms ease-out" : "transform 700ms cubic-bezier(0.16, 1, 0.3, 1)",
+        }}
+      >
+        <div className="ad-hero-3d-img-container">
+          <img
+            key={currentScene.id}
+            src={currentScene.image}
+            alt={currentScene.alt}
+            className="ad-hero-3d-img"
+            fetchPriority="high"
+          />
+          <div className="ad-hero-3d-overlay" />
+        </div>
+
+        {/* Floating 3D Frosted Pill */}
+        <div className="ad-hero-pill-3d">
+          <span className="ad-status-dot-pulse" />
+          <span>{currentScene.tag}</span>
+        </div>
+
+        {/* Floating 3D Gold Stamp Badge */}
+        <div className="ad-hero-stamp-3d">
+          <strong>{currentScene.stat}</strong>
+          <span>{currentScene.statLabel}</span>
+        </div>
+      </div>
+
+      {/* Interactive Scene Nav Controls */}
+      <div className="ad-hero-scene-nav" role="tablist" aria-label="Architectural Showcase Scenes">
+        {heroScenes.map((scene, idx) => (
+          <button
+            key={scene.id}
+            type="button"
+            role="tab"
+            aria-selected={activeScene === idx}
+            onClick={() => setActiveScene(idx)}
+            className={`ad-hero-scene-btn${activeScene === idx ? " is-active" : ""}`}
+            title={scene.title}
+          >
+            <span className="opacity-60">0{scene.id}</span>
+            <span>{scene.title.split(" ")[0]}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ==========================================================================
    PAGE DEFINITIONS (Using the exact replica reference structure)
    ========================================================================== */
 
@@ -1142,7 +1336,7 @@ export function HomePage() {
             </h1>
             <p className="ad-hero-text">
               Professional civil repair, painting and waterproofing for residential, commercial and
-              corporate spaces.
+              corporate spaces. Engineered with architectural precision, premium materials, and lasting durability.
             </p>
             <div className="ad-hero-actions">
               <Button asChild className="ad-primary-cta" size="default">
@@ -1151,26 +1345,14 @@ export function HomePage() {
                 </Link>
               </Button>
               <a className="ad-text-cta" href={company.telephone}>
+                <span className="ad-call-status-dot" />
                 Call {company.phone} <ArrowUpRight aria-hidden="true" size={15} />
               </a>
             </div>
           </div>
-          <div aria-label="Modern commercial building under construction" className="ad-hero-visual">
-            <div className="ad-hero-photo">
-              <img
-                alt="Contemporary glass commercial building with landscape and reflective façade"
-                fetchPriority="high"
-                height="512"
-                src="/atharv-images/commercial-glass-building.jpg"
-                width="768"
-              />
-            </div>
-            <div aria-label="25 years of industry experience" className="ad-hero-stamp">
-              <strong>25+</strong>
-              <span>Years of industry<br />experience</span>
-            </div>
-            <p className="ad-hero-index"><strong>01</strong> / 06 · Thoughtful work, enduring spaces</p>
-          </div>
+
+          {/* Advanced Interactive 3D Hero Showcase */}
+          <InteractiveHeroShowcase />
         </div>
       </section>
 
@@ -1394,6 +1576,31 @@ export function ContactPage() {
               Our team is here to help with reliable solutions and honest advice. Reach out to us today to discuss your
               needs or schedule a site inspection.
             </p>
+
+            {/* Direct Phone & WhatsApp Support Card */}
+            <div className="ad-contact-direct-card">
+              <h4>Direct Support &amp; Site Inspections</h4>
+              <p>
+                Speak directly with our senior project coordinator for immediate site assessments, pricing estimates,
+                and technical queries across Mumbai &amp; Thane.
+              </p>
+              <div className="ad-contact-direct-actions">
+                <a href={company.telephone} className="ad-direct-call-btn">
+                  <Phone size={14} />
+                  <span>Call +91 8879 555 125</span>
+                </a>
+                <a
+                  href="https://wa.me/918879555125?text=Hello%20Atharv%20Decorators,%20I%20would%20like%20to%20inquire%20about%20civil%20repair%20and%20painting%20services"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ad-direct-whatsapp-btn"
+                >
+                  <MessageSquare size={14} className="text-[#25d366]" />
+                  <span>WhatsApp Inquiry</span>
+                </a>
+              </div>
+            </div>
+
             <div className="mt-8">
               <h3 className="text-base font-bold text-foreground mb-4">Our Social Media</h3>
               <div className="flex items-center gap-3">
